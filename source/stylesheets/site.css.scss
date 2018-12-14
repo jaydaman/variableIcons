@@ -1,16 +1,22 @@
+@import "base/typography";
+@import "components/header";
+@import "components/hero";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  background-color: #fbc547;
-  color: #333;
   font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir",
     "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans",
     "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu",
     "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
-  padding: 18vh 1rem;
-  text-align: center;
 }
 
 a {
   color: rgba(#000, 0.7);
+  text-decoration: none;
 
   &:focus,
   &:hover {
@@ -18,7 +24,37 @@ a {
   }
 }
 
-.middleman-logo {
-  margin-bottom: 1rem;
-  width: 10rem;
+.fifty-fifty {
+  display: flex;
+  justify-content: space-between;
+  // background: linear-gradient(to right, #fff 50%, #1d1d1d 50%);
+  height: 646px;
+
+  .fifty-fifty-block {
+    max-width: 50%;
+    padding: 32px 48px;
+  }
+
+  .block-black {
+    background-color: #1d1d1d;
+    color: #fff;
+  }
+
+  .block-white {
+    background-color: #fff;
+  }
+
+  .placeholder {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 250px;
+  }
+
+  .text-block {
+    margin-top: 230px;
+    max-width: 512px;
+    // padding-right: 24px;
+  }
 }
