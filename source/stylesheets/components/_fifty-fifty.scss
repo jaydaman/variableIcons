@@ -1,0 +1,50 @@
+.fifty-fifty {
+  display: flex;
+  justify-content: space-between;
+  // background: linear-gradient(to right, #fff 50%, #1d1d1d 50%);
+  height: 646px;
+
+  @media #{$desktop} {
+    flex-wrap: wrap;
+    height: 1292px;
+  }
+
+  .fifty-fifty-block {
+    width: 50%;
+    padding: 32px 48px;
+
+    @media #{$desktop} {
+      width: 100%;
+    }
+
+    @media #{$tablet} {
+      padding: 32px 24px;
+    }
+  }
+
+  .centered {
+    position: relative;
+    bottom: -40%;
+  }
+
+  .flex-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .placeholder {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .setup-text {
+    margin-top: 48px;
+  }
+
+  p {
+    max-width: 512px;
+  }
+}
