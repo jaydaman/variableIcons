@@ -8,6 +8,10 @@
     padding: 32px 24px;
   }
 
+  @media #{$mobile} {
+    padding: 48px 24px;
+  }
+
   p {
     margin-top: 24px;
     max-width: 344px;
