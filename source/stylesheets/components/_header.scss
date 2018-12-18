@@ -10,6 +10,7 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.25);
 
     @media #{$mobile} {
+      position: static;
       flex-direction: column;
       height: 144px;
     }
@@ -46,8 +47,8 @@
     flex-direction: row;
 
     @media #{$mobile} {
-      width: 600px;
       height: 64px;
+      max-width: 650px;
     }
 
     .nav-b {
@@ -58,7 +59,7 @@
       justify-content: center;
 
       @media #{$mobile} {
-        width: 350px;
+        width: 100%;
       }
     }
   }
