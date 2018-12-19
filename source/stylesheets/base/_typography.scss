@@ -1,15 +1,30 @@
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir",
-    "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans",
-    "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu",
-    "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
+html {
+  font-family: 'SourceSans', sans-serif;
+}
+
+@supports (font-variation-settings: normal) {
+  font-family: 'SourceSansVariable', sans-serif;
+  font-variation-settings: 'wght' 400;
 }
 
 h1 {
-  font-size: 2em;
+  font-family: 'SourceSansVariable';
+  font-size: 4em;
+  font-variation-settings: 'wght' 700;
+}
+
+h3 {
+  font-size: 1.125em;
+  font-weight: 400;
+}
+
+h5 {
+  font-size: 0.8em;
+  font-weight: 600;
 }
 
 p {
   font-size: 1.125em;
   line-height: 25px;
+  font-weight: 200;
 }

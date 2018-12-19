@@ -7,12 +7,17 @@
     }
 
   h1 {
-    font-size: 4em;
     color: $color-bright;
 
     @media #{$tablet} {
       font-size: 3em;
     }
+  }
+
+  .test {
+    font-family: SourceSans;
+    font-size: 4em;
+    color: $color-bright;
   }
 
   p {
