@@ -8,51 +8,10 @@
     <!-- Use the title from a page's frontmatter if it has one -->
     <title><%= current_page.data.title || "Middleman" %></title>
     <%= stylesheet_link_tag "site" %>
-    <%= javascript_include_tag "site" %>
+
   </head>
   <body>
     <%= yield %>
+    <%= javascript_include_tag "site" %>
   </body>
-  <script type="text/javascript">
-
-    //Slider value for "TIME"
-
-    var slider1 = document.getElementById("slider-TIME");
-    var output1 = document.getElementById("output-TIME");
-    output1.innerHTML = slider1.value;
-
-    slider1.oninput = function() {
-      output1.innerHTML = this.value;
-    }
-
-    //Slider value for "wght"
-
-    var slider2 = document.getElementById("slider-wght");
-    var output2 = document.getElementById("output-wght");
-    output2.innerHTML = slider2.value;
-    slider2.oninput = function() {
-      output2.innerHTML = this.value;
-    }
-
-    //Slider value for "wdth"
-
-    var slider3 = document.getElementById("slider-wdth");
-    var output3 = document.getElementById("output-wdth");
-    output3.innerHTML = slider3.value;
-
-    slider3.oninput = function() {
-      output3.innerHTML = this.value;
-    }
-
-    $('input').on('change', function () {
-    var v = $(this).val();
-    $('div').css('font-size', v + 'px')
-    $('span').html(v);
-    })
-
-  </script>
-  <script type="text/javascript">
-
-
-  </script>
 </html>
