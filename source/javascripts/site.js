@@ -1,7 +1,5 @@
 // This is where it all goes :)
 
-//Slider value for "TIME"
-
 var slider1 = document.getElementById("slider-TIME");
 var output1 = document.getElementById("output-TIME");
 var slider2 = document.getElementById("slider-wght");
@@ -23,6 +21,8 @@ icon.style.fontVariationSettings = settingsString(
   sliderWeight,
   sliderWidth
 );
+
+//Slider value for "TIME"
 
 slider1.oninput = function() {
   sliderTime = this.value;
