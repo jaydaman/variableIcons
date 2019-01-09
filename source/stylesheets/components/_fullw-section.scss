@@ -22,12 +22,13 @@
   }
 
   .icon {
-    font-family: 'Variicon';
+    font-family: "Variicon";
     align-self: center;
     text-align: center;
     font-size: 250px;
     margin: 0px;
     font-variation-settings: "TIME" 0, "wdth" 100, "wght" 30;
+    border: 1px solid black;
   }
 
   .input-text {
@@ -35,44 +36,44 @@
     // border: 1px solid;
   }
 
-    .slider-wrapper {
-      max-width: 40%;
-      display: flex;
-      justify-content: space-between;
-      margin: 40px auto;
-    }
+  .slider-wrapper {
+    max-width: 40%;
+    display: flex;
+    justify-content: space-between;
+    margin: 40px auto;
+  }
 
-    .slider {
-      appearance: none;
-      width: 264px;
-      height: 2px;
-      background: #1d1d1d;
-      outline: none;
-      opacity: 0.7;
-      transition: opacity 0.050s ease;
-    }
+  .slider {
+    appearance: none;
+    width: 264px;
+    height: 2px;
+    background: #1d1d1d;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity 0.05s ease;
+  }
 
-    .slider:hover {
-      opacity: 1;
-    }
+  .slider:hover {
+    opacity: 1;
+  }
 
-    .slider::-webkit-slider-thumb {
-      -webkit-appearance: none;
-      appearance: none;
-      width: 25px;
-      height: 25px;
-      border-radius: 25px;
-      background: $color-mediumgrey;
-      cursor: pointer;
-    }
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 25px;
+    background: $color-mediumgrey;
+    cursor: pointer;
+  }
 
-    .slider::-moz-range-thumb {
-      width: 25px;
-      height: 25px;
-      border-radius: 25px;
-      background: #4CAF50;
-      cursor: pointer;
-    }
+  .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 25px;
+    background: #4caf50;
+    cursor: pointer;
+  }
 }
 
 .fullw-section2 {
