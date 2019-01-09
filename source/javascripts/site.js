@@ -6,15 +6,24 @@ var slider2 = document.getElementById("slider-wght");
 var output2 = document.getElementById("output-wght");
 var slider3 = document.getElementById("slider-wdth");
 var output3 = document.getElementById("output-wdth");
+var slider4 = document.getElementById("slider-fontsize");
+var output4 = document.getElementById("output-fontsize");
 var icon = document.querySelector(".js-icon");
 var sliderTime = slider1.value,
   sliderWidth = slider2.value,
-  sliderWeight = slider3.value;
+  sliderWeight = slider3.value,
+  sliderFontsize = slider4.value;
 output1.innerHTML = slider1.value;
 
 var settingsString = function(t, wd, wg) {
   return '"TIME" ' + t + ', "wdth" ' + wd + ', "wght" ' + wg + "";
 };
+
+var fontSize = function(fs) {
+  return '"font-size"' + fs + "";
+};
+
+fontbox.style.fontSize = fontSize(sliderFontsize);
 
 icon.style.fontVariationSettings = settingsString(
   sliderTime,
@@ -59,6 +68,14 @@ slider3.oninput = function() {
     sliderWidth
   );
   output3.innerHTML = this.value;
+};
+
+//Slider value for font-size
+
+slider4.oninput = function() {
+  sliderFontsize = this.value;
+  fontbox.style.fontSize = fontSize(sliderFontsize);
+  output4.innerHTML = this.value;
 };
 
 //    font-variation-settings: "TIME" 0, "wdth" 100, "wght" 30;
