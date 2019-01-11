@@ -1,30 +1,30 @@
 html {
-  font-family: 'SourceSans', sans-serif;
+  font-family: "SourceSans", sans-serif;
 }
 
 @supports (font-variation-settings: normal) {
-  font-family: 'SourceSansVariable', sans-serif;
-  font-variation-settings: 'wght' 400;
+  font-family: "SourceSansVariable", sans-serif;
+  font-variation-settings: "wght" 400;
 }
 
 h1 {
-  font-family: 'SourceSansVariable';
+  font-family: "SourceSansVariable";
   font-size: 4em;
-  font-variation-settings: 'wght' 700;
+  font-variation-settings: "wght" 700;
 }
 
-h3 {
-  font-size: 1.125em;
-  font-weight: 400;
-}
-
-h5 {
-  font-size: 0.8em;
-  font-weight: 600;
+h4 {
+  font-family: "SourceSansVariable";
+  font-size: 1em;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+  color: $color-white;
 }
 
 p {
-  font-size: 1.125em;
+  font-size: 0.875em;
   line-height: 25px;
-  font-weight: 200;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  color: $color-white;
 }
