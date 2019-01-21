@@ -75,6 +75,7 @@
     justify-content: flex-start;
     background-color: rgba($color-black, 0.97);
     height: 100vh;
+    transition: background-color 0.25s;
 
     .menu-container__links {
       flex-direction: column;
@@ -88,6 +89,7 @@
 
 .menu-container.expanded a:not(:nth-child(-n + 2)) {
   display: block;
+  transition: display 2s;
 }
 
 .menu-item__color-pick {
