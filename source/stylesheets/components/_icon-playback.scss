@@ -1,0 +1,48 @@
+//Icon playback component
+
+//Active icon
+
+.icon {
+  font-family: "Variicon";
+  color: $color-bright;
+  font-size: 25vmin;
+  font-variation-settings: "TIME" 0, "wdth" 80, "wght" 30;
+
+  @media #{$smalldesktop} {
+    font-size: 30vmin;
+  }
+
+  @media #{$mobile} {
+    font-size: 50vmin;
+  }
+}
+
+.wrapper-centered {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+//Icon playback
+
+//State button wrapper
+
+.mid-row1 {
+  display: flex;
+  justify-content: space-between;
+  width: 328px;
+}
+
+//Playback options wrapper
+
+.mid-row2 {
+  display: flex;
+  justify-content: space-between;
+  width: 106px;
+  padding-top: 28px;
+
+  @media #{$smalldesktop} {
+    padding-top: 36px;
+  }
+}
