@@ -14,7 +14,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #fff;
+  background-color: $color-semi-darkgrey;
   height: 60vh;
 
   @media #{$smalldesktop} {
