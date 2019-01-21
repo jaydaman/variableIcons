@@ -1,50 +1,94 @@
 ---
 title: Variicons
 ---
-<section class="top-section vert-wrapper">
-    <div class="icon">
-      B
+<!-- <section class="menu-container">
+    <section class="menu-wrap"  id="menuLinks">
+      <a href="#home" class="menu-item__logo">Variicons</a>
+      <a href="javascript:void(0);" class="menu-item__hamburger" onclick="menuExpand()">A</a>
+      <nav class="menu-link-container">
+        <a href="#configurator" class="menu-item active">CONFIGURATOR</a>
+        <a href="#about" class="menu-item">ABOUT</a>
+        <a href="#installation" class="menu-item">INSTALLATION GUIDE</a>
+        <a href="#download" class="menu-item">DOWNLOAD VARIICONS</a>
+        <div class="menu-item__color-pick"></div>
+      </nav>
+    </section>
+</section> -->
+
+<div class="menu-container__block">
+  <section class="menu-container" id="menuLinks">
+    <a href="javascript:void(0)"; class="hamburger" onclick="menuExpand()">A</a>
+    <a href="#home" class="menu-item__logo">Variicons</a>
+    <nav class="menu-container__links">
+      <a href="#"></a>
+      <a href="#"></a>
+      <a href="#" class="menu-item">CONFIGURATOR</a>
+      <a href="#" class="menu-item">ABOUT</a>
+      <a href="#" class="menu-item">INSTALLATION GUIDE</a>
+      <a href="#" class="menu-item">DOWNLOAD VARIICONS</a>
+      <div class="menu-item__color-pick"></div>
+    </nav>
+  </section>
+</div>
+
+
+<section class="top-section">
+    <div class="spacing-block"></div>
+    <div class="wrapper-centered">
+      <div class="icon">
+        B
+      </div>
+      <p>hamburger_1</p>
     </div>
-    <p>hamburger_1</p>
+    <div class="spacing-block"></div>
 </section>
-<section class="bot-section wrapper">
-  <div class="wrapper-row1">
-    <div class="left-row1">
-      <div class="button-large-square line-item-alt">
-        <h4>Ham</h4>
+
+<section class="bottom-section wrapper-col">
+  <div class="wrapper-bottom">
+    <div class="wrapper-col">
+      <div class="left-row1">
+        <div class="button-large-square line-item-alt">
+          <h4>Ham</h4>
+        </div>
+      </div>
+      <div class="left-row2">
+        <p>Select icon</p>
       </div>
     </div>
-    <div class="mid-row1">
-      <div class="button-default-active line-item">
-        <h4>State 1</h4>
+
+    <div class="spacing-block"></div>
+
+    <div class="wrapper-col">
+      <div class="mid-row1">
+        <div class="button-default line-item">
+          <h4>State 1</h4>
+        </div>
+        <div class="button-default line-item">
+          <h4>State 2</h4>
       </div>
-      <div class="button-default-idle line-item">
-        <h4>State 2</h4>
-    </div>
-    </div>
-    <div class="right-row1">
-      <div class="button-default-active line-item">
-        <h4>Configure</h4>
       </div>
-      <div class="button-default-idle line-item">
-        <h4>Get code</h4>
-    </div>
-    </div>
-  </div>
-  <div class="wrapper-row2">
-    <div class="left-row2">
-      <p>Select icon</p>
-    </div>
-    <div class="mid-row2">
-      <div class="button-small-square">
-        <h4>Loop</h4>
-      </div>
-      <div class="button-small-square">
-        <h4>Col</h4>
+      <div class="mid-row2">
+        <div class="button-small-square">
+          <h4>Loop</h4>
+        </div>
+        <div class="button-small-square">
+          <h4>Col</h4>
+        </div>
       </div>
     </div>
-    <div class="right-row2">
-      <div class="wicked-box">
+
+    <div class="spacing-block"></div>
+
+    <div class="wrapper-col">
+      <div class="right-row1">
+        <div class="button-default line-item">
+          <h4>Configure</h4>
+        </div>
+        <div class="button-default line-item">
+          <h4>Get code</h4>
+        </div>
+      </div>
+      <div class="right-row2">
         <div class="slider-wrapper">
           <h4>Weight</h4>
           <input type="range" min="1" max="100" value="1" class="slider" id="slider-wght">
@@ -60,9 +104,20 @@ title: Variicons
           <input type="range" min="1" max="100" value="1" class="slider" id="slider-wght">
           <input type="text" class="input-box" id="output-wght">
         </div>
+      </div>
 
+      <div class="wrapper-ease">
+        <h4>Easing</h4>
+        <div class="wrapper-button">
+          <div class="button-long">
+            <h4>linear</h4>
+          </div>
+          <div class="button-long">
+            <h4>cubic-bezier</h4>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
 
+  </div>
 </section>

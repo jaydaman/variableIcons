@@ -1,0 +1,121 @@
+//Configure & Get code component
+
+//Configure state
+
+//Button wrapper
+
+.right-row1 {
+  display: flex;
+  justify-content: space-between;
+  width: 328px;
+
+  @media #{$smalldesktop} {
+    display: none;
+  }
+}
+
+//Slider component
+
+//Wrapper
+
+.right-row2 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 328px;
+  padding-top: 12px;
+
+  @media #{$smalldesktop} {
+    display: none;
+  }
+
+  //Sliders
+
+  .slider-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 328px;
+    padding-top: 20px;
+
+    h4 {
+      font-weight: 300;
+    }
+
+    .input-box {
+      border: none;
+      height: 32px;
+      width: 64px;
+      background-color: $color-mediumgrey;
+      border-radius: 4px;
+      box-shadow: 1px 2px 8px rgba(0, 0, 6, 0.2);
+      font-family: "SourceSansVariable";
+      font-size: 1em;
+      font-weight: 300;
+      letter-spacing: 0.8px;
+      color: $color-white;
+      padding-left: 8px;
+      transition: 0.07s ease;
+
+      &:hover {
+        background-color: #515151;
+      }
+    }
+
+    .slider {
+      appearance: none;
+      width: 160px;
+      height: 3px;
+      background: $color-lightgrey;
+      outline: none;
+    }
+
+    .slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 21px;
+      height: 21px;
+      border-radius: 25px;
+      background: $color-mediumgrey;
+      box-shadow: 1px 2px 8px rgba(0, 0, 6, 0.2);
+      cursor: pointer;
+      transition: 0.07s ease;
+
+      &:active {
+        width: 25px;
+        height: 25px;
+        background-color: #515151;
+      }
+
+      &:hover {
+        background-color: #515151;
+      }
+    }
+  }
+}
+
+//Easing component
+
+.wrapper-ease {
+  display: flex;
+  justify-content: space-between;
+  width: 328px;
+  padding-top: 20px;
+
+  @media #{$smalldesktop} {
+    display: none;
+  }
+
+  h4 {
+    font-weight: 300;
+  }
+
+  .wrapper-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 21px;
+    width: 255px;
+    height: 96px;
+  }
+}

@@ -1,0 +1,28 @@
+//Icon menu component
+
+//Icon menu idle
+
+//Button wrapper
+
+.left-row1 {
+  display: flex;
+  justify-content: center;
+  width: 328px;
+
+  @media #{$smalldesktop} {
+    padding-top: 24px;
+  }
+
+  @media #{$mobile} {
+    padding-top: 16px;
+  }
+}
+
+//Button text wrapper
+
+.left-row2 {
+  display: flex;
+  justify-content: center;
+  white-space: nowrap;
+  padding-top: 12px;
+}

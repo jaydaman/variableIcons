@@ -1,0 +1,150 @@
+//Header component
+
+.active {
+  color: #fff;
+}
+
+.menu-container {
+  height: 4vh;
+  background-color: $color-semi-darkgrey;
+  display: flex;
+  justify-content: center;
+
+  a {
+    color: #999999;
+    transition: 0.07s ease;
+    white-space: nowrap;
+
+    &:hover {
+      color: #fff;
+    }
+
+    &:focus &:active {
+      color: #fff;
+    }
+  }
+
+  @media #{$mobile} {
+    z-index: 2;
+  }
+}
+
+//Menu content
+
+.menu-wrap {
+  width: 75vw;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @media #{$smalldesktop} {
+    width: 100vw;
+    padding: 0px 20px 0px 20px;
+  }
+
+  @media #{$mobile} {
+    border: 1px solid white;
+    flex-direction: column;
+    a.menu-item__hamburger {
+      display: block;
+    }
+  }
+
+  .menu-item__hamburger {
+    z-index: 3;
+    display: none;
+    font-family: "Variicon";
+    font-size: 40px;
+    font-variation-settings: "TIME" 0, "wdth" 100, "wght" 20;
+    transition: 0.13s cubic-bezier(0.88, 0.01, 0.72, 1);
+  }
+}
+
+.menu-wrap.responsive .menu-item__hamburger {
+  @media #{$mobile} {
+    font-variation-settings: "TIME" 100, "wdth" 100, "wght" 20;
+  }
+}
+
+.menu-wrap .responsive {
+  @media #{$mobile} {
+    flex-direction: column;
+
+    .menu-item {
+      padding-left: 0px;
+    }
+  }
+}
+
+.menu-wrap.responsive a:not(:first-child) {
+  @media #{$mobile} {
+    display: block;
+  }
+}
+
+//Menu logo
+
+.menu-item__logo {
+  color: #999999;
+  transition: 0.07s ease;
+
+  &:hover {
+    color: #fff;
+  }
+
+  @media #{$mobile} {
+    display: none;
+  }
+}
+
+//Menu links
+
+.menu-link-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: wrap;
+
+  @media #{$mobile} {
+    flex-direction: column;
+    border: 1px solid white;
+
+    a {
+      display: none;
+    }
+
+    div {
+      display: none;
+    }
+  }
+
+  .menu-item {
+    padding-left: 48px;
+  }
+
+  //Color picker
+
+  .menu-item__color-pick {
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    background-color: #999999;
+    margin-left: 48px;
+    transition: 0.07s ease;
+
+    &:hover {
+      background-color: #fff;
+      cursor: pointer;
+    }
+
+    &:active {
+      background-color: #fff;
+    }
+  }
+}
+
+.menu-wrap.responsive .menu-link-container {
+  @media #{$mobile} {
+    flex-direction: column;
+  }
+}

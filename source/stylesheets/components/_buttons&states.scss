@@ -1,34 +1,3 @@
-a {
-  color: $color-black;
-  text-decoration: none;
-  transition: background-color 0.1s;
-
-  &:focus,
-  &:hover {
-    background-color: $color-hover;
-  }
-}
-
-.button-full {
-  width: 100%;
-  height: 64px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.button-half {
-  width: 50%;
-  height: 64px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  @media #{$desktop} {
-    width: 100%;
-  }
-}
-
 .button-default-active {
   width: 160px;
   height: 48px;
@@ -38,9 +7,15 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 0.07s ease;
+
+  &:hover {
+    background-color: #515151;
+    cursor: pointer;
+  }
 }
 
-.button-default-idle {
+.button-default {
   width: 160px;
   height: 48px;
   background-color: $color-mediumgrey;
@@ -49,6 +24,36 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 0.07s ease;
+
+  &:hover {
+    background-color: #515151;
+    cursor: pointer;
+  }
+
+  &:active {
+    background-color: $color-black;
+  }
+}
+
+.button-long {
+  height: 40px;
+  background-color: $color-mediumgrey;
+  border-radius: 4px;
+  box-shadow: 1px 2px 8px rgba(0, 0, 6, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.07s ease;
+
+  &:hover {
+    background-color: #515151;
+    cursor: pointer;
+  }
+
+  &:active {
+    background-color: $color-black;
+  }
 }
 
 .button-large-square {
@@ -60,6 +65,12 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 0.07s ease;
+
+  &:hover {
+    background-color: #515151;
+    cursor: pointer;
+  }
 }
 
 .button-small-square {
@@ -71,4 +82,14 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 0.07s ease;
+
+  &:hover {
+    background-color: #515151;
+    cursor: pointer;
+  }
+
+  &:active {
+    background-color: $color-black;
+  }
 }

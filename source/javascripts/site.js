@@ -23,6 +23,15 @@ var fontSize = function(fs) {
   return '"font-size"' + fs + "";
 };
 
+function menuExpand() {
+  var hamburger = document.getElementById("menuLinks");
+  if (hamburger.className === "menu-container") {
+    hamburger.className += " expanded";
+  } else {
+    hamburger.className = "menu-container";
+  }
+}
+
 fontbox.style.fontSize = fontSize(sliderFontsize);
 
 icon.style.fontVariationSettings = settingsString(
