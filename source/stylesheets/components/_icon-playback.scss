@@ -52,3 +52,44 @@
     padding-top: 36px;
   }
 }
+
+// Color theme picker
+
+.color-theme-picker-container {
+  display: flex;
+}
+
+.color-theme-picker {
+  display: none;
+  justify-content: space-around;
+  position: absolute;
+  width: 160px;
+  height: 48px;
+
+  .color-pick-expand {
+    display: flex;
+  }
+}
+
+.theme-pick {
+  width: 24px;
+  height: 24px;
+  border-radius: 50px;
+  background-color: $color-bright;
+}
+
+.col-dark {
+  background-color: $color-darkgrey;
+}
+
+.col-light {
+  background-color: $color-bright;
+}
+
+.col-yellow {
+  background-color: yellow;
+}
+
+.col-blue {
+  background-color: blue;
+}
