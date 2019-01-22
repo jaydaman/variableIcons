@@ -1,5 +1,15 @@
 // This is where it all goes :)
 
+// Color theme pick animation
+
+function colorThemePicker() {
+  var colorPick = document.getElementById("color-pick");
+  if (colorPick.className === "color-theme-picker") {
+    colorPick.className += " color-pick-expand";
+  } else {
+    colorPick.className = "color-theme-picker";
+  }
+}
 // General button state toggle
 
 function buttonToggle() {
