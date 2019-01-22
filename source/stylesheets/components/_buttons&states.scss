@@ -1,21 +1,4 @@
-.button-default-active {
-  width: 160px;
-  height: 48px;
-  background-color: $color-black;
-  border-radius: 4px;
-  box-shadow: 1px 2px 8px rgba(0, 0, 6, 0.2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: 0.07s ease;
-
-  &:hover {
-    background-color: #515151;
-    cursor: pointer;
-  }
-}
-
-.button-default {
+.btn {
   width: 160px;
   height: 48px;
   background-color: $color-mediumgrey;
@@ -30,10 +13,10 @@
     background-color: #515151;
     cursor: pointer;
   }
+}
 
-  &:active {
-    background-color: $color-black;
-  }
+.active {
+  background-color: $color-black;
 }
 
 .button-long {

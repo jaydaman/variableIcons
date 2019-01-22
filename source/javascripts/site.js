@@ -1,5 +1,39 @@
 // This is where it all goes :)
 
+// Active button states
+
+var btnContainer = document.getElementById("btnContainer");
+var btns = document.getElementsByClassName("btn");
+
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+
+// Hamburger menu function
+
+function menuExpand() {
+  var hamburger = document.getElementById("menuExpand");
+  if (hamburger.className === "menu-container") {
+    hamburger.className += " expanded";
+  } else {
+    hamburger.className = "menu-container";
+  }
+}
+
+function iconAnimate() {
+  var iconState = document.getElementById("iconAnimate");
+  if (iconState.className === "icon") {
+    iconState.className += " animate";
+  } else {
+    iconState.className = "icon";
+  }
+}
+// Configure sliders
+
 var slider1 = document.getElementById("slider-TIME");
 var output1 = document.getElementById("output-TIME");
 var slider2 = document.getElementById("slider-wght");
@@ -23,22 +57,13 @@ var fontSize = function(fs) {
   return '"font-size"' + fs + "";
 };
 
-function menuExpand() {
-  var hamburger = document.getElementById("menuLinks");
-  if (hamburger.className === "menu-container") {
-    hamburger.className += " expanded";
-  } else {
-    hamburger.className = "menu-container";
-  }
-}
-
-fontbox.style.fontSize = fontSize(sliderFontsize);
-
-icon.style.fontVariationSettings = settingsString(
-  sliderTime,
-  sliderWeight,
-  sliderWidth
-);
+// fontbox.style.fontSize = fontSize(sliderFontsize);
+//
+// icon.style.fontVariationSettings = settingsString(
+//   sliderTime,
+//   sliderWeight,
+//   sliderWidth
+// );
 
 //Slider value for "TIME"
 

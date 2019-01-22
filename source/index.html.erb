@@ -2,7 +2,7 @@
 title: Variicons
 ---
 <div class="menu-container__block">
-  <section class="menu-container" id="menuLinks">
+  <section class="menu-container" id="menuExpand">
     <a href="javascript:void(0)"; class="hamburger" onclick="menuExpand()">A</a>
     <a href="#home" class="menu-item__logo">Variicons</a>
     <nav class="menu-container__links">
@@ -21,7 +21,7 @@ title: Variicons
 <section class="top-section">
     <div class="spacing-block"></div>
     <div class="wrapper-centered">
-      <div class="icon">
+      <div class="icon" id="iconAnimate">
         B
       </div>
       <p>hamburger_1</p>
@@ -45,15 +45,15 @@ title: Variicons
     <div class="spacing-block"></div>
 
     <div class="wrapper-col">
-      <div class="mid-row1">
-        <div class="button-default line-item">
+      <div class="btn-container-row1" id="btnContainer">
+        <div class="btn active line-item" onclick="iconAnimate()">
           <h4>State 1</h4>
         </div>
-        <div class="button-default line-item">
+        <div class="btn line-item" onclick="iconAnimate()">
           <h4>State 2</h4>
       </div>
       </div>
-      <div class="mid-row2">
+      <div class="btn-container-row2">
         <div class="button-small-square">
           <h4>Loop</h4>
         </div>
@@ -67,10 +67,10 @@ title: Variicons
 
     <div class="wrapper-col">
       <div class="right-row1">
-        <div class="button-default line-item">
+        <div class="btn line-item">
           <h4>Configure</h4>
         </div>
-        <div class="button-default line-item">
+        <div class="btn line-item">
           <h4>Get code</h4>
         </div>
       </div>

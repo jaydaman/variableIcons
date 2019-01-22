@@ -7,6 +7,7 @@
   color: $color-bright;
   font-size: 25vmin;
   font-variation-settings: "TIME" 0, "wdth" 80, "wght" 30;
+  transition: font-variation-settings 0.4s cubic-bezier(0.75, 0, 0, 1);
 
   @media #{$smalldesktop} {
     font-size: 30vmin;
@@ -15,6 +16,11 @@
   @media #{$mobile} {
     font-size: 50vmin;
   }
+}
+
+.icon.animate {
+  font-variation-settings: "TIME" 100, "wdth" 80, "wght" 30;
+  transition: font-variation-settings 0.4s cubic-bezier(0.75, 0, 0, 1);
 }
 
 .wrapper-centered {
@@ -28,7 +34,7 @@
 
 //State button wrapper
 
-.mid-row1 {
+.btn-container-row1 {
   display: flex;
   justify-content: space-between;
   width: 328px;
@@ -36,7 +42,7 @@
 
 //Playback options wrapper
 
-.mid-row2 {
+.btn-container-row2 {
   display: flex;
   justify-content: space-between;
   width: 106px;
@@ -45,4 +51,7 @@
   @media #{$smalldesktop} {
     padding-top: 36px;
   }
+}
+
+#variicon:hover {
 }
