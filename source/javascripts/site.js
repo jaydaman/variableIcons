@@ -1,9 +1,16 @@
 // This is where it all goes :)
 
-// Active button states
+// General button state toggle
+
+function buttonToggle() {
+  var element = document.getElementById("buttonToggle");
+  element.classList.toggle("btnActive");
+}
+
+// Selected icon states button toggle
 
 var btnContainer = document.getElementById("btnContainer");
-var btns = document.getElementsByClassName("btn");
+var btns = document.getElementsByClassName("btnClick");
 
 for (var i = 0; i < btns.length; i++) {
   btns[i].addEventListener("click", function() {
