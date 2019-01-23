@@ -2,7 +2,14 @@
 
 //Active icon
 
-.icon {
+.top-section__icon-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-section__icon {
   font-family: "Variicon";
   color: $color-bright;
   font-size: 25vmin;
@@ -18,23 +25,16 @@
   }
 }
 
-.icon.animate {
+.top-section__icon.animate {
   font-variation-settings: "TIME" 100, "wdth" 80, "wght" 30;
   transition: font-variation-settings 0.4s cubic-bezier(0.75, 0, 0, 1);
-}
-
-.wrapper-centered {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 //Icon playback
 
 //State button wrapper
 
-.btn-container-row1 {
+.mid-container1 {
   display: flex;
   justify-content: space-between;
   width: 328px;
@@ -42,7 +42,7 @@
 
 //Playback options wrapper
 
-.btn-container-row2 {
+.mid-container2 {
   display: flex;
   justify-content: space-between;
   width: 106px;
@@ -55,11 +55,11 @@
 
 // Color theme picker
 
-.color-theme-picker-container {
+.theme-picker {
   display: flex;
 }
 
-.color-theme-picker {
+.theme-picker__module {
   display: none;
   justify-content: space-around;
   position: absolute;
@@ -71,7 +71,7 @@
   }
 }
 
-.theme-pick {
+.theme-picker__option {
   width: 24px;
   height: 24px;
   border-radius: 50px;

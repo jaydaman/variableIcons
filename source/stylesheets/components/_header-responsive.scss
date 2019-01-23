@@ -1,10 +1,10 @@
-.menu-container__block {
+.menu-container {
   display: flex;
   width: 100vw;
   justify-content: center;
 }
 
-.menu-container {
+.menu {
   display: flex;
   justify-content: space-between;
   position: absolute;
@@ -60,39 +60,39 @@
   }
 }
 
-.menu-container__links {
+.menu__links {
   display: flex;
   justify-content: space-between;
 
-  .menu-item {
+  .menu__item {
     padding-left: 48px;
   }
 }
 
 @media #{$mobile} {
-  .menu-container.expanded {
+  .menu.expanded {
     flex-direction: column;
     justify-content: flex-start;
     background-color: rgba($color-black, 0.97);
     height: 100vh;
     transition: background-color 0.25s;
 
-    .menu-container__links {
+    .menu__links {
       flex-direction: column;
     }
   }
 }
 
-.menu-container.expanded a.hamburger {
+.menu.expanded a.hamburger {
   font-variation-settings: "TIME" 100, "wdth" 100, "wght" 20;
 }
 
-.menu-container.expanded a:not(:nth-child(-n + 2)) {
+.menu.expanded a:not(:nth-child(-n + 2)) {
   display: block;
   transition: display 2s;
 }
 
-.menu-item__color-pick {
+.menu__item--color-pick {
   width: 20px;
   height: 20px;
   border-radius: 50px;

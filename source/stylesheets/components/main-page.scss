@@ -34,7 +34,7 @@ p {
   }
 }
 
-.wrapper-bottom {
+.bottom-section__container {
   display: flex;
   justify-content: center;
   width: 75vw;
@@ -54,7 +54,7 @@ p {
   margin-top: -32px;
 }
 
-.wrapper-col {
+.flex-col {
   display: flex;
   align-items: center;
   flex-direction: column;

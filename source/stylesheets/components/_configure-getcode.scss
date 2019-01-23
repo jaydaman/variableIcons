@@ -4,7 +4,7 @@
 
 //Button wrapper
 
-.right-row1 {
+.right-container1 {
   display: flex;
   justify-content: space-between;
   width: 328px;
@@ -18,7 +18,7 @@
 
 //Wrapper
 
-.right-row2 {
+.right-container2 {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -96,7 +96,7 @@
 
 //Easing component
 
-.wrapper-ease {
+.easing {
   display: flex;
   justify-content: space-between;
   width: 328px;
@@ -110,7 +110,7 @@
     font-weight: 300;
   }
 
-  .wrapper-button {
+  .easing__button-container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
