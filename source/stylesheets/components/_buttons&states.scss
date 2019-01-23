@@ -8,13 +8,15 @@
   transition: 0.07s ease;
 
   &:hover {
-    background-color: #515151;
+    // background-color: #515151;
+    background-color: $color-black;
     cursor: pointer;
   }
 }
 
 .active {
   background-color: $color-black;
+  pointer-events: none;
 }
 
 .btnActive {

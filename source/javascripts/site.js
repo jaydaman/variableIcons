@@ -2,12 +2,12 @@
 
 // Color theme pick animation
 
-function colorThemePicker() {
-  var colorPick = document.getElementById("color-pick");
-  if (colorPick.className === "color-theme-picker") {
-    colorPick.className += " color-pick-expand";
+function themePicker() {
+  var themePickExpand = document.getElementById("themePicker");
+  if (themePickExpand.className === "theme-picker") {
+    themePickExpand.className += " expand";
   } else {
-    colorPick.className = "color-theme-picker";
+    themePickExpand.className = "theme-picker";
   }
 }
 // General button state toggle

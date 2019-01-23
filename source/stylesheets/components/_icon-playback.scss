@@ -53,6 +53,10 @@
   }
 }
 
+.no-shrink {
+  flex-grow: 0 0 48px;
+}
+
 // Color theme picker
 
 .theme-picker {
@@ -63,33 +67,41 @@
   display: none;
   justify-content: space-around;
   position: absolute;
-  width: 160px;
-  height: 48px;
+  width: 88px;
+  height: 88px;
+  padding: 8px;
 
-  .color-pick-expand {
-    display: flex;
+  .theme-picker__option {
+    width: 32px;
+    height: 32px;
+    border-radius: 50px;
+    background-color: $color-bright;
+  }
+
+  .col-dark {
+    background-color: $color-mediumgrey;
+  }
+
+  .col-light {
+    background-color: $color-bright;
+  }
+
+  .col-yellow {
+    background-color: yellow;
+  }
+
+  .col-blue {
+    background-color: blue;
   }
 }
 
-.theme-picker__option {
-  width: 24px;
-  height: 24px;
-  border-radius: 50px;
-  background-color: $color-bright;
-}
+.theme-picker.expand {
+  .small-sq {
+    // display: none;
+  }
 
-.col-dark {
-  background-color: $color-darkgrey;
-}
-
-.col-light {
-  background-color: $color-bright;
-}
-
-.col-yellow {
-  background-color: yellow;
-}
-
-.col-blue {
-  background-color: blue;
+  .theme-picker__module {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
