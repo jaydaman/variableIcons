@@ -34,19 +34,19 @@ for (var i = 0; i < btns.length; i++) {
 
 function menuExpand() {
   var hamburger = document.getElementById("menuExpand");
-  if (hamburger.className === "menu-container") {
+  if (hamburger.className === "menu") {
     hamburger.className += " expanded";
   } else {
-    hamburger.className = "menu-container";
+    hamburger.className = "menu";
   }
 }
 
 function iconAnimate() {
   var iconState = document.getElementById("iconAnimate");
-  if (iconState.className === "icon") {
+  if (iconState.className === "top-section__icon") {
     iconState.className += " animate";
   } else {
-    iconState.className = "icon";
+    iconState.className = "top-section__icon";
   }
 }
 // Configure sliders
