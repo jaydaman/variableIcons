@@ -18,7 +18,7 @@ title: Variicons
 </div>
 
 
-<section class="top-section">
+<section class="top-section" id="topSection">
     <div class="spacing-block"></div>
     <div class="top-section__icon-container">
       <div class="top-section__icon" id="iconAnimate">
@@ -29,7 +29,7 @@ title: Variicons
     <div class="spacing-block"></div>
 </section>
 
-<section class="bottom-section flex-col">
+<section class="bottom-section flex-col" id="bottomSection">
   <div class="bottom-section__container">
     <div class="flex-col">
       <div class="left-container1">
@@ -57,23 +57,29 @@ title: Variicons
         <div class="btn small-sq no-shrink" onclick="buttonToggle()" id="buttonToggle">
           <i class="material-icons md-light">loop</i>
         </div>
-        <div class="theme-picker" id="themePicker">
+        <div class="theme-picker">
           <div class="btn small-sq" onclick="themePicker()">
             <i class="material-icons md-light">lens</i>
           </div>
-          <div class="btn active theme-picker__module">
-            <div class="theme-picker__option col-dark">
-            </div>
-            <div class="theme-picker__option col-light">
-            </div>
-            <div class="theme-picker__option col-yellow">
-            </div>
-            <div class="theme-picker__option col-blue">
-            </div>
           </div>
         </div>
+        <div class="theme-picker-sheet" id="themePicker">
+          <ol class="theme-picker-sheet__colors">
+            <li class="theme-picker-sheet__color">
+              <button class="theme-picker-sheet__color--background dark"></button>
+            </li>
+            <li class="theme-picker-sheet__color">
+              <button class="theme-picker-sheet__color--background light" onclick="colorLight()"></button>
+            </li>
+            <li class="theme-picker-sheet__color">
+              <button class="theme-picker-sheet__color--background yellow"></button>
+            </li>
+            <li class="theme-picker-sheet__color">
+              <button class="theme-picker-sheet__color--background blue"></button>
+            </li>
+          </ol>
+        </div>
       </div>
-    </div>
 
     <div class="spacing-block"></div>
 

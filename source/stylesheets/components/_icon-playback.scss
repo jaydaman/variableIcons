@@ -63,45 +63,55 @@
   display: flex;
 }
 
-.theme-picker__module {
+.theme-picker-sheet {
   display: none;
-  justify-content: space-around;
-  position: absolute;
-  width: 88px;
-  height: 88px;
-  padding: 8px;
+  padding: 24px;
+}
 
-  .theme-picker__option {
-    width: 32px;
-    height: 32px;
-    border-radius: 50px;
-    background-color: $color-bright;
-  }
+.theme-picker-sheet__colors {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style: none;
 
-  .col-dark {
-    background-color: $color-mediumgrey;
-  }
+  .theme-picker-sheet__color {
+    display: list-item;
+    padding: 0 8px;
 
-  .col-light {
-    background-color: $color-bright;
-  }
-
-  .col-yellow {
-    background-color: yellow;
-  }
-
-  .col-blue {
-    background-color: blue;
+    .theme-picker-sheet__color--background {
+      display: block;
+      height: 32px;
+      width: 32px;
+      border-radius: 50%;
+      border: none;
+    }
   }
 }
 
-.theme-picker.expand {
-  .small-sq {
-    // display: none;
-  }
+.bg-light-top {
+  background-color: #ffffff;
+}
 
-  .theme-picker__module {
-    display: flex;
-    flex-wrap: wrap;
-  }
+.bg-light-bot {
+  background-color: #919191;
+}
+
+.dark {
+  background-color: $color-mediumgrey;
+}
+
+.light {
+  background-color: $color-bright;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.theme-picker-sheet.expand {
+  display: block;
 }

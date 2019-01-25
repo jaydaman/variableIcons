@@ -4,12 +4,38 @@
 
 function themePicker() {
   var themePickExpand = document.getElementById("themePicker");
-  if (themePickExpand.className === "theme-picker") {
+  if (themePickExpand.className === "theme-picker-sheet") {
     themePickExpand.className += " expand";
   } else {
-    themePickExpand.className = "theme-picker";
+    themePickExpand.className = "theme-picker-sheet";
   }
 }
+
+// Color theme background change
+
+function colorLight() {
+  colorLightTop();
+  colorLightBottom();
+}
+
+function colorLightTop() {
+  var colorChange = document.getElementById("topSection");
+  if (colorChange.className === "top-section") {
+    colorChange.className += " bg-light-top";
+  } else {
+    colorChange.className = "top-section";
+  }
+}
+
+function colorLightBottom() {
+  var colorChange = document.getElementById("bottomSection");
+  if (colorChange.className === "bottom-section") {
+    colorChange.className += " bg-light-bot";
+  } else {
+    colorChange.className = "bottom-section";
+  }
+}
+
 // General button state toggle
 
 function buttonToggle() {
