@@ -8,7 +8,7 @@ p {
   text-align: center;
 }
 
-// Top section
+// Top section background themes
 
 .top-section {
   display: flex;
@@ -22,7 +22,13 @@ p {
   }
 }
 
-// Bottom section
+// Light theme
+
+.top-section.top-light {
+  background-color: #fff;
+}
+
+// Bottom section background themes
 
 .bottom-section {
   background-color: $color-darkgrey;
@@ -33,6 +39,18 @@ p {
     height: 50vh;
   }
 }
+
+// Light theme
+
+.bottom-section.bot-light {
+  background-color: #919191;
+
+  @media #{$smalldesktop} {
+    background-color: #fff;
+  }
+}
+
+// Bottom section content
 
 .bottom-section__container {
   display: flex;

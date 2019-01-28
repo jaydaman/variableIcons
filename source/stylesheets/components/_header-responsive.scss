@@ -60,6 +60,21 @@
   }
 }
 
+.menu.menu-dark {
+  a {
+    color: #121212;
+    transition: 0.03s ease;
+
+    &:hover {
+      color: #313131;
+    }
+
+    &:focus &:active {
+      color: #313131;
+    }
+  }
+}
+
 .menu__links {
   display: flex;
   justify-content: space-between;

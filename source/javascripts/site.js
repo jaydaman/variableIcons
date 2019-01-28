@@ -13,28 +13,24 @@ function themePicker() {
 
 // Color theme background change
 
-function colorLight() {
-  colorLightTop();
-  colorLightBottom();
-}
+const topSection = document.getElementById("topSection");
+const botSection = document.getElementById("bottomSection");
+const menu = document.querySelector(".menu");
+const mainIcon = document.getElementById("iconAnimate");
+const themeDark = document.getElementById("themeDark");
+const themeLight = document.getElementById("themeLight");
+const themeYellow = document.getElementById("themeYellow");
+const themeBlue = document.getElementById("themeBlue");
+const iconName = document.getElementById("iconName");
 
-function colorLightTop() {
-  var colorChange = document.getElementById("topSection");
-  if (colorChange.className === "top-section") {
-    colorChange.className += " bg-light-top";
-  } else {
-    colorChange.className = "top-section";
-  }
-}
-
-function colorLightBottom() {
-  var colorChange = document.getElementById("bottomSection");
-  if (colorChange.className === "bottom-section") {
-    colorChange.className += " bg-light-bot";
-  } else {
-    colorChange.className = "bottom-section";
-  }
-}
+themeLight.addEventListener("click", () => {
+  topSection.className += " top-light";
+  botSection.className += " bot-light";
+  mainIcon.style.color = "#121212";
+  iconName.style.color = "#121212";
+  iconName.style.fontWeight = "600";
+  menu.className += " menu-dark";
+});
 
 // General button state toggle
 
@@ -86,11 +82,11 @@ var output3 = document.getElementById("output-wdth");
 var slider4 = document.getElementById("slider-fontsize");
 var output4 = document.getElementById("output-fontsize");
 var icon = document.querySelector(".js-icon");
-var sliderTime = slider1.value,
-  sliderWidth = slider2.value,
-  sliderWeight = slider3.value,
-  sliderFontsize = slider4.value;
-output1.innerHTML = slider1.value;
+// var sliderTime = slider1.value,
+// sliderWidth = slider2.value,
+// sliderWeight = slider3.value,
+// sliderFontsize = slider4.value;
+// output1.innerHTML = slider1.value;
 
 var settingsString = function(t, wd, wg) {
   return '"TIME" ' + t + ', "wdth" ' + wd + ', "wght" ' + wg + "";
