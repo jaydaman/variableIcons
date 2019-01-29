@@ -46,19 +46,16 @@
       border: none;
       height: 32px;
       width: 64px;
-      background-color: $color-mediumgrey;
       border-radius: 4px;
-      box-shadow: 1px 2px 8px rgba(0, 0, 6, 0.2);
       font-family: "SourceSansVariable";
       font-size: 1em;
       font-weight: 300;
       letter-spacing: 0.8px;
-      color: $color-white;
       padding-left: 8px;
       transition: 0.07s ease;
 
       &:hover {
-        background-color: #515151;
+        background-color: $color-black;
       }
     }
 
@@ -66,7 +63,6 @@
       appearance: none;
       width: 160px;
       height: 3px;
-      background: #c9c9c9;
       outline: none;
     }
 
@@ -76,7 +72,6 @@
       width: 21px;
       height: 21px;
       border-radius: 25px;
-      background: $color-mediumgrey;
       box-shadow: 1px 2px 8px rgba(0, 0, 6, 0.2);
       cursor: pointer;
       transition: 0.07s ease;

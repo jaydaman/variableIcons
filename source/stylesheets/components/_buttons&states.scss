@@ -10,21 +10,7 @@ button {
   align-items: center;
   justify-content: center;
   transition: 0.07s ease;
-
-  &:hover {
-    // background-color: #515151;
-    background-color: $color-black;
-    cursor: pointer;
-  }
-}
-
-.active {
-  background-color: $color-black;
-  pointer-events: none;
-}
-
-.btnActive {
-  background-color: $color-black;
+  cursor: pointer;
 }
 
 .btn-normal {
@@ -82,8 +68,4 @@ button {
 .small-sq {
   width: 48px;
   height: 48px;
-}
-
-.md-light {
-  color: #fff;
 }
