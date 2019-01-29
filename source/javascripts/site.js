@@ -17,19 +17,17 @@ const topSection = document.getElementById("topSection");
 const botSection = document.getElementById("bottomSection");
 const menu = document.querySelector(".menu");
 const mainIcon = document.getElementById("iconAnimate");
-const themeDark = document.getElementById("themeDark");
-const themeLight = document.getElementById("themeLight");
-const themeYellow = document.getElementById("themeYellow");
-const themeBlue = document.getElementById("themeBlue");
+const themeButtons = document.querySelectorAll(".js-theme-button");
 const iconName = document.getElementById("iconName");
+const themeContainer = document.querySelector(".js-theme");
 
-themeLight.addEventListener("click", () => {
-  topSection.className += " top-light";
-  botSection.className += " bot-light";
-  mainIcon.style.color = "#121212";
-  iconName.style.color = "#121212";
-  iconName.style.fontWeight = "600";
-  menu.className += " menu-dark";
+console.log(themeButtons);
+
+Array.prototype.slice.call(themeButtons).forEach(el => {
+  el.addEventListener("click", function() {
+    const theme = this.getAttribute("data-theme");
+    themeContainer.className = "js-theme theme-" + theme;
+  });
 });
 
 // General button state toggle
@@ -106,49 +104,49 @@ var fontSize = function(fs) {
 
 //Slider value for "TIME"
 
-slider1.oninput = function() {
-  sliderTime = this.value;
-  icon.style.fontVariationSettings = settingsString(
-    sliderTime,
-    sliderWeight,
-    sliderWidth
-  );
-  output1.innerHTML = this.value;
-};
-
-//Slider value for "wght"
-
-output2.innerHTML = slider2.value;
-slider2.oninput = function() {
-  sliderWidth = this.value;
-  icon.style.fontVariationSettings = settingsString(
-    sliderTime,
-    sliderWeight,
-    sliderWidth
-  );
-  output2.innerHTML = this.value;
-};
-
-//Slider value for "wdth"
-
-output3.innerHTML = slider3.value;
-
-slider3.oninput = function() {
-  sliderWeight = this.value;
-  icon.style.fontVariationSettings = settingsString(
-    sliderTime,
-    sliderWeight,
-    sliderWidth
-  );
-  output3.innerHTML = this.value;
-};
-
-//Slider value for font-size
-
-slider4.oninput = function() {
-  sliderFontsize = this.value;
-  fontbox.style.fontSize = fontSize(sliderFontsize);
-  output4.innerHTML = this.value;
-};
+// slider1.oninput = function() {
+//   sliderTime = this.value;
+//   icon.style.fontVariationSettings = settingsString(
+//     sliderTime,
+//     sliderWeight,
+//     sliderWidth
+//   );
+//   output1.innerHTML = this.value;
+// };
+//
+// //Slider value for "wght"
+//
+// output2.innerHTML = slider2.value;
+// slider2.oninput = function() {
+//   sliderWidth = this.value;
+//   icon.style.fontVariationSettings = settingsString(
+//     sliderTime,
+//     sliderWeight,
+//     sliderWidth
+//   );
+//   output2.innerHTML = this.value;
+// };
+//
+// //Slider value for "wdth"
+//
+// output3.innerHTML = slider3.value;
+//
+// slider3.oninput = function() {
+//   sliderWeight = this.value;
+//   icon.style.fontVariationSettings = settingsString(
+//     sliderTime,
+//     sliderWeight,
+//     sliderWidth
+//   );
+//   output3.innerHTML = this.value;
+// };
+//
+// //Slider value for font-size
+//
+// slider4.oninput = function() {
+//   sliderFontsize = this.value;
+//   fontbox.style.fontSize = fontSize(sliderFontsize);
+//   output4.innerHTML = this.value;
+// };
 
 //    font-variation-settings: "TIME" 0, "wdth" 100, "wght" 30;

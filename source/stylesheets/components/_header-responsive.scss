@@ -33,19 +33,6 @@
     }
   }
 
-  a {
-    color: #999999;
-    transition: 0.03s ease;
-
-    &:hover {
-      color: #fff;
-    }
-
-    &:focus &:active {
-      color: #fff;
-    }
-  }
-
   .hamburger {
     display: none;
     font-family: "Variicon";
@@ -60,7 +47,7 @@
   }
 }
 
-.menu.menu-dark {
+.theme-l {
   a {
     color: #121212;
     transition: 0.03s ease;

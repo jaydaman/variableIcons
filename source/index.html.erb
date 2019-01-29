@@ -1,6 +1,7 @@
 ---
 title: Variicons
 ---
+<div class="js-theme theme-dark">
 <div class="menu-container">
   <section class="menu" id="menuExpand">
     <a href="javascript:void(0)"; class="hamburger" onclick="menuExpand()">A</a>
@@ -18,110 +19,112 @@ title: Variicons
 </div>
 
 
-<section class="top-section" id="topSection">
-    <div class="spacing-block"></div>
-    <div class="top-section__icon-container">
-      <div class="top-section__icon" id="iconAnimate">
-        B
+    <section class="top-section">
+        <div class="spacing-block"></div>
+        <div class="top-section__icon-container">
+          <div class="top-section__icon" id="iconAnimate">
+            B
+          </div>
+          <p id="iconName">hamburger_1</p>
+        </div>
+        <div class="spacing-block"></div>
+    </section>
+
+  <section class="bottom-section flex-col">
+
+    <div class="bottom-section__container">
+      <div class="flex-col">
+        <div class="left-container1">
+          <div class="btn large-sq hamburger2 fs-32 line-item-alt btnActive">
+            B
+          </div>
+        </div>
+        <div class="left-container2">
+          <h4>Select icon</h4>
+        </div>
       </div>
-      <p id="iconName">hamburger_1</p>
+
+      <div class="spacing-block"></div>
+
+      <div class="flex-col">
+        <div class="mid-container1" id="btnContainer">
+          <div class="btn btn-normal line-item btnClick active" onclick="iconAnimate()">
+            <h4>State 1</h4>
+          </div>
+          <div class="btn btn-normal line-item btnClick" onclick="iconAnimate()">
+            <h4>State 2</h4>
+        </div>
+        </div>
+        <div class="mid-container2">
+          <div class="btn small-sq no-shrink" onclick="buttonToggle()" id="buttonToggle">
+            <i class="material-icons md-col">loop</i>
+          </div>
+          <div class="theme-picker">
+            <div class="btn small-sq" onclick="themePicker()">
+              <i class="material-icons md-col">lens</i>
+            </div>
+            </div>
+          </div>
+          <div class="theme-picker-sheet" id="themePicker">
+            <ol class="theme-picker-sheet__colors">
+              <li class="theme-picker-sheet__color">
+                <button class="js-theme-button theme-picker-sheet__color--background" data-theme="dark"></button>
+              </li>
+              <li class="theme-picker-sheet__color">
+                <button class="js-theme-button theme-picker-sheet__color--background" data-theme="light"></button>
+              </li>
+              <li class="theme-picker-sheet__color">
+                <button class="js-theme-button theme-picker-sheet__color--background" data-theme="yellow"></button>
+              </li>
+              <li class="theme-picker-sheet__color">
+                <button class="js-theme-button theme-picker-sheet__color--background" data-theme="blue"></button>
+              </li>
+            </ol>
+          </div>
+        </div>
+
+      <div class="spacing-block"></div>
+
+      <div class="flex-col">
+        <div class="right-container1">
+          <div class="btn btn-normal line-item active">
+            <h4>Configure</h4>
+          </div>
+          <div class="btn btn-normal line-item">
+            <h4>Get code</h4>
+          </div>
+        </div>
+        <div class="right-container2">
+          <div class="slider-wrapper">
+            <h4>Weight</h4>
+            <input type="range" min="1" max="100" value="1" class="slider" id="slider-wght">
+            <input type="text" class="input-box" id="output-wght">
+          </div>
+          <div class="slider-wrapper">
+            <h4>Width</h4>
+            <input type="range" min="1" max="100" value="1" class="slider" id="slider-wght">
+            <input type="text" class="input-box" id="output-wght">
+          </div>
+          <div class="slider-wrapper">
+            <h4>Duration</h4>
+            <input type="range" min="1" max="100" value="1" class="slider" id="slider-wght">
+            <input type="text" class="input-box" id="output-wght">
+          </div>
+        </div>
+
+        <div class="easing">
+          <h4>Easing</h4>
+          <div class="easing__button-container">
+            <div class="btn btn-thin">
+              <h4>linear</h4>
+            </div>
+            <div class="btn btn-thin">
+              <h4>cubic-bezier</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
-    <div class="spacing-block"></div>
-</section>
-
-<section class="bottom-section flex-col" id="bottomSection">
-  <div class="bottom-section__container">
-    <div class="flex-col">
-      <div class="left-container1">
-        <div class="btn large-sq hamburger2 fs-32 line-item-alt btnActive">
-          B
-        </div>
-      </div>
-      <div class="left-container2">
-        <p>Select icon</p>
-      </div>
-    </div>
-
-    <div class="spacing-block"></div>
-
-    <div class="flex-col">
-      <div class="mid-container1" id="btnContainer">
-        <div class="btn btn-normal line-item btnClick active" onclick="iconAnimate()">
-          <h4>State 1</h4>
-        </div>
-        <div class="btn btn-normal line-item btnClick" onclick="iconAnimate()">
-          <h4>State 2</h4>
-      </div>
-      </div>
-      <div class="mid-container2">
-        <div class="btn small-sq no-shrink" onclick="buttonToggle()" id="buttonToggle">
-          <i class="material-icons md-light">loop</i>
-        </div>
-        <div class="theme-picker">
-          <div class="btn small-sq" onclick="themePicker()">
-            <i class="material-icons md-light">lens</i>
-          </div>
-          </div>
-        </div>
-        <div class="theme-picker-sheet" id="themePicker">
-          <ol class="theme-picker-sheet__colors">
-            <li class="theme-picker-sheet__color">
-              <button class="theme-picker-sheet__color--background" id="themeDark"></button>
-            </li>
-            <li class="theme-picker-sheet__color">
-              <button class="theme-picker-sheet__color--background" id="themeLight"></button>
-            </li>
-            <li class="theme-picker-sheet__color">
-              <button class="theme-picker-sheet__color--background" id="themeYellow"></button>
-            </li>
-            <li class="theme-picker-sheet__color">
-              <button class="theme-picker-sheet__color--background" id="themeBlue"></button>
-            </li>
-          </ol>
-        </div>
-      </div>
-
-    <div class="spacing-block"></div>
-
-    <div class="flex-col">
-      <div class="right-container1">
-        <div class="btn btn-normal line-item btnActive">
-          <h4>Configure</h4>
-        </div>
-        <div class="btn btn-normal line-item">
-          <h4>Get code</h4>
-        </div>
-      </div>
-      <div class="right-container2">
-        <div class="slider-wrapper">
-          <h4>Weight</h4>
-          <input type="range" min="1" max="100" value="1" class="slider" id="slider-wght">
-          <input type="text" class="input-box" id="output-wght">
-        </div>
-        <div class="slider-wrapper">
-          <h4>Width</h4>
-          <input type="range" min="1" max="100" value="1" class="slider" id="slider-wght">
-          <input type="text" class="input-box" id="output-wght">
-        </div>
-        <div class="slider-wrapper">
-          <h4>Duration</h4>
-          <input type="range" min="1" max="100" value="1" class="slider" id="slider-wght">
-          <input type="text" class="input-box" id="output-wght">
-        </div>
-      </div>
-
-      <div class="easing">
-        <h4>Easing</h4>
-        <div class="easing__button-container">
-          <div class="btn btn-thin">
-            <h4>linear</h4>
-          </div>
-          <div class="btn btn-thin">
-            <h4>cubic-bezier</h4>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
+  </section>
+</div>
