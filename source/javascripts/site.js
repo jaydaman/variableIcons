@@ -13,15 +13,11 @@ function themePicker() {
 
 // Color theme background change
 
-const topSection = document.getElementById("topSection");
-const botSection = document.getElementById("bottomSection");
-const menu = document.querySelector(".menu");
-const mainIcon = document.getElementById("iconAnimate");
 const themeButtons = document.querySelectorAll(".js-theme-button");
 const iconName = document.getElementById("iconName");
 const themeContainer = document.querySelector(".js-theme");
 
-console.log(themeButtons);
+// console.log(themeButtons);
 
 Array.prototype.slice.call(themeButtons).forEach(el => {
   el.addEventListener("click", function() {
@@ -30,12 +26,17 @@ Array.prototype.slice.call(themeButtons).forEach(el => {
   });
 });
 
-// General button state toggle
+// Loop button state toggle
 
-function buttonToggle() {
-  var element = document.getElementById("buttonToggle");
-  element.classList.toggle("btnActive");
-}
+var loopButton = document.getElementById("loopButton");
+var iconAnimation = document.querySelector(".js-animation");
+
+console.log(loopButton, iconAnimation);
+
+// function buttonToggle() {
+//   loopButton.classList.toggle("btnActive");
+//   loopButton.addEventListener("click", function() {});
+// }
 
 // Selected icon states button toggle
 
@@ -60,6 +61,8 @@ function menuExpand() {
     hamburger.className = "menu";
   }
 }
+
+// Icon animation
 
 function iconAnimate() {
   var iconState = document.getElementById("iconAnimate");
