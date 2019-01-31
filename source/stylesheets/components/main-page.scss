@@ -9,7 +9,6 @@ p {
 }
 
 // Top section background themes
-
 .top-section {
   display: flex;
   align-items: center;
@@ -22,7 +21,6 @@ p {
 }
 
 // Bottom section background themes
-
 .bottom-section {
   height: 40vh;
 
@@ -32,7 +30,6 @@ p {
 }
 
 // Bottom section content
-
 .bottom-section__container {
   display: flex;
   justify-content: center;
@@ -44,7 +41,6 @@ p {
 }
 
 //General
-
 .line-item {
   margin-top: -24px;
 }
@@ -65,312 +61,13 @@ p {
 
 // Color themes
 
-// Light theme
-
-.theme-light {
-  h4 {
-    color: #5d5d5d;
-  }
-
-  // Menu color
-
-  .menu {
-    a {
-      color: rgba(93, 93, 93, 0.5);
-      transition: 0.03s ease;
-
-      &:hover {
-        color: #5d5d5d;
-      }
-
-      &:focus &:active {
-        color: #5d5d5d;
-      }
-    }
-  }
-
-  // Top section color
-
-  .top-section {
-    background-color: #fff;
-    transition: 0.3s ease;
-  }
-
-  .top-section__icon-container {
-    p {
-      color: #121212;
-    }
-  }
-
-  .top-section__icon {
-    color: #121212;
-  }
-
-  // Bottom section color
-
-  .bottom-section {
-    background-color: #dedede;
-    transition: 0.3s ease;
-  }
-
-  // Button colors
-
-  .btn {
-    background-color: #ededed;
-    box-shadow: 1px 2px 8px rgba(177, 177, 177, 0.2);
-
-    &:hover {
-      background-color: $color-black;
-
-      h4 {
-        color: #fff;
-      }
-    }
-  }
-
-  .active {
-    background-color: $color-black;
-
-    h4 {
-      color: #fff;
-    }
-  }
-
-  .btnActive {
-    background-color: $color-black;
-  }
-
-  .md-col {
-    color: #5d5d5d;
-  }
-
-  // Slider colors
-
-  .input-box {
-    background-color: #ededed;
-    box-shadow: 1px 2px 8px rgba(177, 177, 177, 0.2);
-    color: #5d5d5d;
-  }
-
-  .slider {
-    background: #5d5d5d;
-  }
-
-  .slider::-webkit-slider-thumb {
-    background: #ededed;
-    box-shadow: rgba(177, 177, 177, 0.2);
-  }
-}
-
-// Blue theme
-
-.theme-blue {
-  h4 {
-    color: #d3e8ff;
-  }
-
-  // Menu color
-
-  .menu {
-    a {
-      color: rgba(211, 232, 255, 0.5);
-      transition: 0.03s ease;
-
-      &:hover {
-        color: #d3e8ff;
-      }
-
-      &:focus &:active {
-        color: #d3e8ff;
-      }
-    }
-  }
-
-  // Top section color
-
-  .top-section {
-    background-color: #2c58e8;
-    transition: 0.3s ease;
-  }
-
-  .top-section__icon-container {
-    .top-section__icon {
-      color: $color-bright;
-    }
-
-    p {
-      color: $color-bright;
-    }
-  }
-
-  // Bottom section color
-
-  .bottom-section {
-    background-color: #2448bf;
-    transition: 0.3s ease;
-  }
-
-  // Button colors
-
-  .btn {
-    background-color: #2b56e3;
-    box-shadow: 1px 2px 8px rgba(14, 45, 150, 0.2);
-
-    &:hover {
-      background-color: $color-black;
-
-      h4 {
-        color: #fff;
-      }
-    }
-  }
-
-  .active {
-    background-color: $color-black;
-    pointer-events: none;
-
-    h4 {
-      color: #fff;
-    }
-  }
-
-  .btnActive {
-    background-color: $color-black;
-  }
-
-  .md-col {
-    color: #d3e8ff;
-  }
-
-  // Slider colors
-
-  .input-box {
-    background-color: #2b56e3;
-    box-shadow: 1px 2px 8px rgba(14, 45, 150, 0.2);
-    color: #d3e8ff;
-  }
-
-  .slider {
-    background: #19348a;
-  }
-
-  .slider::-webkit-slider-thumb {
-    background: #2f5df5;
-    box-shadow: rgba(177, 177, 177, 0.2);
-  }
-}
-
-// Yellow theme
-
-.theme-yellow {
-  h4 {
-    color: #77690c;
-  }
-
-  // Menu color
-
-  .menu {
-    a {
-      color: rgba(119, 105, 12, 0.5);
-      transition: 0.03s ease;
-
-      &:hover {
-        color: #77690c;
-      }
-
-      &:focus &:active {
-        color: #77690c;
-      }
-    }
-  }
-
-  // Top section color
-
-  .top-section {
-    background-color: #e6e14d;
-    transition: 0.3s ease;
-  }
-
-  .top-section__icon-container {
-    .top-section__icon {
-      color: #121212;
-    }
-
-    p {
-      color: #121212;
-    }
-  }
-
-  // Bottom section color
-
-  .bottom-section {
-    background-color: #e2c915;
-    transition: 0.3s ease;
-  }
-
-  // Button colors
-
-  .btn {
-    background-color: #efda3b;
-    box-shadow: 1px 2px 8px rgba(176, 157, 16, 0.2);
-
-    &:hover {
-      background-color: $color-black;
-
-      h4 {
-        color: #fff;
-      }
-
-      .md-col {
-        color: #fff;
-      }
-    }
-  }
-
-  .active {
-    background-color: $color-black;
-    pointer-events: none;
-
-    h4 {
-      color: #fff;
-    }
-  }
-
-  .btnActive {
-    background-color: $color-black;
-  }
-
-  .md-col {
-    color: #77690c;
-  }
-
-  // Slider colors
-
-  .input-box {
-    background-color: #efda3b;
-    box-shadow: 1px 2px 8px rgba(176, 157, 16, 0.2);
-    color: #d3e8ff;
-  }
-
-  .slider {
-    background: #77690c;
-  }
-
-  .slider::-webkit-slider-thumb {
-    background: #efda3b;
-    box-shadow: rgba(176, 157, 16, 0.2);
-  }
-}
-
 // Dark theme
-
 .theme-dark {
   h4 {
     color: #fff;
   }
 
   // Menu color
-
   .menu {
     a {
       color: #999999;
@@ -387,7 +84,6 @@ p {
   }
 
   // Top section color
-
   .top-section {
     background-color: $color-semi-darkgrey;
     transition: background-color 0.3s ease;
@@ -404,14 +100,12 @@ p {
   }
 
   // Bottom section color
-
   .bottom-section {
     background-color: $color-darkgrey;
     transition: background-color 0.3s ease;
   }
 
   // Button colors
-
   .btn {
     background-color: #383838;
     box-shadow: 1px 2px 8px rgba(15, 15, 15, 0.2);
@@ -439,6 +133,10 @@ p {
 
   .toggle-active {
     background-color: $color-black;
+
+    h4 {
+      color: #fff;
+    }
   }
 
   .btnActive {
@@ -450,7 +148,6 @@ p {
   }
 
   // Slider colors
-
   .input-box {
     background-color: #383838;
     box-shadow: 1px 2px 8px rgba(15, 15, 15, 0.2);
@@ -464,5 +161,314 @@ p {
   .slider::-webkit-slider-thumb {
     background: #383838;
     box-shadow: rgba(15, 15, 15, 0.2);
+  }
+}
+
+// Light theme
+.theme-light {
+  h4 {
+    color: #5d5d5d;
+  }
+
+  // Menu color
+
+  .menu {
+    a {
+      color: rgba(93, 93, 93, 0.5);
+      transition: 0.03s ease;
+
+      &:hover {
+        color: #5d5d5d;
+      }
+
+      &:focus &:active {
+        color: #5d5d5d;
+      }
+    }
+  }
+
+  // Top section color
+  .top-section {
+    background-color: #fff;
+    transition: 0.3s ease;
+  }
+
+  .top-section__icon-container {
+    p {
+      color: #121212;
+    }
+  }
+
+  .top-section__icon {
+    color: #121212;
+  }
+
+  // Bottom section color
+  .bottom-section {
+    background-color: #dedede;
+    transition: 0.3s ease;
+  }
+
+  // Button colors
+  .btn {
+    background-color: #ededed;
+    box-shadow: 1px 2px 8px rgba(177, 177, 177, 0.2);
+
+    &:hover {
+      background-color: $color-black;
+
+      h4 {
+        color: #fff;
+      }
+
+      .md-col {
+        color: #fff;
+      }
+    }
+  }
+
+  .active {
+    background-color: $color-black;
+
+    h4 {
+      color: #fff;
+    }
+  }
+
+  .toggle-active {
+    background-color: $color-black;
+
+    .md-col {
+      color: #fff;
+    }
+  }
+
+  .btnActive {
+    background-color: $color-black;
+  }
+
+  .md-col {
+    color: #5d5d5d;
+  }
+
+  // Slider colors
+  .input-box {
+    background-color: #ededed;
+    box-shadow: 1px 2px 8px rgba(177, 177, 177, 0.2);
+    color: #5d5d5d;
+  }
+
+  .slider {
+    background: #5d5d5d;
+  }
+
+  .slider::-webkit-slider-thumb {
+    background: #ededed;
+    box-shadow: rgba(177, 177, 177, 0.2);
+  }
+}
+
+// Yellow theme
+.theme-yellow {
+  h4 {
+    color: #77690c;
+  }
+
+  // Menu color
+  .menu {
+    a {
+      color: rgba(119, 105, 12, 0.5);
+      transition: 0.03s ease;
+
+      &:hover {
+        color: #77690c;
+      }
+
+      &:focus &:active {
+        color: #77690c;
+      }
+    }
+  }
+
+  // Top section color
+  .top-section {
+    background-color: #e6e14d;
+    transition: 0.3s ease;
+  }
+
+  .top-section__icon-container {
+    .top-section__icon {
+      color: #121212;
+    }
+
+    p {
+      color: #121212;
+    }
+  }
+
+  // Bottom section color
+  .bottom-section {
+    background-color: #e2c915;
+    transition: 0.3s ease;
+  }
+
+  // Button colors
+  .btn {
+    background-color: #efda3b;
+    box-shadow: 1px 2px 8px rgba(176, 157, 16, 0.2);
+
+    &:hover {
+      background-color: $color-black;
+
+      h4 {
+        color: #fff;
+      }
+
+      .md-col {
+        color: #fff;
+      }
+    }
+  }
+
+  .active {
+    background-color: $color-black;
+    pointer-events: none;
+
+    h4 {
+      color: #fff;
+    }
+  }
+
+  .toggle-active {
+    background-color: $color-black;
+
+    .md-col {
+      color: #fff;
+    }
+  }
+
+  .btnActive {
+    background-color: $color-black;
+  }
+
+  .md-col {
+    color: #77690c;
+  }
+
+  // Slider colors
+  .input-box {
+    background-color: #efda3b;
+    box-shadow: 1px 2px 8px rgba(176, 157, 16, 0.2);
+    color: #d3e8ff;
+  }
+
+  .slider {
+    background: #77690c;
+  }
+
+  .slider::-webkit-slider-thumb {
+    background: #efda3b;
+    box-shadow: rgba(176, 157, 16, 0.2);
+  }
+}
+
+// Blue theme
+.theme-blue {
+  h4 {
+    color: #fff;
+  }
+
+  // Menu color
+  .menu {
+    a {
+      color: rgba(211, 232, 255, 0.5);
+      transition: 0.03s ease;
+
+      &:hover {
+        color: #d3e8ff;
+      }
+
+      &:focus &:active {
+        color: #d3e8ff;
+      }
+    }
+  }
+
+  // Top section color
+  .top-section {
+    background-color: #2c58e8;
+    transition: 0.3s ease;
+  }
+
+  .top-section__icon-container {
+    .top-section__icon {
+      color: $color-bright;
+    }
+
+    p {
+      color: $color-bright;
+    }
+  }
+
+  // Bottom section color
+  .bottom-section {
+    background-color: #2448bf;
+    transition: 0.3s ease;
+  }
+
+  // Button colors
+  .btn {
+    background-color: #2b56e3;
+    box-shadow: 1px 2px 8px rgba(14, 45, 150, 0.2);
+
+    &:hover {
+      background-color: $color-black;
+
+      h4 {
+        color: #fff;
+      }
+
+      .md-col {
+        color: #fff;
+      }
+    }
+  }
+
+  .active {
+    background-color: $color-black;
+    pointer-events: none;
+
+    h4 {
+      color: #fff;
+    }
+  }
+
+  .toggle-active {
+    background-color: $color-black;
+    color: #fff;
+  }
+
+  .btnActive {
+    background-color: $color-black;
+  }
+
+  .md-col {
+    color: #fff;
+  }
+
+  // Slider colors
+  .input-box {
+    background-color: #2b56e3;
+    box-shadow: 1px 2px 8px rgba(14, 45, 150, 0.2);
+    color: #fff;
+  }
+
+  .slider {
+    background: #19348a;
+  }
+
+  .slider::-webkit-slider-thumb {
+    background: #2f5df5;
+    box-shadow: rgba(177, 177, 177, 0.2);
   }
 }
