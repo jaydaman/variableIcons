@@ -2,26 +2,26 @@
 
 // Color theme pick animation
 
-function themePicker() {
-  var themePickExpand = document.getElementById("themePicker");
-  if (themePickExpand.className === "theme-picker-sheet") {
-    themePickExpand.className += " expand";
+// function themePicker() {
+var themeButtonSelect = document.querySelector(".theme-picker");
+var themeSheet = document.querySelector(".theme-picker-sheet");
+console.log(themeButtonSelect, themeSheet);
+
+themeButtonSelect.addEventListener("click", function() {
+  if (themeSheet.className === "theme-picker-sheet") {
+    themeSheet.className += " expand";
   } else {
-    themePickExpand.className = "theme-picker-sheet";
+    themeSheet.className = "theme-picker-sheet";
   }
-}
+});
 
 // Color theme background change
 
-const topSection = document.getElementById("topSection");
-const botSection = document.getElementById("bottomSection");
-const menu = document.querySelector(".menu");
-const mainIcon = document.getElementById("iconAnimate");
 const themeButtons = document.querySelectorAll(".js-theme-button");
 const iconName = document.getElementById("iconName");
 const themeContainer = document.querySelector(".js-theme");
 
-console.log(themeButtons);
+// console.log(themeButtons);
 
 Array.prototype.slice.call(themeButtons).forEach(el => {
   el.addEventListener("click", function() {
@@ -30,16 +30,21 @@ Array.prototype.slice.call(themeButtons).forEach(el => {
   });
 });
 
-// General button state toggle
+// Loop button state toggle
 
-function buttonToggle() {
-  var element = document.getElementById("buttonToggle");
-  element.classList.toggle("btnActive");
-}
+var loopButton = document.querySelector(".js-loop-button");
+var iconLoop = document.querySelector(".js-animation");
+
+loopButton.addEventListener("click", function jsLoop() {
+  if (iconLoop.className === "top-section__icon js-animation") {
+    iconLoop.className += " loop";
+  } else {
+    iconLoop.className = "top-section__icon js-animation";
+  }
+});
 
 // Selected icon states button toggle
 
-var btnContainer = document.getElementById("btnContainer");
 var btns = document.getElementsByClassName("btnClick");
 
 for (var i = 0; i < btns.length; i++) {
@@ -48,6 +53,24 @@ for (var i = 0; i < btns.length; i++) {
     current[0].className = current[0].className.replace(" active", "");
     this.className += " active";
   });
+}
+
+function buttonToggle1() {
+  var buttonSelect = document.querySelector(".small-sq");
+  if (buttonSelect.className === "btn small-sq js-loop-button") {
+    buttonSelect.className += " toggle-active";
+  } else {
+    buttonSelect.className = "btn small-sq js-loop-button";
+  }
+}
+
+function buttonToggle2() {
+  var buttonSelect2 = document.querySelector(".js-button-expand");
+  if (buttonSelect2.className === "btn small-sq js-button-expand") {
+    buttonSelect2.className += " toggle-active";
+  } else {
+    buttonSelect2.className = "btn small-sq js-button-expand";
+  }
 }
 
 // Hamburger menu function
@@ -61,14 +84,17 @@ function menuExpand() {
   }
 }
 
+// Icon animation
+
 function iconAnimate() {
   var iconState = document.getElementById("iconAnimate");
-  if (iconState.className === "top-section__icon") {
+  if (iconState.className === "top-section__icon js-animation") {
     iconState.className += " animate";
   } else {
-    iconState.className = "top-section__icon";
+    iconState.className = "top-section__icon js-animation";
   }
 }
+
 // Configure sliders
 
 var slider1 = document.getElementById("slider-TIME");

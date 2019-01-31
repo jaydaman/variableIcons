@@ -30,6 +30,27 @@
   transition: font-variation-settings 0.4s cubic-bezier(0.75, 0, 0, 1);
 }
 
+.top-section__icon.loop {
+  // Loop animation
+
+  @keyframes loop {
+    20% {
+      font-variation-settings: "TIME" 0, "wdth" 80, "wght" 30;
+    }
+
+    50% {
+      font-variation-settings: "TIME" 50, "wdth" 80, "wght" 30;
+    }
+
+    80%,
+    100% {
+      font-variation-settings: "TIME" 100, "wdth" 80, "wght" 30;
+    }
+  }
+
+  animation: loop 1s cubic-bezier(0.75, 0, 0, 1) 0s infinite alternate;
+}
+
 //Icon playback
 
 //State button wrapper
@@ -110,30 +131,6 @@
       border: none;
     }
   }
-}
-
-.bg-light-top {
-  background-color: #ffffff;
-}
-
-.bg-light-bot {
-  background-color: #919191;
-}
-
-.dark {
-  background-color: $color-mediumgrey;
-}
-
-.light {
-  background-color: $color-bright;
-}
-
-.yellow {
-  background-color: yellow;
-}
-
-.blue {
-  background-color: blue;
 }
 
 .theme-picker-sheet.expand {

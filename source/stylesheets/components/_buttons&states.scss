@@ -13,6 +13,10 @@ button {
   cursor: pointer;
 }
 
+.active {
+  pointer-events: none;
+}
+
 .btn-normal {
   width: 160px;
   height: 48px;
