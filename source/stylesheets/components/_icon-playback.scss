@@ -2,23 +2,6 @@
 
 //Active icon
 
-// Loop animation
-
-@keyframes loop {
-  20% {
-    font-variation-settings: "TIME" 0, "wdth" 80, "wght" 30;
-  }
-
-  50% {
-    font-variation-settings: "TIME" 50, "wdth" 80, "wght" 30;
-  }
-
-  80%,
-  100% {
-    font-variation-settings: "TIME" 100, "wdth" 80, "wght" 30;
-  }
-}
-
 .top-section__icon-container {
   display: flex;
   flex-direction: column;
@@ -32,7 +15,6 @@
   font-size: 25vmin;
   font-variation-settings: "TIME" 0, "wdth" 80, "wght" 30;
   transition: font-variation-settings 0.4s cubic-bezier(0.75, 0, 0, 1);
-  // animation: loop 1s cubic-bezier(0.75, 0, 0, 1) 0s infinite alternate;
 
   @media #{$smalldesktop} {
     font-size: 30vmin;
@@ -49,11 +31,24 @@
 }
 
 .top-section__icon.loop {
-  // animation-name: loop;
-  // animation-duration: 2s;
-  // animation-timing-function: ease-in-out;
-  // animation-iteration-count: infinite;
-  // animation-direction: alternate;
+  // Loop animation
+
+  @keyframes loop {
+    20% {
+      font-variation-settings: "TIME" 0, "wdth" 80, "wght" 30;
+    }
+
+    50% {
+      font-variation-settings: "TIME" 50, "wdth" 80, "wght" 30;
+    }
+
+    80%,
+    100% {
+      font-variation-settings: "TIME" 100, "wdth" 80, "wght" 30;
+    }
+  }
+
+  animation: loop 1s cubic-bezier(0.75, 0, 0, 1) 0s infinite alternate;
 }
 
 //Icon playback

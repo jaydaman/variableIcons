@@ -130,7 +130,6 @@ p {
 
   .active {
     background-color: $color-black;
-    pointer-events: none;
 
     h4 {
       color: #fff;
@@ -375,7 +374,7 @@ p {
   .menu {
     a {
       color: #999999;
-      transition: 0.03s ease;
+      transition: 0.15s ease;
 
       &:hover {
         color: #fff;
@@ -432,11 +431,14 @@ p {
 
   .active {
     background-color: $color-black;
-    pointer-events: none;
 
     h4 {
       color: #fff;
     }
+  }
+
+  .toggle-active {
+    background-color: $color-black;
   }
 
   .btnActive {
