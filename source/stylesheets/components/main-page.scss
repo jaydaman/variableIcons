@@ -103,11 +103,15 @@ p {
   .bottom-section {
     background-color: $color-darkgrey;
     transition: background-color 0.3s ease;
+
+    @media #{$smalldesktop} {
+      background-color: $color-semi-darkgrey;
+    }
   }
 
   // Button colors
   .btn {
-    background-color: #383838;
+    background-color: $color-mediumgrey;
     box-shadow: 1px 2px 8px rgba(15, 15, 15, 0.2);
 
     &:hover {
@@ -149,7 +153,7 @@ p {
 
   // Slider colors
   .input-box {
-    background-color: #383838;
+    background-color: $color-mediumgrey;
     box-shadow: 1px 2px 8px rgba(15, 15, 15, 0.2);
     color: #fff;
   }
@@ -159,7 +163,7 @@ p {
   }
 
   .slider::-webkit-slider-thumb {
-    background: #383838;
+    background: $color-mediumgrey;
     box-shadow: rgba(15, 15, 15, 0.2);
   }
 }
@@ -167,7 +171,7 @@ p {
 // Light theme
 .theme-light {
   h4 {
-    color: #5d5d5d;
+    color: $color-light-theme-text;
   }
 
   // Menu color
@@ -178,11 +182,11 @@ p {
       transition: 0.03s ease;
 
       &:hover {
-        color: #5d5d5d;
+        color: $color-light-theme-text;
       }
 
       &:focus &:active {
-        color: #5d5d5d;
+        color: $color-light-theme-text;
       }
     }
   }
@@ -195,23 +199,27 @@ p {
 
   .top-section__icon-container {
     p {
-      color: #121212;
+      color: $color-black;
     }
   }
 
   .top-section__icon {
-    color: #121212;
+    color: $color-black;
   }
 
   // Bottom section color
   .bottom-section {
-    background-color: #dedede;
+    background-color: $color-light-theme-secondary;
     transition: 0.3s ease;
+
+    @media #{$smalldesktop} {
+      background-color: #fff;
+    }
   }
 
   // Button colors
   .btn {
-    background-color: #ededed;
+    background-color: $color-light-theme-button;
     box-shadow: 1px 2px 8px rgba(177, 177, 177, 0.2);
 
     &:hover {
@@ -248,22 +256,22 @@ p {
   }
 
   .md-col {
-    color: #5d5d5d;
+    color: $color-light-theme-text;
   }
 
   // Slider colors
   .input-box {
-    background-color: #ededed;
+    background-color: $color-light-theme-button;
     box-shadow: 1px 2px 8px rgba(177, 177, 177, 0.2);
-    color: #5d5d5d;
+    color: $color-light-theme-text;
   }
 
   .slider {
-    background: #5d5d5d;
+    background: $color-light-theme-text;
   }
 
   .slider::-webkit-slider-thumb {
-    background: #ededed;
+    background: $color-light-theme-button;
     box-shadow: rgba(177, 177, 177, 0.2);
   }
 }
@@ -271,7 +279,7 @@ p {
 // Yellow theme
 .theme-yellow {
   h4 {
-    color: #77690c;
+    color: $color-yellow-theme-text;
   }
 
   // Menu color
@@ -281,40 +289,44 @@ p {
       transition: 0.03s ease;
 
       &:hover {
-        color: #77690c;
+        color: $color-yellow-theme-text;
       }
 
       &:focus &:active {
-        color: #77690c;
+        color: $color-yellow-theme-text;
       }
     }
   }
 
   // Top section color
   .top-section {
-    background-color: #e6e14d;
+    background-color: $color-yellow-theme-primary;
     transition: 0.3s ease;
   }
 
   .top-section__icon-container {
     .top-section__icon {
-      color: #121212;
+      color: $color-black;
     }
 
     p {
-      color: #121212;
+      color: $color-black;
     }
   }
 
   // Bottom section color
   .bottom-section {
-    background-color: #e2c915;
+    background-color: $color-yellow-theme-secondary;
     transition: 0.3s ease;
+
+    @media #{$smalldesktop} {
+      background-color: $color-yellow-theme-primary;
+    }
   }
 
   // Button colors
   .btn {
-    background-color: #efda3b;
+    background-color: $color-yellow-theme-button;
     box-shadow: 1px 2px 8px rgba(176, 157, 16, 0.2);
 
     &:hover {
@@ -352,22 +364,22 @@ p {
   }
 
   .md-col {
-    color: #77690c;
+    color: $color-yellow-theme-text;
   }
 
   // Slider colors
   .input-box {
-    background-color: #efda3b;
+    background-color: $color-yellow-theme-button;
     box-shadow: 1px 2px 8px rgba(176, 157, 16, 0.2);
-    color: #d3e8ff;
+    color: $color-black;
   }
 
   .slider {
-    background: #77690c;
+    background: $color-yellow-theme-text;
   }
 
   .slider::-webkit-slider-thumb {
-    background: #efda3b;
+    background: $color-yellow-theme-button;
     box-shadow: rgba(176, 157, 16, 0.2);
   }
 }
@@ -396,7 +408,7 @@ p {
 
   // Top section color
   .top-section {
-    background-color: #2c58e8;
+    background-color: $color-blue-theme-primary;
     transition: 0.3s ease;
   }
 
@@ -412,13 +424,17 @@ p {
 
   // Bottom section color
   .bottom-section {
-    background-color: #2448bf;
+    background-color: $color-blue-theme-secondary;
     transition: 0.3s ease;
+
+    @media #{$smalldesktop} {
+      background-color: $color-blue-theme-primary;
+    }
   }
 
   // Button colors
   .btn {
-    background-color: #2b56e3;
+    background-color: $color-blue-theme-button;
     box-shadow: 1px 2px 8px rgba(14, 45, 150, 0.2);
 
     &:hover {
@@ -458,7 +474,7 @@ p {
 
   // Slider colors
   .input-box {
-    background-color: #2b56e3;
+    background-color: $color-blue-theme-button;
     box-shadow: 1px 2px 8px rgba(14, 45, 150, 0.2);
     color: #fff;
   }
