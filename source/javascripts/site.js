@@ -1,8 +1,6 @@
 // This is where it all goes :)
 
 // Color theme pick animation
-
-// function themePicker() {
 var themeButtonSelect = document.querySelector(".theme-picker");
 var themeSheet = document.querySelector(".theme-picker-sheet");
 console.log(themeButtonSelect, themeSheet);
@@ -16,13 +14,10 @@ themeButtonSelect.addEventListener("click", function() {
 });
 
 // Color theme background change
-
 const themeButtons = document.querySelectorAll(".js-theme-button");
-const iconName = document.getElementById("iconName");
 const themeContainer = document.querySelector(".js-theme");
 
 // console.log(themeButtons);
-
 Array.prototype.slice.call(themeButtons).forEach(el => {
   el.addEventListener("click", function() {
     const theme = this.getAttribute("data-theme");
@@ -31,7 +26,6 @@ Array.prototype.slice.call(themeButtons).forEach(el => {
 });
 
 // Loop button state toggle
-
 var loopButton = document.querySelector(".js-loop-button");
 var iconLoop = document.querySelector(".js-animation");
 
@@ -44,8 +38,7 @@ loopButton.addEventListener("click", function jsLoop() {
 });
 
 // Selected icon states button toggle
-
-var btns = document.getElementsByClassName("btnClick");
+var btns = document.getElementsByClassName("js-btn-click");
 
 for (var i = 0; i < btns.length; i++) {
   btns[i].addEventListener("click", function() {
@@ -74,7 +67,6 @@ function buttonToggle2() {
 }
 
 // Hamburger menu function
-
 function menuExpand() {
   var hamburger = document.getElementById("menuExpand");
   if (hamburger.className === "menu") {
@@ -85,7 +77,6 @@ function menuExpand() {
 }
 
 // Icon animation
-
 function iconAnimate() {
   var iconState = document.getElementById("iconAnimate");
   if (iconState.className === "top-section__icon js-animation") {
