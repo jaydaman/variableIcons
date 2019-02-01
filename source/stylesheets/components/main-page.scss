@@ -66,7 +66,7 @@ p {
   // Menu color
   .menu {
     a {
-      color: #999999;
+      color: $color-lightgrey;
       transition: 0.15s ease;
 
       &:hover {
@@ -108,7 +108,6 @@ p {
   // Button colors
   .btn {
     background-color: $color-dark-theme-button;
-    box-shadow: 1px 2px 8px rgba(15, 15, 15, 0.2);
 
     &:hover {
       background-color: $color-black;
@@ -150,7 +149,7 @@ p {
   // Slider colors
   .input-box {
     background-color: $color-dark-theme-button;
-    box-shadow: 1px 2px 8px rgba(15, 15, 15, 0.2);
+    box-shadow: 0px 3px 10px rgba(15, 15, 15, 0.2);
     color: $color-white;
   }
 
@@ -185,6 +184,12 @@ p {
         color: $color-light-theme-text;
       }
     }
+
+    @media #{$mobile} {
+      a {
+        color: $color-lightgrey;
+      }
+    }
   }
 
   // Top section color
@@ -216,7 +221,11 @@ p {
   // Button colors
   .btn {
     background-color: $color-light-theme-button;
-    box-shadow: 1px 2px 8px rgba(177, 177, 177, 0.2);
+    box-shadow: 0px 3px 10px rgba(177, 177, 177, 0.2);
+
+    @media #{$smalldesktop} {
+      box-shadow: 0px 5px 15px rgba(177, 177, 177, 0.5);
+    }
 
     &:hover {
       background-color: $color-black;
@@ -229,6 +238,35 @@ p {
         color: $color-white;
       }
     }
+  }
+
+  .small-sq {
+    background-color: $color-light-theme-button;
+    box-shadow: 0px 3px 10px rgba(177, 177, 177, 0.2);
+
+    @media #{$smalldesktop} {
+      box-shadow: 0px 5px 10px rgba(177, 177, 177, 0.5);
+
+      &:hover {
+        background-color: $color-light-theme-button;
+      }
+    }
+
+    &:hover {
+      background-color: $color-black;
+
+      h4 {
+        color: $color-white;
+      }
+
+      .md-col {
+        color: $color-white;
+      }
+    }
+  }
+
+  .large-sq {
+    box-shadow: 0px 5px 10px rgba(177, 177, 177, 0.5);
   }
 
   .active {
@@ -286,10 +324,20 @@ p {
 
       &:hover {
         color: $color-yellow-theme-text;
+
+        @media #{$mobile} {
+          color: $color-white;
+        }
       }
 
       &:focus &:active {
         color: $color-yellow-theme-text;
+      }
+    }
+
+    @media #{$mobile} {
+      a:not(:first-child) {
+        color: $color-lightgrey;
       }
     }
   }
@@ -323,7 +371,11 @@ p {
   // Button colors
   .btn {
     background-color: $color-yellow-theme-button;
-    box-shadow: 1px 2px 8px rgba(176, 157, 16, 0.2);
+    box-shadow: 0px 3px 10px rgba(176, 157, 16, 0.2);
+
+    @media #{$smalldesktop} {
+      box-shadow: 0px 5px 15px rgba(176, 157, 16, 0.5);
+    }
 
     &:hover {
       background-color: $color-black;
@@ -336,6 +388,31 @@ p {
         color: $color-white;
       }
     }
+  }
+
+  .small-sq {
+    background-color: $color-yellow-theme-button;
+    box-shadow: 0px 3px 10px rgba(176, 157, 16, 0.2);
+
+    @media #{$smalldesktop} {
+      box-shadow: 0px 5px 10px rgba(176, 157, 16, 0.5);
+    }
+
+    &:hover {
+      background-color: $color-black;
+
+      h4 {
+        color: $color-white;
+      }
+
+      .md-col {
+        color: $color-white;
+      }
+    }
+  }
+
+  .large-sq {
+    box-shadow: 0px 5px 10px rgba(176, 157, 16, 0.5);
   }
 
   .active {
@@ -394,10 +471,20 @@ p {
 
       &:hover {
         color: #d3e8ff;
+
+        @media #{$mobile} {
+          color: $color-white;
+        }
       }
 
       &:focus &:active {
         color: #d3e8ff;
+      }
+    }
+
+    @media #{$mobile} {
+      a:not(:first-child) {
+        color: $color-lightgrey;
       }
     }
   }
@@ -433,6 +520,10 @@ p {
     background-color: $color-blue-theme-button;
     box-shadow: 1px 2px 8px rgba(14, 45, 150, 0.2);
 
+    @media #{$smalldesktop} {
+      box-shadow: 0px 5px 15px rgba(14, 45, 150, 0.5);
+    }
+
     &:hover {
       background-color: $color-black;
 
@@ -444,6 +535,31 @@ p {
         color: $color-white;
       }
     }
+  }
+
+  .small-sq {
+    background-color: $color-blue-theme-button;
+    box-shadow: 0px 3px 10px rgba(14, 45, 150, 0.2);
+
+    @media #{$smalldesktop} {
+      box-shadow: 0px 5px 10px rgba(14, 45, 150, 0.5);
+    }
+
+    &:hover {
+      background-color: $color-black;
+
+      h4 {
+        color: $color-white;
+      }
+
+      .md-col {
+        color: $color-white;
+      }
+    }
+  }
+
+  .large-sq {
+    box-shadow: 0px 5px 10px rgba(14, 45, 150, 0.5);
   }
 
   .active {

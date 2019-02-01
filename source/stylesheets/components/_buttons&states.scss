@@ -5,12 +5,16 @@ button {
 .btn {
   background-color: $color-dark-theme-button;
   border-radius: 4px;
-  box-shadow: 1px 2px 8px rgba(0, 0, 6, 0.2);
+  box-shadow: 0px 3px 10px rgba(15, 15, 15, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
   transition: 0.07s ease;
   cursor: pointer;
+
+  @media #{$smalldesktop} {
+    box-shadow: 0px 5px 15px rgba(15, 15, 15, 0.5);
+  }
 }
 
 .active {
@@ -30,50 +34,36 @@ button {
   height: 40px;
 }
 
-.button-large-square {
-  width: 64px;
-  height: 64px;
-  background-color: $color-black;
-  border-radius: 4px;
-  box-shadow: 1px 2px 8px rgba(0, 0, 6, 0.2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: 0.07s ease;
-
-  &:hover {
-    background-color: #515151;
-    cursor: pointer;
-  }
-}
-
-.button-small-square {
-  width: 48px;
-  height: 48px;
-  background-color: $color-dark-theme-button;
-  border-radius: 4px;
-  box-shadow: 1px 2px 8px rgba(0, 0, 6, 0.2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: 0.07s ease;
-
-  &:hover {
-    background-color: #515151;
-    cursor: pointer;
-  }
-
-  &:active {
-    background-color: $color-black;
-  }
-}
-
 .large-sq {
   width: 64px;
   height: 64px;
+  background-color: $color-dark-theme-button;
+  border-radius: 4px;
+  box-shadow: 0px 5px 10px rgba(15, 15, 15, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.07s ease;
+  cursor: pointer;
+
+  @media #{$smalldesktop} {
+    box-shadow: 0px 5px 15px rgba(15, 15, 15, 0.5);
+  }
 }
 
 .small-sq {
   width: 48px;
   height: 48px;
+  background-color: $color-dark-theme-button;
+  border-radius: 4px;
+  box-shadow: 0px 3px 10px rgba(15, 15, 15, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.07s ease;
+  cursor: pointer;
+
+  @media #{$smalldesktop} {
+    box-shadow: 0px 5px 15px rgba(15, 15, 15, 0.5);
+  }
 }

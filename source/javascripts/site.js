@@ -50,19 +50,19 @@ for (var i = 0; i < btns.length; i++) {
 
 function buttonToggle1() {
   var buttonSelect = document.querySelector(".small-sq");
-  if (buttonSelect.className === "btn small-sq js-loop-button") {
+  if (buttonSelect.className === "small-sq js-loop-button") {
     buttonSelect.className += " toggle-active";
   } else {
-    buttonSelect.className = "btn small-sq js-loop-button";
+    buttonSelect.className = "small-sq js-loop-button";
   }
 }
 
 function buttonToggle2() {
   var buttonSelect2 = document.querySelector(".js-button-expand");
-  if (buttonSelect2.className === "btn small-sq js-button-expand") {
+  if (buttonSelect2.className === "small-sq js-button-expand") {
     buttonSelect2.className += " toggle-active";
   } else {
-    buttonSelect2.className = "btn small-sq js-button-expand";
+    buttonSelect2.className = "small-sq js-button-expand";
   }
 }
 
