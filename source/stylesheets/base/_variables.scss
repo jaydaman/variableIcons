@@ -1,4 +1,4 @@
-$color-black: #101010;
+$color-black: #121212;
 
 $color-darkgrey: #212121;
 
@@ -6,13 +6,44 @@ $color-hover: #2a2a2a;
 
 $color-semi-darkgrey: #262626;
 
-$color-mediumgrey: #383838;
-
 $color-lightgrey: #999999;
 
 $color-bright: #dcdcdc;
 
 $color-white: #fff;
+
+// Dark theme color variables
+
+$color-dark-theme-primary: #262626;
+
+$color-dark-theme-secondary: #212121;
+
+$color-dark-theme-button: #383838;
+
+// Light theme color variables
+$color-light-theme-text: #5d5d5d;
+
+$color-light-theme-primary: #fff;
+
+$color-light-theme-secondary: #dedede;
+
+$color-light-theme-button: #ededed;
+
+// Yellow theme color variabes
+$color-yellow-theme-text: #77690c;
+
+$color-yellow-theme-primary: #e6e14d;
+
+$color-yellow-theme-secondary: #e2c915;
+
+$color-yellow-theme-button: #efda3b;
+
+// Blue theme color variables
+$color-blue-theme-primary: #2c58e8;
+
+$color-blue-theme-secondary: #2448bf;
+
+$color-blue-theme-button: #2b56e3;
 
 $mobile: "only screen and (max-width: 650px)";
 

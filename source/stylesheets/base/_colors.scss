@@ -5,20 +5,20 @@
 
 .color-black {
   background-color: $color-black;
-  color: #fff;
+  color: $color-white;
 }
 
 .color-darkgrey {
-  background-color: $color-darkgrey;
-  color: #fff;
+  background-color: $color-dark-theme-secondary;
+  color: $color-white;
 }
 
 .color-semi-darkgrey {
-  background-color: $color-semi-darkgrey;
+  background-color: $color-dark-theme-primary;
   color: $color-bright;
 }
 
 .color-mediumgrey {
-  background-color: $color-mediumgrey;
+  background-color: $color-dark-theme-button;
   color: $color-bright;
 }
