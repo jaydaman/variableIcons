@@ -3,7 +3,7 @@ button {
 }
 
 .btn {
-  background-color: $color-mediumgrey;
+  background-color: $color-dark-theme-button;
   border-radius: 4px;
   box-shadow: 1px 2px 8px rgba(0, 0, 6, 0.2);
   display: flex;
@@ -20,6 +20,10 @@ button {
 .btn-normal {
   width: 160px;
   height: 48px;
+
+  @media #{$mobile} {
+    width: 150px;
+  }
 }
 
 .btn-thin {
@@ -46,7 +50,7 @@ button {
 .button-small-square {
   width: 48px;
   height: 48px;
-  background-color: $color-mediumgrey;
+  background-color: $color-dark-theme-button;
   border-radius: 4px;
   box-shadow: 1px 2px 8px rgba(0, 0, 6, 0.2);
   display: flex;

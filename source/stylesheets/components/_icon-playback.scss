@@ -1,7 +1,6 @@
 //Icon playback component
 
 //Active icon
-
 .top-section__icon-container {
   display: flex;
   flex-direction: column;
@@ -21,7 +20,8 @@
   }
 
   @media #{$mobile} {
-    font-size: 50vmin;
+    font-size: 60vmin;
+    margin-top: 60px;
   }
 }
 
@@ -32,7 +32,6 @@
 
 .top-section__icon.loop {
   // Loop animation
-
   @keyframes loop {
     20% {
       font-variation-settings: "TIME" 0, "wdth" 80, "wght" 30;
@@ -48,21 +47,23 @@
     }
   }
 
-  animation: loop 1s cubic-bezier(0.75, 0, 0, 1) 0s infinite alternate;
+  animation: loop 0.7s cubic-bezier(0.75, 0, 0, 1) 0s infinite alternate;
 }
 
 //Icon playback
 
 //State button wrapper
-
 .mid-container1 {
   display: flex;
   justify-content: space-between;
   width: 328px;
+
+  @media #{$mobile} {
+    width: 308px;
+  }
 }
 
 //Playback options wrapper
-
 .mid-container2 {
   display: flex;
   justify-content: space-between;
@@ -70,7 +71,11 @@
   padding-top: 28px;
 
   @media #{$smalldesktop} {
-    padding-top: 36px;
+    position: fixed;
+    z-index: 1;
+    top: 20px;
+    right: 20px;
+    padding-top: 0px;
   }
 }
 
@@ -79,7 +84,6 @@
 }
 
 // Color theme picker
-
 .theme-picker {
   display: flex;
 }
@@ -97,25 +101,25 @@
 
   :first-child {
     button {
-      background-color: #383838;
+      background-color: $color-dark-theme-button;
     }
   }
 
   :nth-child(2) {
     button {
-      background-color: #fff;
+      background-color: $color-white;
     }
   }
 
   :nth-child(3) {
     button {
-      background-color: #e6e14d;
+      background-color: $color-yellow-theme-primary;
     }
   }
 
   :nth-child(4) {
     button {
-      background-color: #2c58e8;
+      background-color: $color-blue-theme-primary;
     }
   }
 
@@ -135,4 +139,11 @@
 
 .theme-picker-sheet.expand {
   display: block;
+
+  @media #{$smalldesktop} {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    padding: 0px;
+  }
 }

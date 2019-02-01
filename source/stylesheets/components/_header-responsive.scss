@@ -47,21 +47,6 @@
   }
 }
 
-.theme-l {
-  a {
-    color: #121212;
-    transition: 0.03s ease;
-
-    &:hover {
-      color: #313131;
-    }
-
-    &:focus &:active {
-      color: #313131;
-    }
-  }
-}
-
 .menu__links {
   display: flex;
   justify-content: space-between;
@@ -73,6 +58,8 @@
 
 @media #{$mobile} {
   .menu.expanded {
+    position: fixed;
+    z-index: 2;
     flex-direction: column;
     justify-content: flex-start;
     background-color: rgba($color-black, 0.97);
@@ -98,16 +85,16 @@
   width: 20px;
   height: 20px;
   border-radius: 50px;
-  background-color: #999999;
+  background-color: $color-lightgrey;
   margin-left: 48px;
   transition: 0.07s ease;
 
   &:hover {
-    background-color: #fff;
+    background-color: $color-white;
     cursor: pointer;
   }
 
   &:active {
-    background-color: #fff;
+    background-color: $color-white;
   }
 }

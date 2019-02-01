@@ -14,19 +14,11 @@ p {
   align-items: center;
   justify-content: center;
   height: 60vh;
-
-  @media #{$smalldesktop} {
-    height: 50vh;
-  }
 }
 
 // Bottom section background themes
 .bottom-section {
   height: 40vh;
-
-  @media #{$smalldesktop} {
-    height: 50vh;
-  }
 }
 
 // Bottom section content
@@ -37,6 +29,10 @@ p {
 
   @media #{$smalldesktop} {
     flex-direction: column-reverse;
+  }
+
+  @media #{$mobile} {
+    margin-top: 0px;
   }
 }
 
@@ -64,7 +60,7 @@ p {
 // Dark theme
 .theme-dark {
   h4 {
-    color: #fff;
+    color: $color-white;
   }
 
   // Menu color
@@ -74,18 +70,18 @@ p {
       transition: 0.15s ease;
 
       &:hover {
-        color: #fff;
+        color: $color-white;
       }
 
       &:focus &:active {
-        color: #fff;
+        color: $color-white;
       }
     }
   }
 
   // Top section color
   .top-section {
-    background-color: $color-semi-darkgrey;
+    background-color: $color-dark-theme-primary;
     transition: background-color 0.3s ease;
   }
 
@@ -101,28 +97,28 @@ p {
 
   // Bottom section color
   .bottom-section {
-    background-color: $color-darkgrey;
+    background-color: $color-dark-theme-secondary;
     transition: background-color 0.3s ease;
 
     @media #{$smalldesktop} {
-      background-color: $color-semi-darkgrey;
+      background-color: $color-dark-theme-primary;
     }
   }
 
   // Button colors
   .btn {
-    background-color: $color-mediumgrey;
+    background-color: $color-dark-theme-button;
     box-shadow: 1px 2px 8px rgba(15, 15, 15, 0.2);
 
     &:hover {
       background-color: $color-black;
 
       h4 {
-        color: #fff;
+        color: $color-white;
       }
 
       .md-col {
-        color: #fff;
+        color: $color-white;
       }
     }
   }
@@ -131,7 +127,7 @@ p {
     background-color: $color-black;
 
     h4 {
-      color: #fff;
+      color: $color-white;
     }
   }
 
@@ -139,7 +135,7 @@ p {
     background-color: $color-black;
 
     h4 {
-      color: #fff;
+      color: $color-white;
     }
   }
 
@@ -148,14 +144,14 @@ p {
   }
 
   .md-col {
-    color: #fff;
+    color: $color-white;
   }
 
   // Slider colors
   .input-box {
-    background-color: $color-mediumgrey;
+    background-color: $color-dark-theme-button;
     box-shadow: 1px 2px 8px rgba(15, 15, 15, 0.2);
-    color: #fff;
+    color: $color-white;
   }
 
   .slider {
@@ -163,7 +159,7 @@ p {
   }
 
   .slider::-webkit-slider-thumb {
-    background: $color-mediumgrey;
+    background: $color-dark-theme-button;
     box-shadow: rgba(15, 15, 15, 0.2);
   }
 }
@@ -193,7 +189,7 @@ p {
 
   // Top section color
   .top-section {
-    background-color: #fff;
+    background-color: $color-white;
     transition: 0.3s ease;
   }
 
@@ -213,7 +209,7 @@ p {
     transition: 0.3s ease;
 
     @media #{$smalldesktop} {
-      background-color: #fff;
+      background-color: $color-white;
     }
   }
 
@@ -226,11 +222,11 @@ p {
       background-color: $color-black;
 
       h4 {
-        color: #fff;
+        color: $color-white;
       }
 
       .md-col {
-        color: #fff;
+        color: $color-white;
       }
     }
   }
@@ -239,7 +235,7 @@ p {
     background-color: $color-black;
 
     h4 {
-      color: #fff;
+      color: $color-white;
     }
   }
 
@@ -247,7 +243,7 @@ p {
     background-color: $color-black;
 
     .md-col {
-      color: #fff;
+      color: $color-white;
     }
   }
 
@@ -333,11 +329,11 @@ p {
       background-color: $color-black;
 
       h4 {
-        color: #fff;
+        color: $color-white;
       }
 
       .md-col {
-        color: #fff;
+        color: $color-white;
       }
     }
   }
@@ -347,7 +343,7 @@ p {
     pointer-events: none;
 
     h4 {
-      color: #fff;
+      color: $color-white;
     }
   }
 
@@ -355,7 +351,7 @@ p {
     background-color: $color-black;
 
     .md-col {
-      color: #fff;
+      color: $color-white;
     }
   }
 
@@ -387,7 +383,7 @@ p {
 // Blue theme
 .theme-blue {
   h4 {
-    color: #fff;
+    color: $color-white;
   }
 
   // Menu color
@@ -441,11 +437,11 @@ p {
       background-color: $color-black;
 
       h4 {
-        color: #fff;
+        color: $color-white;
       }
 
       .md-col {
-        color: #fff;
+        color: $color-white;
       }
     }
   }
@@ -455,13 +451,13 @@ p {
     pointer-events: none;
 
     h4 {
-      color: #fff;
+      color: $color-white;
     }
   }
 
   .toggle-active {
     background-color: $color-black;
-    color: #fff;
+    color: $color-white;
   }
 
   .btnActive {
@@ -469,14 +465,14 @@ p {
   }
 
   .md-col {
-    color: #fff;
+    color: $color-white;
   }
 
   // Slider colors
   .input-box {
     background-color: $color-blue-theme-button;
     box-shadow: 1px 2px 8px rgba(14, 45, 150, 0.2);
-    color: #fff;
+    color: $color-white;
   }
 
   .slider {
