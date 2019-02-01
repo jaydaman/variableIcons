@@ -246,21 +246,19 @@ p {
 
     @media #{$smalldesktop} {
       box-shadow: 0px 5px 10px rgba(177, 177, 177, 0.5);
-
-      &:hover {
-        background-color: $color-light-theme-button;
-      }
     }
 
-    &:hover {
-      background-color: $color-black;
+    @media #{$widescreen} {
+      &:hover {
+        background-color: $color-black;
 
-      h4 {
-        color: $color-white;
-      }
+        h4 {
+          color: $color-white;
+        }
 
-      .md-col {
-        color: $color-white;
+        .md-col {
+          color: $color-white;
+        }
       }
     }
   }
@@ -398,15 +396,17 @@ p {
       box-shadow: 0px 5px 10px rgba(176, 157, 16, 0.5);
     }
 
-    &:hover {
-      background-color: $color-black;
+    @media #{$widescreen} {
+      &:hover {
+        background-color: $color-black;
 
-      h4 {
-        color: $color-white;
-      }
+        h4 {
+          color: $color-white;
+        }
 
-      .md-col {
-        color: $color-white;
+        .md-col {
+          color: $color-white;
+        }
       }
     }
   }
@@ -527,6 +527,10 @@ p {
     &:hover {
       background-color: $color-black;
 
+      @media #{$smalldesktop} {
+        background-color: $color-blue-theme-button;
+      }
+
       h4 {
         color: $color-white;
       }
@@ -545,15 +549,17 @@ p {
       box-shadow: 0px 5px 10px rgba(14, 45, 150, 0.5);
     }
 
-    &:hover {
-      background-color: $color-black;
+    @media #{$widescreen} {
+      &:hover {
+        background-color: $color-black;
 
-      h4 {
-        color: $color-white;
-      }
+        h4 {
+          color: $color-white;
+        }
 
-      .md-col {
-        color: $color-white;
+        .md-col {
+          color: $color-white;
+        }
       }
     }
   }
