@@ -223,20 +223,16 @@ p {
     background-color: $color-light-theme-button;
     box-shadow: 0px 3px 10px rgba(177, 177, 177, 0.2);
 
+    h4 {
+      color: $color-white;
+    }
+
     @media #{$smalldesktop} {
       box-shadow: 0px 5px 15px rgba(177, 177, 177, 0.5);
     }
 
     &:hover {
       background-color: $color-black;
-
-      h4 {
-        color: $color-white;
-      }
-
-      .md-col {
-        color: $color-white;
-      }
     }
   }
 
@@ -244,22 +240,12 @@ p {
     background-color: $color-light-theme-button;
     box-shadow: 0px 3px 10px rgba(177, 177, 177, 0.2);
 
-    @media #{$smalldesktop} {
-      box-shadow: 0px 5px 10px rgba(177, 177, 177, 0.5);
+    .md-col {
+      color: $color-white;
     }
 
-    @media #{$widescreen} {
-      &:hover {
-        background-color: $color-black;
-
-        h4 {
-          color: $color-white;
-        }
-
-        .md-col {
-          color: $color-white;
-        }
-      }
+    @media #{$smalldesktop} {
+      box-shadow: 0px 5px 10px rgba(177, 177, 177, 0.5);
     }
   }
 
@@ -398,8 +384,6 @@ p {
 
     @media #{$widescreen} {
       &:hover {
-        background-color: $color-black;
-
         h4 {
           color: $color-white;
         }
@@ -527,9 +511,9 @@ p {
     &:hover {
       background-color: $color-black;
 
-      @media #{$smalldesktop} {
-        background-color: $color-blue-theme-button;
-      }
+      // @media #{$smalldesktop} {
+      //   background-color: $color-blue-theme-button;
+      // }
 
       h4 {
         color: $color-white;
@@ -551,8 +535,6 @@ p {
 
     @media #{$widescreen} {
       &:hover {
-        background-color: $color-black;
-
         h4 {
           color: $color-white;
         }
