@@ -66,4 +66,10 @@ button {
   @media #{$smalldesktop} {
     box-shadow: 0px 5px 15px rgba(15, 15, 15, 0.5);
   }
+
+  &:hover {
+    @media #{$widescreen} {
+      background-color: $color-black;
+    }
+  }
 }
