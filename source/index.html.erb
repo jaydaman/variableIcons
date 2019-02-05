@@ -22,7 +22,7 @@ title: Variicons
     <section class="top-section">
         <div class="spacing-block"></div>
         <div class="top-section__icon-container">
-          <div class="top-section__icon js-animation" id="iconAnimate">
+          <div class="top-section__icon js-icon" id="iconAnimate">
             B
           </div>
           <p>hamburger_1</p>
@@ -48,10 +48,10 @@ title: Variicons
 
       <div class="flex-col">
         <div class="mid-container1">
-          <div class="btn btn-normal line-item js-btn-click active" onclick="iconAnimate()">
+          <div class="btn btn-normal line-item js-state-btn active" id="buttonState1">
             <h4>State 1</h4>
           </div>
-          <div class="btn btn-normal line-item js-btn-click" onclick="iconAnimate()">
+          <div class="btn btn-normal line-item js-state-btn" id="buttonState2">
             <h4>State 2</h4>
         </div>
         </div>
@@ -87,42 +87,58 @@ title: Variicons
 
       <div class="flex-col">
         <div class="right-container1">
-          <div class="btn btn-normal line-item active">
+          <div class="btn btn-normal line-item js-view-btn view-active" id="js-configure">
             <h4>Configure</h4>
           </div>
-          <div class="btn btn-normal line-item">
+          <div class="btn btn-normal line-item js-view-btn" id="js-code">
             <h4>Get code</h4>
           </div>
         </div>
         <div class="right-container2">
           <div class="slider-wrapper">
-            <h4>Weight</h4>
-            <input type="range" min="1" max="100" value="1" class="slider" id="slider-wght">
-            <input type="text" class="input-box" id="output-wght">
+            <h4>Width</h4>
+            <input type="range" min="1" max="100" value="80" class="slider" id="slider-wdth">
+            <input type="number" class="input-box" value="80" id="output-wdth">
           </div>
           <div class="slider-wrapper">
-            <h4>Width</h4>
-            <input type="range" min="1" max="100" value="1" class="slider" id="slider-wght">
-            <input type="text" class="input-box" id="output-wght">
+            <h4>Weight</h4>
+            <input type="range" min="1" max="100" value="30" class="slider" id="slider-wght">
+            <input type="number" class="input-box" value="30" id="output-wght">
           </div>
           <div class="slider-wrapper">
             <h4>Duration</h4>
-            <input type="range" min="1" max="100" value="1" class="slider" id="slider-wght">
-            <input type="text" class="input-box" id="output-wght">
+            <input type="range" min="0.1" max="5" value="1" class="slider" id="slider-dura">
+            <input type="number" class="input-box" value="0.4" id="output-dura">
+          </div>
+
+          <div class="easing">
+            <h4>Easing</h4>
+            <div class="easing__button-container">
+              <div class="btn btn-thin">
+                <h4>linear</h4>
+              </div>
+              <div class="btn btn-thin">
+                <h4>cubic-bezier</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="right-container-code">
+          <div class="code__wrapper">
+            <p>.hamburger_1-state1 { <br>
+              	font-variation-settings: “TIME” 0, “wdth” 30, “wght” 60;<br>
+              }<br><br>
+                .hamburger_1-state2 { <br>
+              	  cursor: pointer; <br>
+                  font-variation-settings: "TIME" 100, <br>
+                  transition-property: font-variation-settings; <br>
+                  transition-duration: 0.3s; <br>
+                }
+            </p>
           </div>
         </div>
 
-        <div class="easing">
-          <h4>Easing</h4>
-          <div class="easing__button-container">
-            <div class="btn btn-thin">
-              <h4>linear</h4>
-            </div>
-            <div class="btn btn-thin">
-              <h4>cubic-bezier</h4>
-            </div>
-          </div>
-        </div>
+
       </div>
 
     </div>
