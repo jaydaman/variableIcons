@@ -138,6 +138,14 @@ p {
     }
   }
 
+  .view-active {
+    background-color: $color-black;
+
+    h4 {
+      color: $color-white;
+    }
+  }
+
   .btnActive {
     background-color: $color-black;
   }
@@ -510,10 +518,6 @@ p {
 
     &:hover {
       background-color: $color-black;
-
-      // @media #{$smalldesktop} {
-      //   background-color: $color-blue-theme-button;
-      // }
 
       h4 {
         color: $color-white;

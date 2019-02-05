@@ -17,7 +17,7 @@
 
 //Wrapper
 .right-container2 {
-  display: flex;
+  display: none;
   justify-content: center;
   flex-direction: column;
   width: 328px;
@@ -86,6 +86,10 @@
   }
 }
 
+.mod-active {
+  display: flex;
+}
+
 //Easing component
 .easing {
   display: flex;
@@ -108,5 +112,24 @@
     padding-left: 21px;
     width: 255px;
     height: 96px;
+  }
+}
+
+// Get code component
+.right-container-code {
+  display: none;
+  padding-top: 32px;
+}
+
+.code__wrapper {
+  background-color: $color-dark-theme-button;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0px 3px 10px rgba(15, 15, 15, 0.2);
+
+  p {
+    text-align: left;
+    font-weight: 300;
+    font-variation-settings: "wght" 300;
   }
 }
