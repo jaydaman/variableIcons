@@ -32,6 +32,7 @@ p {
   }
 
   @media #{$mobile} {
+    width: 100vw;
     margin-top: 0px;
   }
 }
@@ -39,10 +40,18 @@ p {
 //General
 .line-item {
   margin-top: -24px;
+
+  @media #{$smalldesktop} {
+    margin-top: 0;
+  }
 }
 
 .line-item-alt {
   margin-top: -32px;
+
+  @media #{$smalldesktop} {
+    margin-top: 0;
+  }
 }
 
 .flex-col {

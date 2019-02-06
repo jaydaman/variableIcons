@@ -159,3 +159,14 @@ for (var i = 0; i < btnToggle.length; i++) {
     this.className += " view-active";
   });
 }
+
+// configure menu function mobile devices
+function configMenuExpand() {
+  var configMenu = document.querySelector(".config-menu");
+  var configBtn = document.querySelector(".configure-button");
+  if (configMenu.className === "flex-col config-menu") {
+    configMenu.className += " config-active";
+  } else {
+    configMenu.className = "flex-col config-menu";
+  }
+}
