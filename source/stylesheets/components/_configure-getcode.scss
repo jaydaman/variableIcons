@@ -15,28 +15,23 @@
 }
 
 .configure-bg {
+  transition: bottom 0.4s ease;
+
   @media #{$smalldesktop} {
-    position: absolute;
-    display: none;
-    // bottom: -600px;
+    position: fixed;
+    // display: none;
+    bottom: -50vh;
     z-index: 2;
     height: 50vh;
     width: 100%;
     background-color: $color-dark-theme-secondary;
     justify-content: center;
     align-items: center;
-    transition: bottom 0.4s ease;
   }
 
   @media #{$mobile} {
-    display: none;
-    bottom: -350px;
-  }
-}
-
-.config-menu {
-  @media #{$smalldesktop} {
     // display: none;
+    bottom: -50vh;
   }
 }
 
@@ -49,7 +44,7 @@
 
   .configure-bg {
     display: flex;
-    bottom: 0;
+    bottom: 0px;
   }
 
   .right-container2 {
