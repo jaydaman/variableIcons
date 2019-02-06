@@ -13,7 +13,6 @@ title: Variicons
       <a href="#" class="menu__item">ABOUT</a>
       <a href="#" class="menu__item">INSTALLATION GUIDE</a>
       <a href="#" class="menu__item">DOWNLOAD VARIICONS</a>
-      <div class="menu__item--color-pick"></div>
     </nav>
   </section>
 </div>
@@ -85,7 +84,8 @@ title: Variicons
 
       <div class="spacing-block"></div>
 
-      <div class="flex-col">
+      <div class="flex-col config-menu">
+        <div class="configure-button" onclick="configMenuExpand()"></div>
         <div class="right-container1">
           <div class="btn btn-normal line-item js-view-btn view-active" id="js-configure">
             <h4>Configure</h4>
@@ -94,7 +94,9 @@ title: Variicons
             <h4>Get code</h4>
           </div>
         </div>
+        <div class="configure-bg">
         <div class="right-container2">
+
           <div class="slider-wrapper">
             <h4>Width</h4>
             <input type="range" min="1" max="100" value="80" class="slider" id="slider-wdth">
@@ -136,6 +138,7 @@ title: Variicons
                 }
             </p>
           </div>
+        </div>
         </div>
 
 

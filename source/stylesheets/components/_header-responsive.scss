@@ -80,21 +80,3 @@
   display: block;
   transition: display 2s;
 }
-
-.menu__item--color-pick {
-  width: 20px;
-  height: 20px;
-  border-radius: 50px;
-  background-color: $color-lightgrey;
-  margin-left: 48px;
-  transition: 0.07s ease;
-
-  &:hover {
-    background-color: $color-white;
-    cursor: pointer;
-  }
-
-  &:active {
-    background-color: $color-white;
-  }
-}

@@ -1,5 +1,77 @@
 //Configure & Get code component
 
+.configure-button {
+  @media #{$smalldesktop} {
+    position: fixed;
+    z-index: 3;
+    bottom: 20px;
+    right: 20px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50px;
+    border: 3px solid $color-lightgrey;
+    transition: 0.4s ease;
+  }
+}
+
+.configure-bg {
+  @media #{$smalldesktop} {
+    position: absolute;
+    display: none;
+    // bottom: -600px;
+    z-index: 2;
+    height: 50vh;
+    width: 100%;
+    background-color: $color-dark-theme-secondary;
+    justify-content: center;
+    align-items: center;
+    transition: bottom 0.4s ease;
+  }
+
+  @media #{$mobile} {
+    display: none;
+    bottom: -350px;
+  }
+}
+
+.config-menu {
+  @media #{$smalldesktop} {
+    // display: none;
+  }
+}
+
+.config-menu.config-active {
+  .configure-button {
+    bottom: 52%;
+    background-color: $color-white;
+    border: 3px solid $color-white;
+  }
+
+  .configure-bg {
+    display: flex;
+    bottom: 0;
+  }
+
+  .right-container2 {
+    display: flex;
+  }
+
+  .right-container1 {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    z-index: 3;
+    bottom: 0px;
+    width: 100%;
+  }
+
+  .btn {
+    width: 50%;
+    border-radius: 0px;
+    box-shadow: none;
+  }
+}
+
 //Configure state
 
 //Button wrapper
@@ -17,7 +89,7 @@
 
 //Wrapper
 .right-container2 {
-  display: none;
+  display: flex;
   justify-content: center;
   flex-direction: column;
   width: 328px;
@@ -112,6 +184,10 @@
     padding-left: 21px;
     width: 255px;
     height: 96px;
+
+    @media #{$smalldesktop} {
+      display: none;
+    }
   }
 }
 
@@ -119,9 +195,16 @@
 .right-container-code {
   display: none;
   padding-top: 32px;
+
+  @media #{$smalldesktop} {
+    display: none;
+  }
 }
 
 .code__wrapper {
+  @media #{$smalldesktop} {
+    display: none;
+  }
   background-color: $color-dark-theme-button;
   border-radius: 12px;
   padding: 20px;
