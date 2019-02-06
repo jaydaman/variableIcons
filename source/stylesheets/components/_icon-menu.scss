@@ -15,11 +15,11 @@
   width: 328px;
 
   @media #{$smalldesktop} {
-    padding-top: 24px;
+    // padding-top: 24px;
   }
 
   @media #{$mobile} {
-    padding-top: 16px;
+    // padding-top: 16px;
     width: 308px;
   }
 }
