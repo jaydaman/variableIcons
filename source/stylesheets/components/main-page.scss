@@ -175,6 +175,15 @@ p {
     color: $color-white;
   }
 
+  // Configure menu small screens
+
+  // Background color
+  .configure-bg {
+    @media #{$smalldesktop} {
+      background-color: $color-dark-theme-secondary;
+    }
+  }
+
   .config-menu.config-active {
     .configure-button {
       background-color: $color-white;
@@ -323,6 +332,14 @@ p {
     }
   }
 
+  .view-active {
+    background-color: $color-black;
+
+    h4 {
+      color: $color-white;
+    }
+  }
+
   .btnActive {
     background-color: $color-black;
   }
@@ -331,11 +348,50 @@ p {
     color: $color-light-theme-text;
   }
 
+  // Configure menu small screens
+
+  // Configure menu button--active state
+  .config-menu.config-active {
+    .configure-button {
+      background-color: $color-light-theme-text;
+      border: 3px solid $color-light-theme-text;
+    }
+
+    // Background color
+    .configure-bg {
+      background-color: $color-light-theme-secondary;
+    }
+
+    .config-menu__button-wrapper {
+      button {
+        box-shadow: 0px 5px 15px rgba(150, 150, 150, 0.5);
+
+        h4 {
+          color: $color-white;
+        }
+      }
+
+      // property/easing button color
+      .js-settings-button {
+        background-color: $color-light-theme-button;
+      }
+
+      // property/easing button color--active state
+      .sett-active {
+        background-color: $color-black;
+
+        h4 {
+          color: $color-white;
+        }
+      }
+    }
+  }
+
   // Slider colors
   .input-box {
     background-color: $color-light-theme-button;
     box-shadow: 1px 2px 8px rgba(177, 177, 177, 0.2);
-    color: $color-light-theme-text;
+    color: $color-white;
   }
 
   .slider {
@@ -470,6 +526,14 @@ p {
     }
   }
 
+  .view-active {
+    background-color: $color-black;
+
+    h4 {
+      color: $color-white;
+    }
+  }
+
   .btnActive {
     background-color: $color-black;
   }
@@ -478,10 +542,56 @@ p {
     color: $color-yellow-theme-text;
   }
 
+  // Configure menu small screens
+
+  // Configure menu button--active state
+  .configure-button {
+    border: 3px solid $color-yellow-theme-text;
+  }
+  .config-menu.config-active {
+    .configure-button {
+      background-color: $color-yellow-theme-text;
+      border: 3px solid $color-yellow-theme-text;
+    }
+
+    // Background color
+    .configure-bg {
+      background-color: $color-yellow-theme-secondary;
+    }
+
+    .config-menu__button-wrapper {
+      button {
+        box-shadow: 0px 5px 10px rgba(176, 157, 16, 0.5);
+
+        h4 {
+          color: $color-white;
+        }
+      }
+
+      // property/easing button color
+      .js-settings-button {
+        background-color: $color-yellow-theme-button;
+
+        h4 {
+          color: $color-yellow-theme-text;
+        }
+      }
+
+      // property/easing button color--active state
+      .sett-active {
+        background-color: $color-black;
+
+        h4 {
+          color: $color-white;
+        }
+      }
+    }
+  }
+
   // Slider colors
   .input-box {
     background-color: $color-yellow-theme-button;
-    box-shadow: 1px 2px 8px rgba(176, 157, 16, 0.2);
+    box-shadow: 1px 2px 8px rgba(176, 157, 16, 0.5);
     color: $color-black;
   }
 
@@ -614,6 +724,14 @@ p {
     color: $color-white;
   }
 
+  .view-active {
+    background-color: $color-black;
+
+    h4 {
+      color: $color-white;
+    }
+  }
+
   .btnActive {
     background-color: $color-black;
   }
@@ -622,10 +740,56 @@ p {
     color: $color-white;
   }
 
+  // Configure menu small screens
+
+  // Configure menu button--active state
+  .configure-button {
+    border: 3px solid rgba(211, 232, 255, 0.5);
+  }
+  .config-menu.config-active {
+    .configure-button {
+      background-color: $color-white;
+      border: 3px solid $color-white;
+    }
+
+    // Background color
+    .configure-bg {
+      background-color: $color-blue-theme-secondary;
+    }
+
+    .config-menu__button-wrapper {
+      button {
+        box-shadow: 1px 2px 8px rgba(14, 45, 150, 0.5);
+
+        h4 {
+          color: $color-white;
+        }
+      }
+
+      // property/easing button color
+      .js-settings-button {
+        background-color: $color-blue-theme-button;
+
+        h4 {
+          color: $color-white;
+        }
+      }
+
+      // property/easing button color--active state
+      .sett-active {
+        background-color: $color-black;
+
+        h4 {
+          color: $color-white;
+        }
+      }
+    }
+  }
+
   // Slider colors
   .input-box {
     background-color: $color-blue-theme-button;
-    box-shadow: 1px 2px 8px rgba(14, 45, 150, 0.2);
+    box-shadow: 1px 2px 8px rgba(14, 45, 150, 0.5);
     color: $color-white;
   }
 
