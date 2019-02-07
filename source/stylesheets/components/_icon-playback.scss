@@ -61,6 +61,10 @@
   @media #{$mobile} {
     width: 308px;
   }
+
+  @media #{$smallmobile} {
+    width: 308px;
+  }
 }
 
 //Playback options wrapper

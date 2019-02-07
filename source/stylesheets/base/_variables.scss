@@ -45,9 +45,11 @@ $color-blue-theme-secondary: #2448bf;
 
 $color-blue-theme-button: #2f5ef7;
 
-$mobile: "only screen and (max-width: 650px)";
+$smallmobile: "only screen and (max-width: 321px)";
 
-$tablet: "only screen and (max-width: 768px)";
+$mobile: "only screen and (min-width: 322px) and (max-width: 650px)";
+
+$tablet: "only screen and (min-width: 651px) and (max-width: 1170px)";
 
 $smalldesktop: "only screen and (max-width: 1170px)";
 

@@ -19,32 +19,62 @@
 
   @media #{$smalldesktop} {
     position: fixed;
-    // display: none;
     bottom: -50vh;
-    z-index: 2;
     height: 50vh;
     width: 100%;
     background-color: $color-dark-theme-secondary;
-    justify-content: center;
-    align-items: center;
   }
 
   @media #{$mobile} {
-    // display: none;
     bottom: -50vh;
   }
 }
 
 .config-menu.config-active {
   .configure-button {
-    bottom: 52%;
-    background-color: $color-white;
-    border: 3px solid $color-white;
+    bottom: 52vh;
   }
 
   .configure-bg {
     display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 2;
     bottom: 0px;
+
+    @media #{$tablet} {
+      justify-content: center;
+    }
+  }
+
+  .config-menu__button-wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    button {
+      background-color: $color-dark-theme-button;
+      border-radius: 4px;
+      box-shadow: 0px 5px 15px rgba(15, 15, 15, 0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 0.07s ease;
+      width: 132px;
+      height: 40px;
+    }
+
+    div {
+      flex: 1 0 8px;
+    }
+
+    @media #{$smallmobile} {
+      margin-top: 5%;
+    }
+
+    @media #{$mobile} {
+      margin-top: 10%;
+    }
   }
 
   .right-container2 {
@@ -70,6 +100,10 @@
 //Configure state
 
 //Button wrapper
+.config-menu__button-wrapper {
+  display: none;
+}
+
 .right-container1 {
   display: flex;
   justify-content: space-between;
@@ -92,6 +126,7 @@
 
   @media #{$smalldesktop} {
     display: none;
+    width: 90vw;
   }
 
   //Sliders
@@ -101,6 +136,10 @@
     align-items: center;
     width: 328px;
     padding-top: 20px;
+
+    @media #{$smalldesktop} {
+      width: 90vw;
+    }
 
     h4 {
       font-weight: 300;
@@ -128,6 +167,10 @@
       width: 160px;
       height: 3px;
       outline: none;
+
+      @media #{$smalldesktop} {
+        width: 50%;
+      }
     }
 
     .slider::-webkit-slider-thumb {
@@ -153,10 +196,6 @@
   }
 }
 
-.mod-active {
-  display: flex;
-}
-
 //Easing component
 .easing {
   display: flex;
@@ -170,6 +209,12 @@
 
   h4 {
     font-weight: 300;
+  }
+
+  #desktop-title {
+    @media #{$smalldesktop} {
+      display: none;
+    }
   }
 
   .easing__button-container {

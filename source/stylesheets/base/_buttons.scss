@@ -28,6 +28,10 @@ button {
   @media #{$mobile} {
     width: 150px;
   }
+
+  @media #{$smallmobile} {
+    width: 150px;
+  }
 }
 
 .btn-thin {

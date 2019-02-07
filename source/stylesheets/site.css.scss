@@ -2,9 +2,9 @@
 @import "base/fonts";
 @import "base/typography";
 @import "base/colors";
-@import "components/header-responsive";
+@import "base/buttons";
+@import "components/header";
 @import "components/main-page";
-@import "components/buttons&states";
 @import "components/configure-getcode";
 @import "components/icon-playback";
 @import "components/icon-menu";
@@ -12,4 +12,16 @@
 * {
   margin: 0;
   padding: 0;
+}
+
+button {
+  border-color: none;
+  border-style: none;
+  border-width: 0;
+  padding: 0;
+  cursor: default;
+  color: inherit;
+  background-color: inherit;
+  box-sizing: inherit;
+  font: inherit;
 }
