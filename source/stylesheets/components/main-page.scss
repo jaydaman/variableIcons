@@ -19,6 +19,14 @@ p {
 // Bottom section background themes
 .bottom-section {
   height: 40vh;
+
+  @media #{$mobile} {
+    height: 45vh;
+  }
+
+  @media #{$smallmobile} {
+    height: 45vh;
+  }
 }
 
 // Bottom section content
