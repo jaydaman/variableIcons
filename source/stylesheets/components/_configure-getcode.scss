@@ -22,7 +22,6 @@
     bottom: -50vh;
     height: 50vh;
     width: 100vw;
-    background-color: $color-dark-theme-secondary;
   }
 
   @media #{$mobile} {
@@ -68,12 +67,12 @@
       flex: 1 0 8px;
     }
 
-    @media #{$smallmobile} {
-      margin-top: 5%;
-    }
-
     @media #{$mobile} {
       margin-top: 10%;
+    }
+
+    @media only screen and (max-width: 321px) {
+      margin-top: 5%;
     }
   }
 
