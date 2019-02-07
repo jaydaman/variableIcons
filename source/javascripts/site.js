@@ -147,9 +147,7 @@ loopButton.addEventListener("click", function jsLoop() {
 
 // Get code module
 
-// Button toggle
-var configureToggle = document.querySelector(".right-container2");
-var codeToggle = document.querySelector(".right-container-code");
+// Configure/getcode toggle
 var btnToggle = document.getElementsByClassName("js-view-btn");
 
 for (var i = 0; i < btnToggle.length; i++) {
@@ -169,4 +167,15 @@ function configMenuExpand() {
   } else {
     configMenu.className = "flex-col config-menu";
   }
+}
+
+// Properties/easing button toggle mobile devices
+var settingsToggle = document.getElementsByClassName("js-settings-button");
+
+for (var i = 0; i < settingsToggle.length; i++) {
+  settingsToggle[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("sett-active");
+    current[0].className = current[0].className.replace(" sett-active", "");
+    this.className += " sett-active";
+  });
 }
