@@ -21,7 +21,7 @@
     position: fixed;
     bottom: -50vh;
     height: 50vh;
-    width: 100%;
+    width: 100vw;
     background-color: $color-dark-theme-secondary;
   }
 
@@ -87,11 +87,11 @@
     position: fixed;
     z-index: 3;
     bottom: 0px;
-    width: 100%;
+    width: 100vw;
   }
 
   .btn {
-    width: 50%;
+    width: 50vw;
     border-radius: 0px;
     box-shadow: none;
   }
