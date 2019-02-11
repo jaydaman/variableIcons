@@ -175,6 +175,12 @@ p {
     color: $color-white;
   }
 
+  // Icon menu color
+  .icon-item {
+    color: $color-black;
+    background-color: $color-light-theme-button;
+  }
+
   // active theme border color for wide screens
   .theme-picker-sheet__colors {
     :first-child {
@@ -357,6 +363,12 @@ p {
 
   .md-col {
     color: $color-light-theme-text;
+  }
+
+  // Icon menu color
+  .icon-item {
+    color: $color-white;
+    background-color: $color-light-theme-button;
   }
 
   // active theme border color for wide screens
@@ -562,6 +574,12 @@ p {
 
   .md-col {
     color: $color-yellow-theme-text;
+  }
+
+  // Icon menu color
+  .icon-item {
+    color: $color-black;
+    background-color: $color-yellow-theme-button;
   }
 
   // active theme border color for wide screens
@@ -774,6 +792,12 @@ p {
 
   .md-col {
     color: $color-white;
+  }
+
+  // Icon menu color
+  .icon-item {
+    color: $color-bright;
+    background-color: $color-blue-theme-button;
   }
 
   // active theme border color for wide screens

@@ -11,7 +11,7 @@
 
 .left-container1 {
   display: flex;
-  justify-content: center;
+  // justify-content: center;
   width: 328px;
 
   @media #{$smalldesktop} {
@@ -21,6 +21,22 @@
   @media #{$mobile} {
     // padding-top: 16px;
     width: 308px;
+  }
+}
+
+// Icon item
+.icon-item {
+  width: 64px;
+  height: 64px;
+  font-family: "Variicon";
+  font-size: 40px;
+  font-variation-settings: "TIME" 0, "wdth" 80, "wght" 30;
+  transition: font-variation-settings 0.2s ease;
+  text-align: center;
+  margin-right: 2px;
+
+  &:hover {
+    font-variation-settings: "TIME" 100, "wdth" 80, "wght" 30;
   }
 }
 
