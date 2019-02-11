@@ -147,7 +147,7 @@ loopButton.addEventListener("click", function jsLoop() {
 
 // Get code module
 
-// Configure/getcode toggle
+// Configure/getcode button toggle
 var btnToggle = document.getElementsByClassName("js-view-btn");
 
 for (var i = 0; i < btnToggle.length; i++) {
@@ -179,3 +179,19 @@ for (var i = 0; i < settingsToggle.length; i++) {
     this.className += " sett-active";
   });
 }
+
+// Properties/easing view toggle mobile devices
+var propertiesView = document.querySelector(".properties-wrapper");
+var easingView = document.querySelector(".easing");
+var toggleContainer = document.querySelector(".right-container2");
+var easingButton = document.querySelector(
+  ".config-menu__button-wrapper__easing"
+);
+
+// easingButton.addEventListener("click", function() {
+//   if (toggleContainer.className === "right-container2") {
+//     toggleContainer.className += "show-easing";
+//   } else {
+//     toggleContainer.className = "right-container2";
+//   }
+// });
