@@ -1,0 +1,33 @@
+<!-- About page -->
+
+<div class="menu-container">
+  <section class="menu" id="menuExpand">
+    <a href="javascript:void(0)"; class="hamburger" onclick="menuExpand()">A</a>
+    <a href="#home" class="menu__logo">Variicons</a>
+    <nav class="menu__links">
+      <a href=""></a>
+      <a href=""></a>
+      <a href="index.html" class="menu__item">CONFIGURATOR</a>
+      <a href="about.html" class="menu__item">ABOUT</a>
+      <a href="how-to-use.html" class="menu__item">HOW TO USE VARIICONS</a>
+      <a href="" class="menu__item">GITHUB</a>
+    </nav>
+  </section>
+</div>
+<div class="text-wrap">
+  <h1>About Variicons</h1>
+  <h4>Variicons is a icon library created with Variable Fonts and made to show some of the possibllities of its technique. </h4><br><br>
+  <p>Firstly let’s explain how Variable Fonts work. Variable Fonts is a specific font format that most browsers can read and also manipulate in different ways that the typeface maker decides. Here’s a link for more reading if you want to learn more.<br><br>
+
+  Here’s how I made it. Every icon is made up with several parameters that is created within the font tool. Every icon, or glyph as it’s called in type language has different masters which is extremes that is usually used for weights, from the thinnest to the thickest. This makes it possible to use the masters to create built in animations in the icons. All you have to do is to create masters and the browser will be able to interpolate the transitions in between.<br>
+  </p>
+  <div class="img-box">
+    <img src="" alt="">
+    <p>In the type tool I make masters, or extremes that the browser later will interpolate between.</p>
+  </div>
+  <p><strong>The next step is to implement it in a website.</strong> The way you tell a browser how to and when to animate the icon is to use CSS and JavaScript. Load the icon library as a font file in your code, put the icon where you want it and give it a class. There are several ways to make an animation of it, but I used it this way: </p>
+  <div class="img-box">
+
+  </div>
+  <p><strong>The CSS-selector made for Variable Fonts</strong> is “font-variation-settings” and this is what you use to manipulate the icons. The variable “TIME” is the animation it self, which means in the example above with the hamburger that “TIME” 0 means you’ll see the hamburger in idle and “TIME” 100 will show you the cross and the end of the animation. So like in the code example above will give you a hamburger to a cross when hovering.</p>
+</div>
