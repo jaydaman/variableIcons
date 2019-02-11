@@ -126,7 +126,7 @@ p {
     }
   }
 
-  // Button colors
+  // Button colors and states
   .btn {
     background-color: $color-dark-theme-button;
 
@@ -173,6 +173,17 @@ p {
 
   .md-col {
     color: $color-white;
+  }
+
+  // active theme border color for wide screens
+  .theme-picker-sheet__colors {
+    :first-child {
+      button {
+        @media #{$widescreen} {
+          border: 2px solid #ed2f2f;
+        }
+      }
+    }
   }
 
   // Configure menu small screens
@@ -346,6 +357,17 @@ p {
 
   .md-col {
     color: $color-light-theme-text;
+  }
+
+  // active theme border color for wide screens
+  .theme-picker-sheet__colors {
+    :nth-child(2) {
+      button {
+        @media #{$widescreen} {
+          border: 2px solid #ed2f2f;
+        }
+      }
+    }
   }
 
   // Configure menu small screens
@@ -542,12 +564,26 @@ p {
     color: $color-yellow-theme-text;
   }
 
+  // active theme border color for wide screens
+  .theme-picker-sheet__colors {
+    :nth-child(3) {
+      button {
+        @media #{$widescreen} {
+          border: 2px solid #ed2f2f;
+        }
+      }
+    }
+  }
+
   // Configure menu small screens
 
   // Configure menu button--active state
   .configure-button {
-    border: 3px solid $color-yellow-theme-text;
+    @media #{$smalldesktop} {
+      border: 3px solid $color-yellow-theme-text;
+    }
   }
+
   .config-menu.config-active {
     .configure-button {
       background-color: $color-yellow-theme-text;
@@ -740,11 +776,24 @@ p {
     color: $color-white;
   }
 
+  // active theme border color for wide screens
+  .theme-picker-sheet__colors {
+    :nth-child(4) {
+      button {
+        @media #{$widescreen} {
+          border: 2px solid #ed2f2f;
+        }
+      }
+    }
+  }
+
   // Configure menu small screens
 
   // Configure menu button--active state
   .configure-button {
-    border: 3px solid rgba(211, 232, 255, 0.5);
+    @media #{$smalldesktop} {
+      border: 3px solid rgba(211, 232, 255, 0.5);
+    }
   }
   .config-menu.config-active {
     .configure-button {
