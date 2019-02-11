@@ -14,6 +14,10 @@
   padding: 0;
 }
 
+*:focus {
+  outline: none;
+}
+
 button {
   border-color: none;
   border-style: none;
