@@ -82,6 +82,10 @@ function buttonToggle2() {
   }
 }
 
+// Get state buttons
+var stateButton1 = document.getElementById("buttonState1");
+var stateButton2 = document.getElementById("buttonState2");
+
 // Configure sliders
 var slider1 = document.getElementById("slider-wdth");
 var output1 = document.getElementById("output-wdth");
@@ -93,60 +97,121 @@ var icon = document.querySelector(".js-icon");
 var sliderWidth = slider1.value,
   sliderWeight = slider2.value;
 
-// Propably the beginning of getting the input fields to work
+// Set the right animation state depending on which active state button
 var settingsString = function(wd, wg) {
-  return '"wdth" ' + wd + ', "wght" ' + wg + "";
+  if (
+    stateButton1.className === "btn btn-normal line-item js-state-btn active"
+  ) {
+    // Insert font-variation-settings to element style
+    return '"TIME" 0, "wdth" ' + wd + ', "wght" ' + wg + "";
+  } else if (
+    stateButton2.className === "btn btn-normal line-item js-state-btn active"
+  ) {
+    return '"TIME" 100, "wdth" ' + wd + ', "wght" ' + wg + "";
+  }
 };
 
-// Width slider
-slider1.oninput = function() {
-  sliderWidth = this.value;
-  icon.style.fontVariationSettings = settingsString(sliderWidth, sliderWeight);
-  output1.innerHTML = this.value;
-};
-
-// Weight Slider
-slider2.oninput = function() {
-  sliderWeight = this.value;
-  icon.style.fontVariationSettings = settingsString(sliderWidth, sliderWeight);
-  output2.innerHTML = this.value;
-};
-
-// State button functionality
-var stateButton1 = document.getElementById("buttonState1");
-var stateButton2 = document.getElementById("buttonState2");
-
-// Default icon settings
-icon.style.fontVariationSettings =
-  '"TIME" ' + 0 + ', "wdth" ' + sliderWidth + ', "wght" ' + sliderWeight + "";
+// Document load icon style settings
+icon.style.fontVariationSettings = `"TIME" 0, "wdth" ${sliderWidth}, "wght" ${sliderWeight}`;
 
 // Function state 1 button click
 stateButton1.addEventListener("click", function() {
   icon.style.fontVariationSettings =
-    '"TIME" ' + 0 + ', "wdth" ' + sliderWidth + ', "wght" ' + sliderWeight + "";
+    '"TIME" ' + 0 + ', "wdth" ' + sliderWidth + ', "wght" ' + sliderWeight;
 });
 
 // Function state 2 button click
 stateButton2.addEventListener("click", function() {
   icon.style.fontVariationSettings =
-    '"TIME" ' +
-    100 +
-    ', "wdth" ' +
-    sliderWidth +
-    ', "wght" ' +
-    sliderWeight +
-    "";
+    '"TIME" ' + 100 + ', "wdth" ' + sliderWidth + ', "wght" ' + sliderWeight;
 });
+
+// Slider functionality
+// Width slider
+slider1.oninput = function() {
+  sliderWidth = this.value;
+  // Style icon with current slider settings
+  icon.style.fontVariationSettings = settingsString(sliderWidth, sliderWeight);
+  // Output value to input box
+  output1.value = this.value;
+};
+// Width input
+output1.oninput = function() {
+  sliderWidth = this.value;
+  // Style icon with current input settings
+  icon.style.fontVariationSettings = settingsString(sliderWidth, sliderWeight);
+  // Output value to slider
+  slider1.value = this.value;
+};
+
+// Weight slider
+slider2.oninput = function() {
+  sliderWeight = this.value;
+  icon.style.fontVariationSettings = settingsString(sliderWidth, sliderWeight);
+  output2.value = this.value;
+};
+// Weight input
+output2.oninput = function() {
+  sliderWeight = this.value;
+  icon.style.fontVariationSettings = settingsString(sliderWidth, sliderWeight);
+  slider2.value = this.value;
+};
 
 // Loop button state toggle
 var loopButton = document.querySelector(".js-loop-button");
 var iconLoop = document.querySelector(".js-icon");
 
-loopButton.addEventListener("click", function jsLoop() {
+// search the CSSOM for a specific -webkit-keyframe rule
+function findKeyframesRule(rule) {
+  // gather first stylesheet
+  var ss = document.styleSheets[0];
+  // loop through all the rules
+  let rules = [];
+  for (var j = 0; j < ss.cssRules.length; ++j) {
+    // find the -webkit-keyframe rule whose name matches our passed over parameter and return that rule
+    if (
+      (ss.cssRules[j].type == window.CSSRule.WEBKIT_KEYFRAMES_RULE ||
+        ss.cssRules[j].type == window.CSSRule.KEYFRAMES_RULE) &&
+      ss.cssRules[j].name == rule
+    )
+      rules.push(ss.cssRules[j]);
+  }
+  return rules;
+
+  // rule not found
+  return null;
+}
+
+function updateLoopKeyframe() {
+  let keyFrames = findKeyframesRule("loop");
+  for (var i = 0; i < keyFrames.length; i++) {
+    keyFrames[i].deleteRule("20%");
+    keyFrames[i].deleteRule("50%");
+    keyFrames[i].deleteRule("100%");
+    keyFrames[i].appendRule(
+      `20% {font-variation-settings: "TIME" 0, "wdth" ${sliderWidth}, "wght" ${sliderWeight}}`
+    );
+    keyFrames[i].appendRule(
+      `50% {font-variation-settings: "TIME" 50, "wdth" ${sliderWidth}, "wght" ${sliderWeight}}`
+    );
+    keyFrames[i].appendRule(
+      `80%,100% {font-variation-settings: "TIME" 100, "wdth" ${sliderWidth}, "wght" ${sliderWeight}}`
+    );
+  }
+}
+
+slider1.addEventListener("change", function() {
+  updateLoopKeyframe();
+});
+
+slider2.addEventListener("change", function() {
+  updateLoopKeyframe();
+});
+
+loopButton.addEventListener("click", function() {
   if (iconLoop.className === "top-section__icon js-icon") {
+    updateLoopKeyframe();
     iconLoop.className += " loop";
-    icon.style.fontVariationSettings =
-      '"wdth" ' + sliderWidth + ', "wght" ' + sliderWeight + "";
   } else {
     iconLoop.className = "top-section__icon js-icon";
   }
