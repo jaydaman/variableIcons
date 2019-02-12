@@ -33,7 +33,7 @@ function menuExpand() {
   }
 }
 
-// Icon animation
+// Icon animation (old version)
 // function iconAnimate() {
 //   var iconState = document.getElementById("iconAnimate");
 //   if (iconState.className === "top-section__icon js-icon") {
@@ -93,28 +93,40 @@ var icon = document.querySelector(".js-icon");
 var sliderWidth = slider1.value,
   sliderWeight = slider2.value;
 
+// Propably the beginning of getting the input fields to work
 var settingsString = function(wd, wg) {
   return '"wdth" ' + wd + ', "wght" ' + wg + "";
 };
 
+// Width slider
 slider1.oninput = function() {
   sliderWidth = this.value;
   icon.style.fontVariationSettings = settingsString(sliderWidth, sliderWeight);
   output1.innerHTML = this.value;
 };
 
+// Weight Slider
 slider2.oninput = function() {
   sliderWeight = this.value;
   icon.style.fontVariationSettings = settingsString(sliderWidth, sliderWeight);
   output2.innerHTML = this.value;
 };
 
+// State button functionality
 var stateButton1 = document.getElementById("buttonState1");
 var stateButton2 = document.getElementById("buttonState2");
 
+// Default icon settings
 icon.style.fontVariationSettings =
   '"TIME" ' + 0 + ', "wdth" ' + sliderWidth + ', "wght" ' + sliderWeight + "";
 
+// Function state 1 button click
+stateButton1.addEventListener("click", function() {
+  icon.style.fontVariationSettings =
+    '"TIME" ' + 0 + ', "wdth" ' + sliderWidth + ', "wght" ' + sliderWeight + "";
+});
+
+// Function state 2 button click
 stateButton2.addEventListener("click", function() {
   icon.style.fontVariationSettings =
     '"TIME" ' +
@@ -124,11 +136,6 @@ stateButton2.addEventListener("click", function() {
     ', "wght" ' +
     sliderWeight +
     "";
-});
-
-stateButton1.addEventListener("click", function() {
-  icon.style.fontVariationSettings =
-    '"TIME" ' + 0 + ', "wdth" ' + sliderWidth + ', "wght" ' + sliderWeight + "";
 });
 
 // Loop button state toggle
@@ -187,11 +194,3 @@ var toggleContainer = document.querySelector(".right-container2");
 var easingButton = document.querySelector(
   ".config-menu__button-wrapper__easing"
 );
-
-// easingButton.addEventListener("click", function() {
-//   if (toggleContainer.className === "right-container2") {
-//     toggleContainer.className += "show-easing";
-//   } else {
-//     toggleContainer.className = "right-container2";
-//   }
-// });
