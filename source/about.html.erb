@@ -15,19 +15,20 @@
   </section>
 </div>
 <div class="text-wrap">
-  <h1>About Variicons</h1>
+  <h1>About Variicons</h1><br>
   <h4>Variicons is a icon library created with Variable Fonts and made to show some of the possibllities of its technique. </h4><br><br>
-  <p>Firstly let’s explain how Variable Fonts work. Variable Fonts is a specific font format that most browsers can read and also manipulate in different ways that the typeface maker decides. Here’s a link for more reading if you want to learn more.<br><br>
+  <p>Variable Fonts is a specific font format that most browsers have support for (checkout support here) and the biggest advantage using it is that you only have to use one single font file for each typeface and still get all font weights in it like Regluar, Thin or Bold. This is because within the Variable Font file there's masters, or extremes, set between the thinnest and the thickest state of each glyph and the browser is able to interpolate between these masters to output a desired weight value.<br><br>
 
-  Here’s how I made it. Every icon is made up with several parameters that is created within the font tool. Every icon, or glyph as it’s called in type language has different masters which is extremes that is usually used for weights, from the thinnest to the thickest. This makes it possible to use the masters to create built in animations in the icons. All you have to do is to create masters and the browser will be able to interpolate the transitions in between.<br>
-  </p>
-  <div class="img-box">
-    <img src="" alt="">
-    <p>In the type tool I make masters, or extremes that the browser later will interpolate between.</p>
-  </div>
-  <p><strong>The next step is to implement it in a website.</strong> The way you tell a browser how to and when to animate the icon is to use CSS and JavaScript. Load the icon library as a font file in your code, put the icon where you want it and give it a class. There are several ways to make an animation of it, but I used it this way: </p>
-  <div class="img-box">
+  But there's more possibilities with this technique just than changing font weights. The masters can also be seen as states, where master no 1 is the first state and master no 2 is the second state, which makes it possible to make icons with built-in animations. And this is how Variicons is made.<br><br>
+
+  Each icon is made up in a typeface-tool with master that works like animation states, which the browser later can interpolate between.
+</p><br><br>
+  <div>
+    <img src="images/masters.png" alt="">
+  </div><br><br>
+  <p>The magical way to control the font settings when using it in a webpage is to use the CSS keyword "font-variation-settings". With this keyword you'll access the properties that is set for each icon in the font.</p><br><br>
+  <div>
 
   </div>
-  <p><strong>The CSS-selector made for Variable Fonts</strong> is “font-variation-settings” and this is what you use to manipulate the icons. The variable “TIME” is the animation it self, which means in the example above with the hamburger that “TIME” 0 means you’ll see the hamburger in idle and “TIME” 100 will show you the cross and the end of the animation. So like in the code example above will give you a hamburger to a cross when hovering.</p>
+  <p>And you can bind the animation to be triggered on the most common ways that is used in code, like on hover or when clicked etc. For a more thorough explanation on how to use it in your own web projects, check out the "how to use" page.</p>
 </div>

@@ -15,19 +15,30 @@
   </section>
 </div>
 <div class="text-wrap">
-  <h1>How to use Variicons</h1>
-  <h4>Variicons is a icon library created with Variable Fonts and made to show some of the possibllities of its technique. </h4><br><br>
-  <p><br><br>
-
-  <br>
-  </p>
-  <div class="img-box">
+  <h1>How to use Variicons</h1><br>
+  <h4>Here's a quick installation guide of how you can implement it in your own web projects and make it work.</h4><br><br>
+  <p>The animations itself is done with a few CSS-lines, but to make those cool interaction triggers you'll need some JavaScript as well.<br><br>
+  1. First off download the Variicon font and put it in your project. Since it's a Variable Font the @fontface looks a bit different than normal. The font-weight and font-stretch need to be set in an interval of 1-100 in order for the browser to know what values to interpolate between like this:</p><br><br>
+  <div class="content-box">
     <img src="" alt="">
-    <p>In the type tool I make masters, or extremes that the browser later will interpolate between.</p>
-  </div>
-  <p><strong></strong> </p>
-  <div class="img-box">
-
-  </div>
-  <p><strong></strong> </p>
+    <p>@font-face {</p><br>
+    <p class="indent">font-family: 'Variicon';<br>
+    src: url(/fonts/VariiconGX.ttf) format('truetype');<br>
+    font-weight: 1 100;<br>
+    font-stretch: 1 100;</p>
+    <p>}</p>
+  </div><br><br>
+  <p>2. Choose your icon and write it's name in the HTML to embed it, all the icon names are displayed here.<br><br>
+  3. Time to style the icon in CSS. With the keyword font-variation-settings you can style the icons weight ("wght"), width ("wdth") and animation state ("TIME"). So to show an easy example how it works an interaction animation can look like this:</p><br><br>
+  <div class="content-box">
+    <p>.icon {</p><br>
+    <p class="indent">font-size: 32px;<br>
+    font-variation-settings: "TIME" 0, "wdth" 80, "wght" 30;<br>
+    transition: font-variation-settings 0.4s ease;</p>
+    <p>}</p><br>
+    <p>.icon:hover {</p><br>
+    <p class="indent">font-variation-settings: "TIME" 100, "wdth" 80, "wght" 30;</p>
+    <p>}</p>
+  </div><br><br>
+  <p>And this is how it's done! Note that it's the "TIME"-parameter that contain the animation states itself where "TIME" 0 is always the first state and "TIME" 100 is always the second state. Have fun using it!</p>
 </div>
