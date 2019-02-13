@@ -12,9 +12,9 @@
   font-family: "Variicon";
   color: $color-bright;
   font-size: 25vmin;
-  // font-variation-settings: "TIME" 0, "wdth" 80, "wght" 30;
-  transition: font-variation-settings cubic-bezier(0.75, 0, 0, 1);
+  transition: font-variation-settings;
   transition-duration: 400ms;
+  transition-timing-function: cubic-bezier(0.75, 0, 0, 1);
 
   @media #{$smalldesktop} {
     font-size: 30vmin;
@@ -48,8 +48,9 @@
     }
   }
 
-  animation: loop cubic-bezier(0.75, 0, 0, 1) 0s infinite alternate;
+  animation: loop 0s infinite alternate;
   animation-duration: 0.7s;
+  animation-timing-function: cubic-bezier(0.75, 0, 0, 1);
 }
 
 //Icon playback
