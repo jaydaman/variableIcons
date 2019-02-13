@@ -93,9 +93,14 @@ var slider2 = document.getElementById("slider-wght");
 var output2 = document.getElementById("output-wght");
 var slider3 = document.getElementById("slider-dura");
 var output3 = document.getElementById("output-dura");
+var button1 = document.getElementById("button-easing");
 var icon = document.querySelector(".js-icon");
+
 var sliderWidth = slider1.value,
   sliderWeight = slider2.value;
+var sliderDuration = slider3.value,
+  buttonEasing = button1.value;
+var delay = 250;
 
 // Set the right animation state depending on which active state button
 var settingsString = function(wd, wg) {
@@ -109,6 +114,16 @@ var settingsString = function(wd, wg) {
   ) {
     return '"TIME" 100, "wdth" ' + wd + ', "wght" ' + wg + "";
   }
+};
+
+// Get transition duration value
+var durationString = function(dura) {
+  return dura + "ms";
+};
+
+// Get value to delay loop animation duration to match state animation length
+var delayString = function(dura) {
+  return Number(dura) + Number(delay) + "ms";
 };
 
 // Document load icon style settings
@@ -155,6 +170,23 @@ output2.oninput = function() {
   sliderWeight = this.value;
   icon.style.fontVariationSettings = settingsString(sliderWidth, sliderWeight);
   slider2.value = this.value;
+};
+
+// Duration slider
+slider3.oninput = function() {
+  sliderDuration = this.value;
+  // Set duration length for transition
+  icon.style.transitionDuration = durationString(sliderDuration);
+  output3.value = this.value;
+  // Set duration length for animation
+  icon.style.animationDuration = delayString(sliderDuration);
+};
+// Duration input
+output3.oninput = function() {
+  sliderDuration = this.value;
+  icon.style.transitionDuration = durationString(sliderDuration);
+  slider3.value = this.value;
+  icon.style.animationDuration = delayString(sliderDuration);
 };
 
 // Loop button state toggle
