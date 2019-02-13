@@ -117,15 +117,15 @@ title: Variicons
               </div>
               <div class="slider-wrapper">
                 <h4>Duration</h4>
-                <input type="range" min="0.1" max="5" value="1" class="slider" id="slider-dura">
-                <input type="number" class="input-box" value="0.4" id="output-dura">
+                <input type="range" min="0" max="1200" value="400" class="slider" step="10" id="slider-dura">
+                <input type="number" class="input-box" min="0" max="1200" value="400" step="10" id="output-dura">
               </div>
             </div>
 
             <div class="easing">
               <h4 id="desktop-title">Easing</h4>
               <div class="easing__button-container">
-                <div class="btn btn-thin">
+                <div class="btn btn-thin" id="button-easing">
                   <h4>linear</h4>
                 </div>
                 <div class="btn btn-thin">

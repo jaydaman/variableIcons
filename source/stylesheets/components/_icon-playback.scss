@@ -13,7 +13,8 @@
   color: $color-bright;
   font-size: 25vmin;
   // font-variation-settings: "TIME" 0, "wdth" 80, "wght" 30;
-  transition: font-variation-settings 0.4s cubic-bezier(0.75, 0, 0, 1);
+  transition: font-variation-settings cubic-bezier(0.75, 0, 0, 1);
+  transition-duration: 400ms;
 
   @media #{$smalldesktop} {
     font-size: 30vmin;
@@ -27,7 +28,7 @@
 
 .js-icon.animate {
   // font-variation-settings: "TIME" 100, "wdth" 80, "wght" 30;
-  transition: font-variation-settings 0.4s cubic-bezier(0.75, 0, 0, 1);
+  // transition: font-variation-settings 0.4s cubic-bezier(0.75, 0, 0, 1);
 }
 
 .top-section__icon.loop {
@@ -47,7 +48,8 @@
     }
   }
 
-  animation: loop 0.7s cubic-bezier(0.75, 0, 0, 1) 0s infinite alternate;
+  animation: loop cubic-bezier(0.75, 0, 0, 1) 0s infinite alternate;
+  animation-duration: 0.7s;
 }
 
 //Icon playback
