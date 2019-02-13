@@ -98,8 +98,7 @@ var icon = document.querySelector(".js-icon");
 
 var sliderWidth = slider1.value,
   sliderWeight = slider2.value;
-var sliderDuration = slider3.value,
-  buttonEasing = button1.value;
+var sliderDuration = slider3.value;
 var delay = 250;
 
 // Set the right animation state depending on which active state button

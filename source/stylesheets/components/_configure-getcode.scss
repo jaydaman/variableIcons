@@ -30,11 +30,20 @@
   @media #{$mobile} {
     bottom: -50vh;
   }
+
+  @media #{$smallmobile} {
+    height: 59vh;
+    bottom: -59vh;
+  }
 }
 
 .config-menu.config-active {
   .configure-button {
     bottom: 52vh;
+
+    @media #{$smallmobile} {
+      bottom: 61vh;
+    }
   }
 
   .configure-bg {
@@ -92,7 +101,7 @@
     width: 100vw;
   }
 
-  .btn {
+  .btn-normal {
     width: 50vw;
     border-radius: 0px;
     box-shadow: none;
@@ -207,7 +216,7 @@
   padding-top: 20px;
 
   @media #{$smalldesktop} {
-    display: none;
+    width: 100%;
   }
 
   h4 {
@@ -222,14 +231,37 @@
 
   .easing__button-container {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding-left: 21px;
-    width: 255px;
-    height: 96px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-left: 16px;
+    width: 100%;
 
     @media #{$smalldesktop} {
-      display: none;
+      margin-left: 2.7%;
+    }
+
+    .btn {
+      flex-grow: 1;
+      padding: 10px 0 10px 0;
+      margin-bottom: 8px;
+      margin-left: 2.7%;
+      width: 47.3%;
+
+      @media #{$smalldesktop} {
+        flex-grow: 0;
+        padding: 2px 4px 2px 4px;
+        height: 32px;
+        border-radius: 4px;
+        width: 28%;
+        margin-left: 0;
+        margin-right: 2.7%;
+      }
+
+      @media #{$smallmobile} {
+        flex-grow: 1;
+        width: 27%;
+      }
     }
   }
 }
