@@ -129,7 +129,6 @@
 
 //Wrapper
 .right-container2 {
-  display: flex;
   justify-content: center;
   flex-direction: column;
   width: 328px;
@@ -268,7 +267,6 @@
 
 // Get code component
 .right-container-code {
-  display: none;
   padding-top: 32px;
 
   @media #{$smalldesktop} {
@@ -290,4 +288,12 @@
     font-weight: 300;
     font-variation-settings: "wght" 300;
   }
+}
+
+.setting-container-display-flex {
+  display: flex;
+}
+
+.setting-container-display-none {
+  display: none;
 }

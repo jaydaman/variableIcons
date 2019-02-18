@@ -24,7 +24,7 @@ title: Variicons
           <div class="top-section__icon js-icon" id="iconAnimate">
             B
           </div>
-          <p>hamburger_1</p>
+          <p id="icon-title">hamburger_1</p>
         </div>
         <div class="spacing-block"></div>
     </section>
@@ -34,10 +34,10 @@ title: Variicons
     <div class="bottom-section__container">
         <div class="left-container1 line-item-alt">
           <div class="icon-wrapper">
-            <div class="icon-item" title="hamburger_1">
+            <div class="icon-item" data-title="hamburger_1">
               B
             </div>
-            <div class="icon-item" title="hamburger_2">
+            <div class="icon-item" data-title="hamburger_2">
               A
             </div>
           </div>
@@ -91,16 +91,16 @@ title: Variicons
         <div class="configure-button" onclick="configMenuExpand()"></div>
 
         <div class="right-container1">
-          <div class="btn btn-normal line-item js-view-btn view-active" id="js-configure">
+          <div class="btn btn-normal line-item js-view-btn view-active" id="js-configure-button">
             <h4>Configure</h4>
           </div>
-          <div class="btn btn-normal line-item js-view-btn" id="js-code">
+          <div class="btn btn-normal line-item js-view-btn" id="js-code-button">
             <h4>Get code</h4>
           </div>
         </div>
         <div class="configure-bg">
 
-          <div class="right-container2 js-container" id="configure-container">
+          <div class="right-container2 js-container setting-container-display-flex" id="configure-container">
             <div class="properties-wrapper">
               <div class="slider-wrapper">
                 <h4>Width</h4>
