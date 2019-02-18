@@ -70,6 +70,19 @@
   }
 }
 
+.js-icon-button {
+  display: none;
+  font-family: "Variicon";
+  font-size: 40px;
+  font-variation-settings: "TIME" 0, "wdth" 70, "wght" 5;
+  color: $color-white;
+
+  @media #{$smalldesktop} {
+    display: flex;
+    justify-content: center;
+  }
+}
+
 //Playback options wrapper
 .mid-container2 {
   display: flex;
@@ -83,6 +96,7 @@
     top: 20px;
     right: 20px;
     padding-top: 0px;
+    width: 162px;
   }
 }
 

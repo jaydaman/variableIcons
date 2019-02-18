@@ -33,6 +33,25 @@ function menuExpand() {
   }
 }
 
+// Icon menu toggle on smaller screens
+var iconButton = document.querySelector(".js-icon-button");
+var iconMenu = document.querySelector(".left-container1");
+iconButton.addEventListener("click", function() {
+  if (iconMenu.className === "left-container1 line-item-alt") {
+    iconMenu.className += " expanded";
+  } else {
+    iconMenu.className = "left-container1 line-item-alt";
+  }
+});
+
+iconMenu.addEventListener("click", function() {
+  if (iconMenu.className === "left-container1 line-item-alt") {
+    iconMenu.className += " expanded";
+  } else {
+    iconMenu.className = "left-container1 line-item-alt";
+  }
+});
+
 // Icon playback functions
 
 // Selected icon states button toggle
@@ -44,24 +63,6 @@ for (var i = 0; i < stateBtns.length; i++) {
     current[0].className = current[0].className.replace(" active", "");
     this.className += " active";
   });
-}
-
-function buttonToggle1() {
-  var buttonSelect = document.querySelector(".small-sq");
-  if (buttonSelect.className === "small-sq js-loop-button") {
-    buttonSelect.className += " toggle-active";
-  } else {
-    buttonSelect.className = "small-sq js-loop-button";
-  }
-}
-
-function buttonToggle2() {
-  var buttonSelect2 = document.querySelector(".js-button-expand");
-  if (buttonSelect2.className === "small-sq js-button-expand") {
-    buttonSelect2.className += " toggle-active";
-  } else {
-    buttonSelect2.className = "small-sq js-button-expand";
-  }
 }
 
 // Configure easing buttons
@@ -271,6 +272,18 @@ for (var i = 0; i < btnToggle.length; i++) {
     this.className += " view-active";
   });
 }
+
+var containerView = document.querySelector(".js-container");
+var configView = document.getElementById("configure-container");
+var codeView = document.getElementById("code-container");
+
+if (current.id === "js-configure") {
+  configView.style.display = "flex";
+} else if (current.id === "js-code") {
+  codeView.style.display = "block";
+}
+
+console.log(current.id);
 
 // configure menu function mobile devices
 function configMenuExpand() {
