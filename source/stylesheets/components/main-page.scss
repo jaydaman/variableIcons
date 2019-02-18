@@ -152,6 +152,14 @@ p {
     }
   }
 
+  .setting-active {
+    background-color: $color-black;
+
+    h4 {
+      color: $color-white;
+    }
+  }
+
   .toggle-active {
     background-color: $color-black;
 
@@ -215,14 +223,6 @@ p {
 
       .js-settings-button {
         background-color: $color-dark-theme-button;
-      }
-
-      .sett-active {
-        background-color: $color-black;
-
-        h4 {
-          color: $color-white;
-        }
       }
     }
   }
@@ -342,6 +342,14 @@ p {
     }
   }
 
+  .setting-active {
+    background-color: $color-black;
+
+    h4 {
+      color: $color-white;
+    }
+  }
+
   .toggle-active {
     background-color: $color-black;
 
@@ -409,15 +417,6 @@ p {
       // property/easing button color
       .js-settings-button {
         background-color: $color-light-theme-button;
-      }
-
-      // property/easing button color--active state
-      .sett-active {
-        background-color: $color-black;
-
-        h4 {
-          color: $color-white;
-        }
       }
     }
   }
@@ -553,6 +552,14 @@ p {
     }
   }
 
+  .setting-active {
+    background-color: $color-black;
+
+    h4 {
+      color: $color-white;
+    }
+  }
+
   .toggle-active {
     background-color: $color-black;
 
@@ -629,15 +636,6 @@ p {
 
         h4 {
           color: $color-yellow-theme-text;
-        }
-      }
-
-      // property/easing button color--active state
-      .sett-active {
-        background-color: $color-black;
-
-        h4 {
-          color: $color-white;
         }
       }
     }
@@ -774,6 +772,14 @@ p {
     }
   }
 
+  .setting-active {
+    background-color: $color-black;
+
+    h4 {
+      color: $color-white;
+    }
+  }
+
   .toggle-active {
     background-color: $color-black;
     color: $color-white;
@@ -843,15 +849,6 @@ p {
       // property/easing button color
       .js-settings-button {
         background-color: $color-blue-theme-button;
-
-        h4 {
-          color: $color-white;
-        }
-      }
-
-      // property/easing button color--active state
-      .sett-active {
-        background-color: $color-black;
 
         h4 {
           color: $color-white;
