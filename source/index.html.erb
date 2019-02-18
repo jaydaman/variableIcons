@@ -33,11 +33,13 @@ title: Variicons
 
     <div class="bottom-section__container">
         <div class="left-container1 line-item-alt">
-          <div class="icon-item" title="hamburger_1">
-            B
-          </div>
-          <div class="icon-item" title="hamburger_2">
-            A
+          <div class="icon-wrapper">
+            <div class="icon-item" title="hamburger_1">
+              B
+            </div>
+            <div class="icon-item" title="hamburger_2">
+              A
+            </div>
           </div>
         </div>
 
@@ -53,11 +55,14 @@ title: Variicons
         </div>
         </div>
         <div class="mid-container2">
-          <div class="small-sq js-loop-button" onclick="buttonToggle1()">
+          <div class="small-sq js-icon-button">
+            <i class="active-icon">B</i>
+          </div>
+          <div class="small-sq js-loop-button">
             <i class="material-icons md-col">loop</i>
           </div>
           <div class="theme-picker">
-            <div class="small-sq js-button-expand" onclick="buttonToggle2()">
+            <div class="small-sq js-button-expand">
               <i class="material-icons md-col">lens</i>
             </div>
             </div>
@@ -95,7 +100,7 @@ title: Variicons
         </div>
         <div class="configure-bg">
 
-          <div class="right-container2">
+          <div class="right-container2 js-container" id="configure-container">
             <div class="properties-wrapper">
               <div class="slider-wrapper">
                 <h4>Width</h4>
@@ -131,7 +136,7 @@ title: Variicons
               </div>
             </div>
           </div>
-          <div class="right-container-code">
+          <div class="right-container-code js-container" id="code-container">
             <div class="code__wrapper">
               <p>.hamburger_1-state1 { <br>
                 	font-variation-settings: “TIME” 0, “wdth” 30, “wght” 60;<br>
