@@ -33,24 +33,6 @@ function menuExpand() {
   }
 }
 
-// Icon animation (old version)
-// function iconAnimate() {
-//   var iconState = document.getElementById("iconAnimate");
-//   if (iconState.className === "top-section__icon js-icon") {
-//     iconState.className += " animate";
-//   } else {
-//     iconState.className = "top-section__icon js-icon";
-//   }
-// }
-
-// Range and input listener
-const range = document.querySelectorAll(".slider");
-const field = document.querySelectorAll(".input-box");
-
-// range.addEventListener("click", () => {
-//   field.innerHTML = range.value;
-// });
-
 // Icon playback functions
 
 // Selected icon states button toggle
@@ -82,6 +64,35 @@ function buttonToggle2() {
   }
 }
 
+// Configure easing buttons
+var button1 = document.getElementById("button-linear");
+var button2 = document.getElementById("button-ease");
+var button3 = document.getElementById("button-ease-in");
+var button4 = document.getElementById("button-ease-out");
+var button5 = document.getElementById("button-ease-in-out");
+
+// Set transition-timing-function on click event
+button1.addEventListener("click", function() {
+  icon.style.transitionTimingFunction = "linear";
+  icon.style.animationTimingFunction = "linear";
+});
+button2.addEventListener("click", function() {
+  icon.style.transitionTimingFunction = "ease";
+  icon.style.animationTimingFunction = "ease";
+});
+button3.addEventListener("click", function() {
+  icon.style.transitionTimingFunction = "ease-in";
+  icon.style.animationTimingFunction = "ease-in";
+});
+button4.addEventListener("click", function() {
+  icon.style.transitionTimingFunction = "ease-out";
+  icon.style.animationTimingFunction = "ease-out";
+});
+button5.addEventListener("click", function() {
+  icon.style.transitionTimingFunction = "ease-in-out";
+  icon.style.animationTimingFunction = "ease-in-out";
+});
+
 // Get state buttons
 var stateButton1 = document.getElementById("buttonState1");
 var stateButton2 = document.getElementById("buttonState2");
@@ -93,12 +104,12 @@ var slider2 = document.getElementById("slider-wght");
 var output2 = document.getElementById("output-wght");
 var slider3 = document.getElementById("slider-dura");
 var output3 = document.getElementById("output-dura");
-var button1 = document.getElementById("button-easing");
 var icon = document.querySelector(".js-icon");
 
 var sliderWidth = slider1.value,
   sliderWeight = slider2.value;
 var sliderDuration = slider3.value;
+// buttonEasing = button1.value;
 var delay = 250;
 
 // Set the right animation state depending on which active state button
@@ -272,14 +283,14 @@ function configMenuExpand() {
   }
 }
 
-// Properties/easing button toggle mobile devices
-var settingsToggle = document.getElementsByClassName("js-settings-button");
+// easing buttons toggle mobile devices
+var settingsToggle = document.getElementsByClassName("js-easing-button");
 
 for (var i = 0; i < settingsToggle.length; i++) {
   settingsToggle[i].addEventListener("click", function() {
-    var current = document.getElementsByClassName("sett-active");
-    current[0].className = current[0].className.replace(" sett-active", "");
-    this.className += " sett-active";
+    var current = document.getElementsByClassName("setting-active");
+    current[0].className = current[0].className.replace(" setting-active", "");
+    this.className += " setting-active";
   });
 }
 
