@@ -33,24 +33,6 @@ function menuExpand() {
   }
 }
 
-// Icon animation (old version)
-// function iconAnimate() {
-//   var iconState = document.getElementById("iconAnimate");
-//   if (iconState.className === "top-section__icon js-icon") {
-//     iconState.className += " animate";
-//   } else {
-//     iconState.className = "top-section__icon js-icon";
-//   }
-// }
-
-// Range and input listener
-const range = document.querySelectorAll(".slider");
-const field = document.querySelectorAll(".input-box");
-
-// range.addEventListener("click", () => {
-//   field.innerHTML = range.value;
-// });
-
 // Icon playback functions
 
 // Selected icon states button toggle
