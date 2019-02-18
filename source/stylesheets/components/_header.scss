@@ -55,7 +55,7 @@
   }
 }
 
-@media #{$mobile} {
+@media #{$smalldesktop} {
   .menu.expanded {
     position: fixed;
     z-index: 10;
