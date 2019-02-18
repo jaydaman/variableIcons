@@ -135,21 +135,24 @@ title: Variicons
                 </div>
               </div>
             </div>
-          </div>
-          <div class="right-container-code js-container" id="code-container">
-            <div class="code__wrapper">
-              <p>.hamburger_1-state1 { <br>
-                	font-variation-settings: “TIME” 0, “wdth” 30, “wght” 60;<br>
-                }<br><br>
-                  .hamburger_1-state2 { <br>
-                	  cursor: pointer; <br>
-                    font-variation-settings: "TIME" 100, <br>
-                    transition-property: font-variation-settings; <br>
-                    transition-duration: 0.3s; <br>
-                  }
-              </p>
+
+            <div class="right-container-code js-container setting-container-display-none" id="code-container">
+              <div class="code__wrapper">
+                <p id="code-output">.hamburger_1-state1 { <br>
+                  	font-variation-settings: “TIME” 0, “wdth” 30, “wght” 60;<br>
+                    transition-property: font-variation-settings;
+                    transition-duration: 400ms;<br>
+                    transition-timing-function: ease;<br>
+                  }<br><br>
+                    .hamburger_1-state2 { <br>
+                  	  cursor: pointer; <br>
+                      font-variation-settings: "TIME" 100, “wdth” 30, “wght” 60;<br>
+                    }
+                </p>
+              </div>
             </div>
           </div>
+
         </div>
       </div>
 
