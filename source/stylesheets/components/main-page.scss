@@ -242,6 +242,17 @@ p {
     background: $color-dark-theme-button;
     box-shadow: rgba(15, 15, 15, 0.2);
   }
+
+  // Code view colors
+  .code__wrapper {
+    background-color: $color-dark-theme-button;
+    box-shadow: 0px 3px 10px rgba(15, 15, 15, 0.2);
+
+    @media #{$smalldesktop} {
+      background-color: $color-dark-theme-secondary;
+      box-shadow: none;
+    }
+  }
 }
 
 // Light theme
@@ -251,7 +262,6 @@ p {
   }
 
   // Menu color
-
   .menu {
     a {
       color: rgba(93, 93, 93, 0.5);
@@ -393,16 +403,18 @@ p {
 
   // Configure menu small screens
 
+  // Background color
+  .configure-bg {
+    @media #{$smalldesktop} {
+      background-color: $color-light-theme-secondary;
+    }
+  }
+
   // Configure menu button--active state
   .config-menu.config-active {
     .configure-button {
       background-color: $color-light-theme-text;
       border: 3px solid $color-light-theme-text;
-    }
-
-    // Background color
-    .configure-bg {
-      background-color: $color-light-theme-secondary;
     }
 
     .config-menu__button-wrapper {
@@ -435,6 +447,21 @@ p {
   .slider::-webkit-slider-thumb {
     background: $color-light-theme-button;
     box-shadow: rgba(177, 177, 177, 0.2);
+  }
+
+  // Code view colors
+  .code__wrapper {
+    background-color: $color-light-theme-button;
+    box-shadow: 0px 3px 10px rgba(177, 177, 177, 0.2);
+
+    p {
+      color: $color-black;
+    }
+
+    @media #{$smalldesktop} {
+      background-color: $color-light-theme-secondary;
+      box-shadow: none;
+    }
   }
 }
 
@@ -603,6 +630,13 @@ p {
 
   // Configure menu small screens
 
+  // Background color
+  .configure-bg {
+    @media #{$smalldesktop} {
+      background-color: $color-yellow-theme-secondary;
+    }
+  }
+
   // Configure menu button--active state
   .configure-button {
     @media #{$smalldesktop} {
@@ -614,11 +648,6 @@ p {
     .configure-button {
       background-color: $color-yellow-theme-text;
       border: 3px solid $color-yellow-theme-text;
-    }
-
-    // Background color
-    .configure-bg {
-      background-color: $color-yellow-theme-secondary;
     }
 
     .config-menu__button-wrapper {
@@ -655,6 +684,21 @@ p {
   .slider::-webkit-slider-thumb {
     background: $color-yellow-theme-button;
     box-shadow: rgba(176, 157, 16, 0.2);
+  }
+
+  // Code view colors
+  .code__wrapper {
+    background-color: $color-yellow-theme-button;
+    box-shadow: 0px 3px 10px rgba(176, 157, 16, 0.2);
+
+    p {
+      color: $color-yellow-theme-text;
+    }
+
+    @media #{$smalldesktop} {
+      background-color: $color-yellow-theme-secondary;
+      box-shadow: none;
+    }
   }
 }
 
@@ -820,6 +864,13 @@ p {
 
   // Configure menu small screens
 
+  // Background color
+  .configure-bg {
+    @media #{$smalldesktop} {
+      background-color: $color-blue-theme-secondary;
+    }
+  }
+
   // Configure menu button--active state
   .configure-button {
     @media #{$smalldesktop} {
@@ -830,11 +881,6 @@ p {
     .configure-button {
       background-color: $color-white;
       border: 3px solid $color-white;
-    }
-
-    // Background color
-    .configure-bg {
-      background-color: $color-blue-theme-secondary;
     }
 
     .config-menu__button-wrapper {
@@ -870,6 +916,17 @@ p {
 
   .slider::-webkit-slider-thumb {
     background: #2f5df5;
-    box-shadow: rgba(177, 177, 177, 0.2);
+    box-shadow: rgba(14, 45, 150, 0.2);
+  }
+
+  // Code view colors
+  .code__wrapper {
+    background-color: $color-blue-theme-button;
+    box-shadow: 0px 3px 10px rgba(14, 45, 150, 0.2);
+
+    @media #{$smalldesktop} {
+      background-color: $color-blue-theme-secondary;
+      box-shadow: none;
+    }
   }
 }

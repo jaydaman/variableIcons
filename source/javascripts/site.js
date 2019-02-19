@@ -34,23 +34,23 @@ function menuExpand() {
 }
 
 // Icon menu toggle on smaller screens
-var iconButton = document.querySelector(".js-icon-button");
-var iconMenu = document.querySelector(".left-container1");
-iconButton.addEventListener("click", function() {
-  if (iconMenu.className === "left-container1 line-item-alt") {
-    iconMenu.className += " expanded";
-  } else {
-    iconMenu.className = "left-container1 line-item-alt";
-  }
-});
-
-iconMenu.addEventListener("click", function() {
-  if (iconMenu.className === "left-container1 line-item-alt") {
-    iconMenu.className += " expanded";
-  } else {
-    iconMenu.className = "left-container1 line-item-alt";
-  }
-});
+// var iconButton = document.querySelector(".js-icon-button");
+// var iconMenu = document.querySelector(".left-container1");
+// iconButton.addEventListener("click", function() {
+//   if (iconMenu.className === "left-container1 line-item-alt") {
+//     iconMenu.className += " expanded";
+//   } else {
+//     iconMenu.className = "left-container1 line-item-alt";
+//   }
+// });
+//
+// iconMenu.addEventListener("click", function() {
+//   if (iconMenu.className === "left-container1 line-item-alt") {
+//     iconMenu.className += " expanded";
+//   } else {
+//     iconMenu.className = "left-container1 line-item-alt";
+//   }
+// });
 
 // Icon playback functions
 
@@ -263,27 +263,25 @@ loopButton.addEventListener("click", function() {
 // Get code module
 
 // Configure/getcode button toggle
-var btnToggle = document.getElementsByClassName("js-view-btn");
+var toggleBtns = document.getElementsByClassName("js-view-btn");
 
-for (var i = 0; i < btnToggle.length; i++) {
-  btnToggle[i].addEventListener("click", function() {
+for (var i = 0; i < toggleBtns.length; i++) {
+  toggleBtns[i].addEventListener("click", function() {
     var current = document.getElementsByClassName("view-active");
     current[0].className = current[0].className.replace(" view-active", "");
     this.className += " view-active";
+    displayFlex = document.querySelector(".setting-container-display-flex");
+    displayNone = document.querySelector(".setting-container-display-none");
+    displayFlex.className = displayFlex.className.replace(
+      " setting-container-display-flex",
+      " setting-container-display-none"
+    );
+    displayNone.className = displayNone.className.replace(
+      " setting-container-display-none",
+      " setting-container-display-flex"
+    );
   });
 }
-
-var containerView = document.querySelector(".js-container");
-var configView = document.getElementById("configure-container");
-var codeView = document.getElementById("code-container");
-
-if (current.id === "js-configure") {
-  configView.style.display = "flex";
-} else if (current.id === "js-code") {
-  codeView.style.display = "block";
-}
-
-console.log(current.id);
 
 // configure menu function mobile devices
 function configMenuExpand() {
@@ -314,3 +312,64 @@ var toggleContainer = document.querySelector(".right-container2");
 var easingButton = document.querySelector(
   ".config-menu__button-wrapper__easing"
 );
+
+var codeBtn = document.querySelector("#js-code-button");
+var codeOutputText = document.querySelector("#code-output");
+
+codeBtn.onclick = () => {
+  var easingSetting = document.querySelector(".setting-active").childNodes[0]
+    .innerHTML;
+  newCodeOutputText = `.hamburger_1-state1 { <br>
+      font-variation-settings: “TIME” 0, “wdth” ${sliderWidth}, “wght” ${sliderWeight};<br>
+      transition-property: font-variation-settings;
+      transition-duration: ${sliderDuration}ms;<br>
+      transition-timing-function: ${easingSetting};<br>
+    }<br><br>
+      .hamburger_1-state2 { <br>
+        font-variation-settings: "TIME" 100, “wdth” ${sliderWidth}, “wght” ${sliderWeight};<br>
+      }`;
+  codeOutputText.innerHTML = newCodeOutputText;
+
+  var expandMobileBackground = document.querySelector(".configure-bg");
+  var moveButton = document.querySelector(".configure-button");
+  if (expandMobileBackground.className === "configure-bg") {
+    expandMobileBackground.className += " expand-background";
+  } else {
+    expandMobileBackground.className = "configure-bg";
+  }
+
+  if (moveButton.className === "configure-button") {
+    moveButton.className += " move-button";
+  } else {
+    moveButton.className = "configure-button";
+  }
+};
+
+var configureBtn = document.querySelector("#js-configure-button");
+
+configureBtn.onclick = () => {
+  var expandMobileBackground = document.querySelector(".configure-bg");
+  var moveButton = document.querySelector(".configure-button");
+  if (expandMobileBackground.className === "configure-bg expand-background") {
+    expandMobileBackground.classList.remove("expand-background");
+  } else {
+    expandMobileBackground.className = "configure-bg expand-background";
+  }
+
+  if (moveButton.className === "configure-button move-button") {
+    moveButton.classList.remove("move-button");
+  } else {
+    moveButton.className = "configure-button";
+  }
+};
+
+var iconItems = document.querySelectorAll(".icon-item");
+var activeIcon = document.querySelector(".js-icon");
+var iconTitle = document.querySelector("#icon-title");
+
+for (var i = 0; i < iconItems.length; i++) {
+  iconItems[i].addEventListener("click", function() {
+    activeIcon.innerHTML = this.innerHTML;
+    iconTitle.innerHTML = this.getAttribute("data-title");
+  });
+}
