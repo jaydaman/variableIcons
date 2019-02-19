@@ -319,7 +319,6 @@ var codeOutputText = document.querySelector("#code-output");
 codeBtn.onclick = () => {
   var easingSetting = document.querySelector(".setting-active").childNodes[0]
     .innerHTML;
-  console.log(easingSetting);
   newCodeOutputText = `.hamburger_1-state1 { <br>
       font-variation-settings: “TIME” 0, “wdth” ${sliderWidth}, “wght” ${sliderWeight};<br>
       transition-property: font-variation-settings;
@@ -327,10 +326,41 @@ codeBtn.onclick = () => {
       transition-timing-function: ${easingSetting};<br>
     }<br><br>
       .hamburger_1-state2 { <br>
-        cursor: pointer; <br>
         font-variation-settings: "TIME" 100, “wdth” ${sliderWidth}, “wght” ${sliderWeight};<br>
       }`;
   codeOutputText.innerHTML = newCodeOutputText;
+
+  var expandMobileBackground = document.querySelector(".configure-bg");
+  var moveButton = document.querySelector(".configure-button");
+  if (expandMobileBackground.className === "configure-bg") {
+    expandMobileBackground.className += " expand-background";
+  } else {
+    expandMobileBackground.className = "configure-bg";
+  }
+
+  if (moveButton.className === "configure-button") {
+    moveButton.className += " move-button";
+  } else {
+    moveButton.className = "configure-button";
+  }
+};
+
+var configureBtn = document.querySelector("#js-configure-button");
+
+configureBtn.onclick = () => {
+  var expandMobileBackground = document.querySelector(".configure-bg");
+  var moveButton = document.querySelector(".configure-button");
+  if (expandMobileBackground.className === "configure-bg expand-background") {
+    expandMobileBackground.classList.remove("expand-background");
+  } else {
+    expandMobileBackground.className = "configure-bg expand-background";
+  }
+
+  if (moveButton.className === "configure-button move-button") {
+    moveButton.classList.remove("move-button");
+  } else {
+    moveButton.className = "configure-button";
+  }
 };
 
 var iconItems = document.querySelectorAll(".icon-item");
@@ -341,6 +371,5 @@ for (var i = 0; i < iconItems.length; i++) {
   iconItems[i].addEventListener("click", function() {
     activeIcon.innerHTML = this.innerHTML;
     iconTitle.innerHTML = this.getAttribute("data-title");
-    console.log(this);
   });
 }
