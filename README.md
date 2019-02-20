@@ -1,6 +1,7 @@
 # Variicon
 
 https://variicon.netlify.com/
+
 Variicon is a icon library made with Variable Fonts using [Middleman](https://middlemanapp.com/) that generates a static site.
 
 ## Installation
