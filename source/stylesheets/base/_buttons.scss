@@ -33,23 +33,6 @@
   height: 40px;
 }
 
-.large-sq {
-  width: 64px;
-  height: 64px;
-  background-color: $color-dark-theme-button;
-  border-radius: 4px;
-  box-shadow: 0px 5px 10px rgba(15, 15, 15, 0.2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: 0.07s ease;
-  cursor: pointer;
-
-  @media #{$smalldesktop} {
-    box-shadow: 0px 5px 15px rgba(15, 15, 15, 0.5);
-  }
-}
-
 .small-sq {
   width: 48px;
   height: 48px;
