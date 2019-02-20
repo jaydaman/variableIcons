@@ -324,7 +324,7 @@ codeBtn.onclick = () => {
     .innerHTML;
   newCodeOutputText = `.hamburger_1-state1 { <br>
       font-variation-settings: “TIME” 0, “wdth” ${sliderWidth}, “wght” ${sliderWeight};<br>
-      transition-property: font-variation-settings;
+      transition-property: font-variation-settings;<br>
       transition-duration: ${sliderDuration}ms;<br>
       transition-timing-function: ${easingSetting};<br>
     }<br><br>
