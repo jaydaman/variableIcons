@@ -3,12 +3,15 @@
 // Color theme pick animation
 var themeButtonSelect = document.querySelector(".theme-picker");
 var themeSheet = document.querySelector(".theme-picker-sheet");
+var buttonActive = document.querySelector(".js-button-expand");
 
 themeButtonSelect.addEventListener("click", function() {
   if (themeSheet.className === "theme-picker-sheet") {
     themeSheet.className += " expand";
+    buttonActive.className += " toggle-active";
   } else {
     themeSheet.className = "theme-picker-sheet";
+    buttonActive.className = "small-sq js-button-expand";
   }
 });
 
@@ -255,8 +258,10 @@ loopButton.addEventListener("click", function() {
   if (iconLoop.className === "top-section__icon js-icon") {
     updateLoopKeyframe();
     iconLoop.className += " loop";
+    loopButton.className += " toggle-active";
   } else {
     iconLoop.className = "top-section__icon js-icon";
+    loopButton.className = "small-sq js-loop-button";
   }
 });
 
