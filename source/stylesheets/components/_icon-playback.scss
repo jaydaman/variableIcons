@@ -61,8 +61,13 @@
   justify-content: space-between;
   width: 328px;
 
+  @media #{$tablet} {
+    margin-top: 60px;
+  }
+
   @media #{$mobile} {
     width: 308px;
+    margin-top: 35px;
   }
 
   @media #{$smallmobile} {

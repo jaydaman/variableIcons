@@ -22,8 +22,8 @@
 
   @media #{$smalldesktop} {
     position: fixed;
-    bottom: -42vh;
-    height: 42vh;
+    bottom: -47vh;
+    height: 47vh;
     width: 100vw;
   }
 
@@ -58,7 +58,7 @@
 
 .config-menu.config-active {
   .configure-button {
-    bottom: 44vh;
+    bottom: 49vh;
 
     @media #{$mobile} {
       bottom: 55vh;
@@ -206,10 +206,6 @@
       transition: 0.07s ease;
       border: none;
 
-      &:hover {
-        background-color: #515151;
-      }
-
       &:active {
         width: 25px;
         height: 25px;
@@ -290,6 +286,11 @@
   @media #{$smalldesktop} {
     width: 90vw;
     justify-content: center;
+  }
+
+  @media #{$tablet} {
+    margin-top: -48px;
+    padding-top: 0;
   }
 }
 
