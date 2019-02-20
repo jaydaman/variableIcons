@@ -35,6 +35,8 @@
 
 .left-container1.expanded {
   display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: rgba($color-black, 0.97);
   height: 100vh;
   width: 100%;
@@ -43,12 +45,6 @@
   top: 0;
   left: 0;
   cursor: pointer;
-
-  .icon-wrapper {
-    position: fixed;
-    top: 100px;
-    padding: 0 20px;
-  }
 }
 
 // Icon item
