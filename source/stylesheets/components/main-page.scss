@@ -241,6 +241,10 @@ p {
   .slider::-webkit-slider-thumb {
     background: $color-dark-theme-button;
     box-shadow: rgba(15, 15, 15, 0.2);
+
+    &:hover {
+      background-color: #515151;
+    }
   }
 
   // Code view colors
@@ -280,6 +284,12 @@ p {
       a {
         color: $color-lightgrey;
       }
+    }
+  }
+
+  .menu.expanded {
+    a {
+      color: $color-lightgrey;
     }
   }
 
@@ -451,6 +461,10 @@ p {
   .slider::-webkit-slider-thumb {
     background: $color-light-theme-button;
     box-shadow: rgba(177, 177, 177, 0.2);
+
+    &:hover {
+      background-color: #515151;
+    }
   }
 
   // Code view colors
@@ -498,6 +512,12 @@ p {
       a:not(:first-child) {
         color: $color-lightgrey;
       }
+    }
+  }
+
+  .menu.expanded {
+    a {
+      color: $color-lightgrey;
     }
   }
 
@@ -679,6 +699,10 @@ p {
     background-color: $color-yellow-theme-button;
     box-shadow: 1px 2px 8px rgba(176, 157, 16, 0.5);
     color: $color-black;
+
+    &:hover {
+      color: $color-white;
+    }
   }
 
   .slider {
@@ -688,6 +712,10 @@ p {
   .slider::-webkit-slider-thumb {
     background: $color-yellow-theme-button;
     box-shadow: rgba(176, 157, 16, 0.2);
+
+    &:hover {
+      background-color: $color-yellow-theme-text;
+    }
   }
 
   // Code view colors
@@ -735,6 +763,12 @@ p {
       a:not(:first-child) {
         color: $color-lightgrey;
       }
+    }
+  }
+
+  .menu.expanded {
+    a {
+      color: $color-lightgrey;
     }
   }
 
@@ -921,6 +955,10 @@ p {
   .slider::-webkit-slider-thumb {
     background: #2f5df5;
     box-shadow: rgba(14, 45, 150, 0.2);
+
+    &:hover {
+      background-color: $color-blue-theme-secondary;
+    }
   }
 
   // Code view colors
