@@ -37,23 +37,21 @@ function menuExpand() {
 }
 
 // Icon menu toggle on smaller screens
-// var iconButton = document.querySelector(".js-icon-button");
-// var iconMenu = document.querySelector(".left-container1");
-// iconButton.addEventListener("click", function() {
-//   if (iconMenu.className === "left-container1 line-item-alt") {
-//     iconMenu.className += " expanded";
-//   } else {
-//     iconMenu.className = "left-container1 line-item-alt";
-//   }
-// });
-//
-// iconMenu.addEventListener("click", function() {
-//   if (iconMenu.className === "left-container1 line-item-alt") {
-//     iconMenu.className += " expanded";
-//   } else {
-//     iconMenu.className = "left-container1 line-item-alt";
-//   }
-// });
+var iconButton = document.querySelector(".js-icon-button");
+var iconMenu = document.querySelector(".left-container1");
+iconButton.addEventListener("click", function() {
+  if (iconMenu.className === "left-container1 line-item-alt") {
+    iconMenu.className += " expanded";
+  } else {
+    iconMenu.className = "left-container1 line-item-alt";
+  }
+});
+
+iconMenu.addEventListener("click", function() {
+  if (iconMenu.className === "left-container1 line-item-alt expanded") {
+    iconMenu.classList.remove("expanded");
+  }
+});
 
 // Icon playback functions
 
@@ -376,5 +374,7 @@ for (var i = 0; i < iconItems.length; i++) {
   iconItems[i].addEventListener("click", function() {
     activeIcon.innerHTML = this.innerHTML;
     iconTitle.innerHTML = this.getAttribute("data-title");
+    iconButton.innerHTML = this.innerHTML;
+    iconMenu.classList.remove("expanded");
   });
 }
