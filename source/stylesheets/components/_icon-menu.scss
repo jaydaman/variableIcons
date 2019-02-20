@@ -8,6 +8,18 @@
   font-variation-settings: "TIME" 0, "wdth" 80, "wght" 30;
 }
 //Button wrapper
+.js-icon-button {
+  display: none;
+  font-family: "Variicon";
+  font-size: 40px;
+  font-variation-settings: "TIME" 0, "wdth" 70, "wght" 5;
+  color: $color-white;
+
+  @media #{$smalldesktop} {
+    display: flex;
+    justify-content: center;
+  }
+}
 
 .left-container1 {
   width: 328px;
