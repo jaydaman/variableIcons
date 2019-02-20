@@ -3,12 +3,15 @@
 // Color theme pick animation
 var themeButtonSelect = document.querySelector(".theme-picker");
 var themeSheet = document.querySelector(".theme-picker-sheet");
+var buttonActive = document.querySelector(".js-button-expand");
 
 themeButtonSelect.addEventListener("click", function() {
   if (themeSheet.className === "theme-picker-sheet") {
     themeSheet.className += " expand";
+    buttonActive.className += " toggle-active";
   } else {
     themeSheet.className = "theme-picker-sheet";
+    buttonActive.className = "small-sq js-button-expand";
   }
 });
 
@@ -34,23 +37,21 @@ function menuExpand() {
 }
 
 // Icon menu toggle on smaller screens
-// var iconButton = document.querySelector(".js-icon-button");
-// var iconMenu = document.querySelector(".left-container1");
-// iconButton.addEventListener("click", function() {
-//   if (iconMenu.className === "left-container1 line-item-alt") {
-//     iconMenu.className += " expanded";
-//   } else {
-//     iconMenu.className = "left-container1 line-item-alt";
-//   }
-// });
-//
-// iconMenu.addEventListener("click", function() {
-//   if (iconMenu.className === "left-container1 line-item-alt") {
-//     iconMenu.className += " expanded";
-//   } else {
-//     iconMenu.className = "left-container1 line-item-alt";
-//   }
-// });
+var iconButton = document.querySelector(".js-icon-button");
+var iconMenu = document.querySelector(".left-container1");
+iconButton.addEventListener("click", function() {
+  if (iconMenu.className === "left-container1 line-item-alt") {
+    iconMenu.className += " expanded";
+  } else {
+    iconMenu.className = "left-container1 line-item-alt";
+  }
+});
+
+iconMenu.addEventListener("click", function() {
+  if (iconMenu.className === "left-container1 line-item-alt expanded") {
+    iconMenu.classList.remove("expanded");
+  }
+});
 
 // Icon playback functions
 
@@ -255,8 +256,10 @@ loopButton.addEventListener("click", function() {
   if (iconLoop.className === "top-section__icon js-icon") {
     updateLoopKeyframe();
     iconLoop.className += " loop";
+    loopButton.className += " toggle-active";
   } else {
     iconLoop.className = "top-section__icon js-icon";
+    loopButton.className = "small-sq js-loop-button";
   }
 });
 
@@ -321,7 +324,7 @@ codeBtn.onclick = () => {
     .innerHTML;
   newCodeOutputText = `.hamburger_1-state1 { <br>
       font-variation-settings: “TIME” 0, “wdth” ${sliderWidth}, “wght” ${sliderWeight};<br>
-      transition-property: font-variation-settings;
+      transition-property: font-variation-settings;<br>
       transition-duration: ${sliderDuration}ms;<br>
       transition-timing-function: ${easingSetting};<br>
     }<br><br>
@@ -371,5 +374,7 @@ for (var i = 0; i < iconItems.length; i++) {
   iconItems[i].addEventListener("click", function() {
     activeIcon.innerHTML = this.innerHTML;
     iconTitle.innerHTML = this.getAttribute("data-title");
+    iconButton.innerHTML = this.innerHTML;
+    iconMenu.classList.remove("expanded");
   });
 }
