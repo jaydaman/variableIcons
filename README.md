@@ -4,9 +4,15 @@ https://variicon.netlify.com/
 Variicon is a icon library made with Variable Fonts using [Middleman](https://middlemanapp.com/) that generates a static site.
 
 ## Installation
-Install dependencies:
-```Setup
-bin/setup
+Install Middleman
+:
+First install Xcode:
+```
+$ xcode-select --install
+```
+Then install Middleman:
+```
+$ gem install middleman
 ```
 Start local server:
 ```Middleman
