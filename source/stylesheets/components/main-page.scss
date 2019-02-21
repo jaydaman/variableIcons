@@ -43,7 +43,11 @@ a:link {
 
 // Bottom section background themes
 .bottom-section {
-  height: 40vh;
+  height: 45vh;
+
+  @media #{$tablet} {
+    height: 40vh;
+  }
 
   @media #{$mobile} {
     height: 45vh;
