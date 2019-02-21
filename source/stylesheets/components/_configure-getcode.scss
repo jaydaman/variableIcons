@@ -184,6 +184,17 @@
       }
     }
 
+    // hide spin box
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    input[type="number"] {
+      -moz-appearance: textfield;
+    }
+
     .slider {
       appearance: none;
       width: 160px;
@@ -197,6 +208,7 @@
 
     .slider::-webkit-slider-thumb {
       -webkit-appearance: none;
+      -moz-appearance: none;
       appearance: none;
       width: 21px;
       height: 21px;
@@ -205,6 +217,27 @@
       cursor: pointer;
       transition: 0.07s ease;
       border: none;
+      -moz-border: none;
+
+      &:active {
+        width: 25px;
+        height: 25px;
+        background-color: $color-black;
+      }
+    }
+
+    .slider::-moz-range-thumb {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      width: 21px;
+      height: 21px;
+      border-radius: 25px;
+      box-shadow: 1px 2px 8px rgba(0, 0, 6, 0.2);
+      cursor: pointer;
+      transition: 0.07s ease;
+      border: none;
+      -moz-border: none;
 
       &:active {
         width: 25px;

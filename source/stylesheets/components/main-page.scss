@@ -8,6 +8,31 @@ p {
   text-align: center;
 }
 
+a:visited,
+a:link {
+  text-decoration: none;
+}
+
+// Menu color
+.menu {
+  a {
+    color: $color-lightgrey;
+    transition: 0.15s ease;
+
+    &:hover {
+      color: $color-white;
+    }
+
+    &:focus &:active {
+      color: $color-white;
+    }
+  }
+
+  .current {
+    color: $color-white;
+  }
+}
+
 // Top section background themes
 .top-section {
   display: flex;
@@ -82,22 +107,6 @@ p {
 .theme-dark {
   h4 {
     color: $color-white;
-  }
-
-  // Menu color
-  .menu {
-    a {
-      color: $color-lightgrey;
-      transition: 0.15s ease;
-
-      &:hover {
-        color: $color-white;
-      }
-
-      &:focus &:active {
-        color: $color-white;
-      }
-    }
   }
 
   // Top section color
@@ -247,6 +256,15 @@ p {
     }
   }
 
+  .slider::-moz-range-thumb {
+    background: $color-dark-theme-button;
+    box-shadow: rgba(15, 15, 15, 0.2);
+
+    &:hover {
+      background-color: #515151;
+    }
+  }
+
   // Code view colors
   .code__wrapper {
     background-color: $color-dark-theme-button;
@@ -284,6 +302,10 @@ p {
       a {
         color: $color-lightgrey;
       }
+    }
+
+    .current {
+      color: $color-light-theme-text;
     }
   }
 
@@ -347,6 +369,12 @@ p {
 
     @media #{$smalldesktop} {
       box-shadow: 0px 5px 10px rgba(177, 177, 177, 0.5);
+    }
+
+    &:hover {
+      @media #{$widescreen} {
+        background-color: $color-black;
+      }
     }
   }
 
@@ -467,6 +495,15 @@ p {
     }
   }
 
+  .slider::-moz-range-thumb {
+    background: $color-light-theme-button;
+    box-shadow: rgba(177, 177, 177, 0.2);
+
+    &:hover {
+      background-color: #515151;
+    }
+  }
+
   // Code view colors
   .code__wrapper {
     background-color: $color-light-theme-button;
@@ -512,6 +549,10 @@ p {
       a:not(:first-child) {
         color: $color-lightgrey;
       }
+    }
+
+    .current {
+      color: $color-yellow-theme-text;
     }
   }
 
@@ -579,6 +620,8 @@ p {
 
     @media #{$widescreen} {
       &:hover {
+        background-color: $color-black;
+
         h4 {
           color: $color-white;
         }
@@ -718,6 +761,15 @@ p {
     }
   }
 
+  .slider::-moz-range-thumb {
+    background: $color-yellow-theme-button;
+    box-shadow: rgba(176, 157, 16, 0.2);
+
+    &:hover {
+      background-color: $color-yellow-theme-text;
+    }
+  }
+
   // Code view colors
   .code__wrapper {
     background-color: $color-yellow-theme-button;
@@ -763,6 +815,10 @@ p {
       a:not(:first-child) {
         color: $color-lightgrey;
       }
+    }
+
+    .current {
+      color: $color-white;
     }
   }
 
@@ -830,6 +886,8 @@ p {
 
     @media #{$widescreen} {
       &:hover {
+        background-color: $color-black;
+
         h4 {
           color: $color-white;
         }
@@ -958,6 +1016,15 @@ p {
 
     &:hover {
       background-color: $color-blue-theme-secondary;
+    }
+  }
+
+  .slider::-moz-range-thumb {
+    background: #2f5df5;
+    box-shadow: rgba(14, 45, 150, 0.2);
+
+    &:hover {
+      background-color: $color-blue-theme-primary;
     }
   }
 
