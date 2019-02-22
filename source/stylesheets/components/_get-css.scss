@@ -1,0 +1,46 @@
+// get CSS component
+
+.right-container-code {
+  padding-top: 32px;
+  width: 328px;
+
+  @media #{$smalldesktop} {
+    width: 90vw;
+    justify-content: center;
+  }
+
+  @media #{$tablet} {
+    margin-top: -48px;
+    padding-top: 0;
+  }
+}
+
+.code__wrapper {
+  border-radius: 12px;
+  padding: 20px;
+
+  @media #{$smalldesktop} {
+    padding: 0;
+  }
+
+  p {
+    text-align: left;
+    font-weight: 300;
+    font-variation-settings: "wght" 300;
+  }
+}
+
+// small screen get CSS active state
+.expand-background {
+  transition: bottom 0.4s cubic-bezier(0.99, 0, 0.4, 0.99);
+
+  @media #{$mobile} {
+    height: 63vh;
+    bottom: -63vh;
+  }
+
+  @media #{$smallmobile} {
+    height: 73vh;
+    bottom: -73vh;
+  }
+}

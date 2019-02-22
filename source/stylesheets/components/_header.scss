@@ -1,9 +1,13 @@
+// top menu component
+
+// menu container
 .menu-container {
   display: flex;
   width: 100vw;
   justify-content: center;
 }
 
+// menu content
 .menu {
   display: flex;
   justify-content: space-between;
@@ -29,9 +33,7 @@
     }
   }
 
-  @media #{$mobile} {
-  }
-
+  // mobile hamburger
   .hamburger {
     display: none;
     font-family: "Variicon";
@@ -75,10 +77,12 @@
   }
 }
 
+// hamburger menu active state
 .menu.expanded a.hamburger {
   font-variation-settings: "TIME" 100, "wdth" 100, "wght" 20;
 }
 
+// hide "variicon" anchor on mobile
 .menu.expanded a:not(:nth-child(-n + 2)) {
   display: block;
   transition: display 2s;
