@@ -1,0 +1,63 @@
+//Easing component
+
+.easing {
+  display: flex;
+  justify-content: space-between;
+  width: 328px;
+  padding-top: 20px;
+
+  @media #{$smalldesktop} {
+    width: 100%;
+  }
+
+  @media #{$tablet} {
+    width: 70%;
+    padding-top: 40px;
+  }
+
+  h4 {
+    font-weight: 300;
+  }
+
+  #desktop-title {
+    @media #{$smalldesktop} {
+      display: none;
+    }
+  }
+
+  .easing__button-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-left: 16px;
+    width: 100%;
+
+    @media #{$smalldesktop} {
+      margin-left: 2.7%;
+    }
+
+    .btn {
+      flex-grow: 1;
+      padding: 10px 0 10px 0;
+      margin-bottom: 8px;
+      margin-left: 2.7%;
+      width: 47.3%;
+
+      @media #{$smalldesktop} {
+        flex-grow: 0;
+        padding: 2px 4px 2px 4px;
+        height: 32px;
+        border-radius: 4px;
+        width: 28%;
+        margin-left: 0;
+        margin-right: 2.7%;
+      }
+
+      @media #{$smallmobile} {
+        flex-grow: 1;
+        width: 27%;
+      }
+    }
+  }
+}

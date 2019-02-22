@@ -4,10 +4,15 @@
 @import "base/colors";
 @import "base/buttons";
 @import "components/header";
-@import "components/main-page";
-@import "components/configure-getcode";
+@import "components/index";
+@import "components/color-themes";
+@import "components/icon";
+@import "components/icon-settings";
+@import "components/sliders";
+@import "components/easing";
 @import "components/icon-playback";
 @import "components/icon-menu";
+@import "components/get-css";
 @import "components/underpage-text";
 
 * {

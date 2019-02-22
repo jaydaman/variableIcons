@@ -1,12 +1,12 @@
 //Icon menu component
 
 //Icon menu idle
-
 .hamburger2 {
   font-family: "Variicon";
   color: $color-bright;
   font-variation-settings: "TIME" 0, "wdth" 80, "wght" 30;
 }
+
 //Button wrapper
 .js-icon-button {
   display: none;
@@ -21,6 +21,7 @@
   }
 }
 
+// Icon selection container
 .left-container1 {
   width: 328px;
 
@@ -33,6 +34,7 @@
   }
 }
 
+// Icon selection container active mobile
 .left-container1.expanded {
   display: flex;
   justify-content: center;

@@ -1,33 +1,32 @@
 ---
-title: Variicons
+title: Variicon
 ---
 <div class="js-theme theme-dark">
-<div class="menu-container">
-  <section class="menu" id="menuExpand">
-    <a href="javascript:void(0)"; class="hamburger" onclick="menuExpand()">A</a>
-    <a href="index.html" class="menu__logo">Variicons</a>
-    <nav class="menu__links">
-      <a href="#"></a>
-      <a href="#"></a>
-      <a href="index.html" class="menu__item current">CONFIGURATOR</a>
-      <a href="about.html" class="menu__item">ABOUT</a>
-      <a href="how-to-use.html" class="menu__item">HOW TO USE VARIICONS</a>
-      <a href="https://github.com/jaydaman/variableIcons" target="_blank" class="menu__item">GITHUB</a>
-    </nav>
-  </section>
-</div>
-
-
-    <section class="top-section">
-        <div class="spacing-block"></div>
-        <div class="top-section__icon-container">
-          <div class="top-section__icon js-icon" id="iconAnimate">
-            B
-          </div>
-          <p id="icon-title">hamburger_1</p>
-        </div>
-        <div class="spacing-block"></div>
+  <div class="menu-container">
+    <section class="menu" id="menuExpand">
+      <a href="javascript:void(0)"; class="hamburger" onclick="menuExpand()">A</a>
+      <a href="index.html" class="menu__logo">Variicons</a>
+      <nav class="menu__links">
+        <a href="#"></a>
+        <a href="#"></a>
+        <a href="index.html" class="menu__item current">CONFIGURATOR</a>
+        <a href="about.html" class="menu__item">ABOUT</a>
+        <a href="how-to-use.html" class="menu__item">HOW TO USE VARIICONS</a>
+        <a href="https://github.com/jaydaman/variableIcons" target="_blank" class="menu__item">GITHUB</a>
+      </nav>
     </section>
+  </div>
+
+  <section class="top-section">
+    <div class="spacing-block"></div>
+    <div class="top-section__icon-container">
+      <div class="top-section__icon js-icon">
+        B
+      </div>
+      <p id="icon-title">hamburger_1</p>
+    </div>
+    <div class="spacing-block"></div>
+  </section>
 
   <section class="bottom-section flex-col">
 
@@ -52,7 +51,7 @@ title: Variicons
           </div>
           <div class="btn btn-normal line-item js-state-btn" id="buttonState2">
             <h4>State 2</h4>
-        </div>
+          </div>
         </div>
         <div class="mid-container2">
           <div class="small-sq js-icon-button toggle-active">
@@ -65,8 +64,8 @@ title: Variicons
             <div class="small-sq js-button-expand" title="Change color theme">
               <i class="material-icons md-col">lens</i>
             </div>
-            </div>
           </div>
+        </div>
           <div class="theme-picker-sheet">
             <ol class="theme-picker-sheet__colors">
               <li class="theme-picker-sheet__color">
@@ -83,12 +82,12 @@ title: Variicons
               </li>
             </ol>
           </div>
-        </div>
+      </div>
 
       <div class="spacing-block"></div>
 
       <div class="flex-col config-menu">
-        <div class="configure-button" onclick="configMenuExpand()"></div>
+        <div class="configure-button"></div>
 
         <div class="right-container1">
           <div class="btn btn-normal line-item js-view-btn view-active" id="js-configure-button">
@@ -100,8 +99,8 @@ title: Variicons
         </div>
         <div class="configure-bg">
 
-          <div class="right-container2 js-container setting-container-display-flex" id="configure-container">
-            <div class="properties-wrapper">
+          <div class="right-container2 setting-container-display-flex" id="configure-container">
+            <div class="js-properties-wrapper">
               <div class="slider-wrapper">
                 <h4>Width</h4>
                 <input type="range" min="1" max="100" value="80" title="Set icon 'width' value" class="slider" id="slider-wdth">
@@ -122,39 +121,32 @@ title: Variicons
             <div class="easing">
               <h4 id="desktop-title">Easing</h4>
               <div class="easing__button-container">
-                <!-- <div class="btn btn-thin" id="button-easing">
-                  <h4>linear</h4>
-                </div> -->
                 <button type="button" name="button" title="Set transition-timing to 'linear'" class="btn js-easing-button" id="button-linear"><h4>linear</h4></button>
                 <button type="button" name="button" title="Set transition-timing to 'ease'" class="btn js-easing-button setting-active" id="button-ease"><h4>ease</h4></button>
                 <button type="button" name="button" title="Set transition-timing to 'ease-in'" class="btn js-easing-button" id="button-ease-in"><h4>ease-in</h4></button>
                 <button type="button" name="button" title="Set transition-timing to 'ease-out'"class="btn js-easing-button" id="button-ease-out"><h4>ease-out</h4></button>
                 <button type="button" name="button" title="Set transition-timing to 'ease-in-out'" class="btn js-easing-button" id="button-ease-in-out"><h4>ease-in-out</h4></button>
-                <!-- <div class="btn btn-thin">
-                  <h4>cubic-bezier</h4> -->
-                </div>
-              </div>
-            </div>
-
-            <div class="right-container-code js-container setting-container-display-none" id="code-container">
-              <div class="code__wrapper">
-                <p id="code-output">.hamburger_1-state1 { <br>
-                  	font-variation-settings: “TIME” 0, “wdth” 30, “wght” 60;<br>
-                    transition-property: font-variation-settings;
-                    transition-duration: 400ms;<br>
-                    transition-timing-function: ease;<br>
-                  }<br><br>
-                    .hamburger_1-state2 { <br>
-                      font-variation-settings: "TIME" 100, “wdth” 30, “wght” 60;<br>
-                    }
-                </p>
               </div>
             </div>
           </div>
 
+          <div class="right-container-code setting-container-display-none" id="code-container">
+            <div class="code__wrapper">
+              <p id="code-output">.hamburger_1-state1 { <br>
+                	font-variation-settings: “TIME” 0, “wdth” 30, “wght” 60;<br>
+                  transition-property: font-variation-settings;
+                  transition-duration: 400ms;<br>
+                  transition-timing-function: ease;<br>
+                }<br><br>
+                  .hamburger_1-state2 { <br>
+                    font-variation-settings: "TIME" 100, “wdth” 30, “wght” 60;<br>
+                  }
+              </p>
+            </div>
+          </div>
         </div>
-      </div>
 
+      </div>
     </div>
   </section>
 </div>
