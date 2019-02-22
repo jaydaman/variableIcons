@@ -310,7 +310,7 @@ for (var i = 0; i < settingsToggle.length; i++) {
 }
 
 // Properties/easing view toggle mobile devices
-var propertiesView = document.querySelector(".properties-wrapper");
+var propertiesView = document.querySelector(".js-properties-wrapper");
 var easingView = document.querySelector(".easing");
 var toggleContainer = document.querySelector(".right-container2");
 var easingButton = document.querySelector(
