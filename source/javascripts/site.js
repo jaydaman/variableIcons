@@ -226,6 +226,7 @@ function findKeyframesRule(rule) {
   return null;
 }
 
+// Append updated icon settings on loop class
 function updateLoopKeyframe() {
   let keyFrames = findKeyframesRule("loop");
   for (var i = 0; i < keyFrames.length; i++) {
@@ -244,6 +245,7 @@ function updateLoopKeyframe() {
   }
 }
 
+// Update loop class on slider change
 slider1.addEventListener("change", function() {
   updateLoopKeyframe();
 });
@@ -252,16 +254,26 @@ slider2.addEventListener("change", function() {
   updateLoopKeyframe();
 });
 
+// Loop button click function
 loopButton.addEventListener("click", function() {
   if (iconLoop.className === "top-section__icon js-icon") {
     updateLoopKeyframe();
     iconLoop.className += " loop";
     loopButton.className += " toggle-active";
+    icon.style.fontVariationSettings = `"TIME" 0, "wdth" ${sliderWidth}, "wght" ${sliderWeight}`;
+    stateButton1.className += " active";
+    stateButton2.classList.remove("active");
+    stateButton1.style.pointerEvents = "none";
+    stateButton2.style.pointerEvents = "none";
   } else {
     iconLoop.className = "top-section__icon js-icon";
     loopButton.className = "small-sq js-loop-button";
+    stateButton1.style.pointerEvents = "auto";
+    stateButton2.style.pointerEvents = "auto";
   }
 });
+
+console.log(stateButton2.className);
 
 // Get code module
 
