@@ -1,56 +1,6 @@
-//Icon playback component
-
-//Active icon
-.top-section__icon-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.js-icon {
-  font-family: "Variicon";
-  color: $color-bright;
-  font-size: 25vmin;
-  transition: font-variation-settings;
-  transition-duration: 400ms;
-  transition-timing-function: cubic-bezier(0.75, 0, 0, 1);
-
-  @media #{$smalldesktop} {
-    font-size: 30vmin;
-  }
-
-  @media #{$mobile} {
-    font-size: 60vmin;
-    margin-top: 60px;
-  }
-}
-
-.top-section__icon.loop {
-  // Loop animation
-  @keyframes loop {
-    20% {
-      font-variation-settings: "TIME" 0;
-    }
-
-    50% {
-      font-variation-settings: "TIME" 50;
-    }
-
-    80%,
-    100% {
-      font-variation-settings: "TIME" 100;
-    }
-  }
-
-  animation: loop 0s infinite alternate;
-  animation-duration: 0.7s;
-  animation-timing-function: cubic-bezier(0.75, 0, 0, 1);
-}
-
 //Icon playback
 
-//State button wrapper
+//State button component
 .mid-container1 {
   display: flex;
   justify-content: space-between;
@@ -70,7 +20,7 @@
   }
 }
 
-//Playback options wrapper
+//Playback options component
 .mid-container2 {
   display: flex;
   justify-content: space-between;
@@ -87,20 +37,18 @@
   }
 }
 
-.no-shrink {
-  flex-grow: 0 0 48px;
-}
-
 // Color theme picker
 .theme-picker {
   display: flex;
 }
 
+// Theme picker container
 .theme-picker-sheet {
   display: none;
   padding: 24px;
 }
 
+// Theme picker color list
 .theme-picker-sheet__colors {
   display: flex;
   flex-direction: row;
@@ -131,6 +79,7 @@
     }
   }
 
+  // Theme picker elements
   .theme-picker-sheet__color {
     display: list-item;
     padding: 0 8px;
@@ -149,6 +98,7 @@
   }
 }
 
+// Theme picker expanded
 .theme-picker-sheet.expand {
   display: block;
 

@@ -287,15 +287,16 @@ for (var i = 0; i < toggleBtns.length; i++) {
 }
 
 // configure menu function mobile devices
-function configMenuExpand() {
+var configBtn = document.querySelector(".configure-button");
+
+configBtn.addEventListener("click", function() {
   var configMenu = document.querySelector(".config-menu");
-  var configBtn = document.querySelector(".configure-button");
   if (configMenu.className === "flex-col config-menu") {
     configMenu.className += " config-active";
   } else {
     configMenu.className = "flex-col config-menu";
   }
-}
+});
 
 // easing buttons toggle mobile devices
 var settingsToggle = document.getElementsByClassName("js-easing-button");
@@ -309,7 +310,7 @@ for (var i = 0; i < settingsToggle.length; i++) {
 }
 
 // Properties/easing view toggle mobile devices
-var propertiesView = document.querySelector(".properties-wrapper");
+var propertiesView = document.querySelector(".js-properties-wrapper");
 var easingView = document.querySelector(".easing");
 var toggleContainer = document.querySelector(".right-container2");
 var easingButton = document.querySelector(
