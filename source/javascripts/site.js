@@ -72,6 +72,8 @@ var button2 = document.getElementById("button-ease");
 var button3 = document.getElementById("button-ease-in");
 var button4 = document.getElementById("button-ease-out");
 var button5 = document.getElementById("button-ease-in-out");
+var input1 = document.getElementById("button-cubic");
+// var transitionInput = input1.value;
 
 // Set transition-timing-function on click event
 button1.addEventListener("click", function() {
@@ -94,7 +96,22 @@ button5.addEventListener("click", function() {
   icon.style.transitionTimingFunction = "ease-in-out";
   icon.style.animationTimingFunction = "ease-in-out";
 });
+// Set cubic-bezier timing on input
+// var transitionString = function(bezierValue) {
+//   return "cubic-bezier(" + bezierValue + ")";
+// };
+// input1.oninput = function() {
+//   transitionInput = this.value;
+//   icon.style.transitionTimingFunction
+// };
 
+
+// output3.oninput = function() {
+//   sliderDuration = this.value;
+//   icon.style.transitionDuration = durationString(sliderDuration);
+//   slider3.value = this.value;
+//   icon.style.animationDuration = delayString(sliderDuration);
+// };
 // Get state buttons
 var stateButton1 = document.getElementById("buttonState1");
 var stateButton2 = document.getElementById("buttonState2");
@@ -209,6 +226,7 @@ var iconLoop = document.querySelector(".js-icon");
 function findKeyframesRule(rule) {
   // gather first stylesheet
   var ss = document.styleSheets[0];
+  console.log(ss);
   // loop through all the rules
   let rules = [];
   for (var j = 0; j < ss.cssRules.length; ++j) {
@@ -229,6 +247,7 @@ function findKeyframesRule(rule) {
 // Append updated icon settings on loop class
 function updateLoopKeyframe() {
   let keyFrames = findKeyframesRule("loop");
+  console.log(keyFrames);
   for (var i = 0; i < keyFrames.length; i++) {
     keyFrames[i].deleteRule("20%");
     keyFrames[i].deleteRule("50%");
@@ -261,7 +280,9 @@ loopButton.addEventListener("click", function() {
     iconLoop.className += " loop";
     loopButton.className += " toggle-active";
     icon.style.fontVariationSettings = `"TIME" 0, "wdth" ${sliderWidth}, "wght" ${sliderWeight}`;
-    stateButton1.className += " active";
+    stateButton1.className.includes("active")
+      ? ""
+      : (stateButton1.className += " active");
     stateButton2.classList.remove("active");
     stateButton1.style.pointerEvents = "none";
     stateButton2.style.pointerEvents = "none";
@@ -272,8 +293,6 @@ loopButton.addEventListener("click", function() {
     stateButton2.style.pointerEvents = "auto";
   }
 });
-
-console.log(stateButton2.className);
 
 // Get code module
 
@@ -335,13 +354,13 @@ var codeOutputText = document.querySelector("#code-output");
 codeBtn.onclick = () => {
   var easingSetting = document.querySelector(".setting-active").childNodes[0]
     .innerHTML;
-  newCodeOutputText = `.hamburger_1-state1 { <br>
+  newCodeOutputText = `.icon-state1 { <br>
       font-variation-settings: “TIME” 0, “wdth” ${sliderWidth}, “wght” ${sliderWeight};<br>
       transition-property: font-variation-settings;<br>
       transition-duration: ${sliderDuration}ms;<br>
       transition-timing-function: ${easingSetting};<br>
     }<br><br>
-      .hamburger_1-state2 { <br>
+      .icon-state2 { <br>
         font-variation-settings: "TIME" 100, “wdth” ${sliderWidth}, “wght” ${sliderWeight};<br>
       }`;
   codeOutputText.innerHTML = newCodeOutputText;
