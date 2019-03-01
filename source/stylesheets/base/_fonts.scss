@@ -1,30 +1,31 @@
 @font-face {
-  font-family: 'SourceSansVariable';
-  src: url(/fonts/SourceSansPro/VAR/SourceSansVariable-Roman.ttf) format('truetype');
+  font-family: "SourceSansVariable";
+  src: url(/fonts/SourceSansPro/VAR/SourceSansVariable-Roman.ttf)
+    format("truetype");
   font-weight: 1 999;
 }
 
 @font-face {
-  font-family: 'SourceSans';
+  font-family: "SourceSans";
   src: url(/fonts/SourceSansPro/TTF/SourceSansPro-Bold.ttf);
   font-weight: 700;
 }
 
 @font-face {
-  font-family: 'SourceSans';
+  font-family: "SourceSans";
   src: url(/fonts/SourceSansPro/TTF/SourceSansPro-Regular.ttf);
   font-weight: 400;
 }
 
 @font-face {
-  font-family: 'SourceSans';
+  font-family: "SourceSans";
   src: url(/fonts/SourceSansPro/TTF/SourceSansPro-light.ttf);
   font-weight: 200;
 }
 
 @font-face {
-  font-family: 'Variicon';
-  src: url(/fonts/VariiconGX.ttf) format('truetype');
+  font-family: "Variicon";
+  src: url(/fonts/VariiconGX_1.1.4.ttf) format("truetype");
   font-weight: 1 100;
   font-stretch: 1 100;
 }

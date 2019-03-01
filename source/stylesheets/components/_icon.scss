@@ -43,6 +43,21 @@
     }
   }
 
+  @-webkit-keyframes loop {
+    20% {
+      -webkit-font-variation-settings: "TIME" 0;
+    }
+
+    50% {
+      -webkit-font-variation-settings: "TIME" 50;
+    }
+
+    80%,
+    100% {
+      -webkit-font-variation-settings: "TIME" 100;
+    }
+  }
+
   animation: loop 0s infinite alternate;
   animation-duration: 0.7s;
   animation-timing-function: cubic-bezier(0.75, 0, 0, 1);
