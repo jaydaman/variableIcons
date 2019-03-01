@@ -19,6 +19,14 @@
     font-weight: 300;
   }
 
+  input {
+    border: none;
+  }
+
+  input[type="text"] {
+    color: $color-white;
+  }
+
   #desktop-title {
     @media #{$smalldesktop} {
       display: none;
@@ -27,9 +35,9 @@
 
   .easing__button-container {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     justify-content: flex-start;
+    align-items: stretch;
     margin-left: 16px;
     width: 100%;
 
@@ -38,26 +46,35 @@
     }
 
     .btn {
-      flex-grow: 1;
       padding: 10px 0 10px 0;
       margin-bottom: 8px;
       margin-left: 2.7%;
-      width: 47.3%;
+      min-width: 47.3%;
+
+      &:nth-of-type(1) {
+        width: 100%;
+      }
 
       @media #{$smalldesktop} {
         flex-grow: 0;
+        flex-wrap: wrap;
         padding: 2px 4px 2px 4px;
         height: 32px;
         border-radius: 4px;
-        width: 28%;
+        min-width: 45%;
         margin-left: 0;
-        margin-right: 2.7%;
+        margin-right: 2.3%;
       }
 
       @media #{$smallmobile} {
         flex-grow: 1;
+        flex-wrap: wrap;
         width: 27%;
       }
+    }
+
+    .flex-grow {
+      flex-grow: 2;
     }
   }
 }
