@@ -59,8 +59,8 @@
   }
 
   @media #{$mobile} {
-    bottom: -56vh;
-    height: 56vh;
+    bottom: -68vh;
+    height: 68vh;
   }
 
   @media #{$smallmobile} {
@@ -75,7 +75,7 @@
     bottom: 49vh;
 
     @media #{$mobile} {
-      bottom: 58vh;
+      bottom: 70vh;
     }
 
     @media #{$smallmobile} {
