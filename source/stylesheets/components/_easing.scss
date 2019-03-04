@@ -19,12 +19,37 @@
     font-weight: 400;
   }
 
-  input {
+  input, input::placeholder, input[type="text"] {
+    font-family: "SourceSansVariable";
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    font-size: 1em;
+    font-weight: 500;
+    letter-spacing: 0.8px;
+    text-align: center;
     border: none;
   }
 
-  input[type="text"] {
-    color: $color-white;
+  :-ms-input, :-ms-input-placeholder, :-ms-input[type="text"] {
+    font-family: "SourceSansVariable";
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    font-size: 1em;
+    font-weight: 500;
+    letter-spacing: 0.8px;
+    text-align: center;
+    border: none;
+  }
+
+  ::-webkit-input, ::-webkit-input-placeholder, ::-webkit-input[type="text"] {
+    font-family: "SourceSansVariable";
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    font-size: 1em;
+    font-weight: 500;
+    letter-spacing: 0.8px;
+    text-align: center;
+    border: none;
   }
 
   #desktop-title {

@@ -72,8 +72,7 @@ var button2 = document.getElementById("button-ease");
 var button3 = document.getElementById("button-ease-in");
 var button4 = document.getElementById("button-ease-out");
 var button5 = document.getElementById("button-ease-in-out");
-var input1 = document.getElementById("button-cubic");
-// var transitionInput = input1.value;
+
 
 // Set transition-timing-function on click event
 button1.addEventListener("click", function() {
@@ -96,22 +95,7 @@ button5.addEventListener("click", function() {
   icon.style.transitionTimingFunction = "ease-in-out";
   icon.style.animationTimingFunction = "ease-in-out";
 });
-// Set cubic-bezier timing on input
-// var transitionString = function(bezierValue) {
-//   return "cubic-bezier(" + bezierValue + ")";
-// };
-// input1.oninput = function() {
-//   transitionInput = this.value;
-//   icon.style.transitionTimingFunction
-// };
 
-
-// output3.oninput = function() {
-//   sliderDuration = this.value;
-//   icon.style.transitionDuration = durationString(sliderDuration);
-//   slider3.value = this.value;
-//   icon.style.animationDuration = delayString(sliderDuration);
-// };
 // Get state buttons
 var stateButton1 = document.getElementById("buttonState1");
 var stateButton2 = document.getElementById("buttonState2");
@@ -128,7 +112,6 @@ var icon = document.querySelector(".js-icon");
 var sliderWidth = slider1.value,
   sliderWeight = slider2.value;
 var sliderDuration = slider3.value;
-// buttonEasing = button1.value;
 var delay = 250;
 
 // Set the right animation state depending on which active state button
@@ -154,6 +137,10 @@ var durationString = function(dura) {
 var delayString = function(dura) {
   return Number(dura) + Number(delay) + "ms";
 };
+
+var bezierString = function(bezierValue) {
+  return "cubic-bezier(" + bezierValue + ")";
+}
 
 // Document load icon style settings
 icon.style.fontVariationSettings = `"TIME" 0, "wdth" ${sliderWidth}, "wght" ${sliderWeight}`;
@@ -218,6 +205,22 @@ output3.oninput = function() {
   icon.style.animationDuration = delayString(sliderDuration);
 };
 
+
+var input1 = document.querySelector("#cubic-bezier");
+var bezierInput = input1.value;
+// cubic bezier input
+input1.oninput = function() {
+  bezierInput = this.value;
+  icon.style.transitionTimingFunction = bezierString(bezierInput);
+  icon.style.animationTimingFunction = bezierString(bezierInput);
+}
+
+console.log(bezierInput);
+console.log(input1);
+console.log(sliderWeight);
+console.log(bezierInput);
+console.log(icon);
+
 // Loop button state toggle
 var loopButton = document.querySelector(".js-loop-button");
 var iconLoop = document.querySelector(".js-icon");
@@ -247,7 +250,6 @@ function findKeyframesRule(rule) {
 // Append updated icon settings on loop class
 function updateLoopKeyframe() {
   let keyFrames = findKeyframesRule("loop");
-  console.log(keyFrames);
   for (var i = 0; i < keyFrames.length; i++) {
     keyFrames[i].deleteRule("20%");
     keyFrames[i].deleteRule("50%");

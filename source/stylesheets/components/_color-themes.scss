@@ -138,6 +138,18 @@
     color: $color-white;
   }
 
+  input, input::placeholder, input[type="text"] {
+    color: $color-white;
+  }
+
+  :-ms-input, :-ms-input-placeholder, :-ms-input[type="text"] {
+    color: $color-white;
+  }
+
+  ::-webkit-input, ::-webkit-input-placeholder, ::-webkit-input[type="text"] {
+    color: $color-white;
+  }
+
   .slider {
     background: $color-bright;
   }
@@ -377,6 +389,18 @@
     color: $color-white;
   }
 
+  input, input::placeholder, input[type="text"] {
+    color: $color-white;
+  }
+
+  :-ms-input, :-ms-input-placeholder, :-ms-input[type="text"] {
+    color: $color-white;
+  }
+
+  ::-webkit-input, ::-webkit-input-placeholder, ::-webkit-input[type="text"] {
+    color: $color-white;
+  }
+
   .slider {
     background: $color-light-theme-text;
   }
@@ -547,6 +571,8 @@
     h4 {
       color: $color-white;
     }
+
+    color: $color-white;
   }
 
   .toggle-active {
@@ -637,6 +663,30 @@
     background-color: $color-yellow-theme-button;
     box-shadow: 1px 2px 8px rgba(176, 157, 16, 0.5);
     color: $color-black;
+
+    &:hover {
+      color: $color-white;
+    }
+  }
+
+  input, input::placeholder, input[type="text"] {
+    color: $color-yellow-theme-text;
+
+    &:hover, :active {
+      color: $color-white;
+    }
+  }
+
+  :-ms-input, :-ms-input-placeholder, :-ms-input[type="text"] {
+    color: $color-yellow-theme-text;
+
+    &:hover {
+      color: $color-white;
+    }
+  }
+
+  ::-webkit-input, ::-webkit-input-placeholder, ::-webkit-input[type="text"] {
+    color: $color-yellow-theme-text;
 
     &:hover {
       color: $color-white;
@@ -899,6 +949,30 @@
     background-color: $color-blue-theme-button;
     box-shadow: 1px 2px 8px rgba(14, 45, 150, 0.5);
     color: $color-white;
+  }
+
+  input, input::placeholder, input[type="text"] {
+    color: $color-white;
+
+    &:hover, :active {
+      color: $color-white;
+    }
+  }
+
+  :-ms-input, :-ms-input-placeholder, :-ms-input[type="text"] {
+    color: $color-white;
+
+    &:hover {
+      color: $color-white;
+    }
+  }
+
+  ::-webkit-input, ::-webkit-input-placeholder, ::-webkit-input[type="text"] {
+    color: $color-white;
+
+    &:hover {
+      color: $color-white;
+    }
   }
 
   .slider {
