@@ -15,6 +15,8 @@
   transition: font-variation-settings;
   transition-duration: 400ms;
   transition-timing-function: cubic-bezier(0.75, 0, 0, 1);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 
   @media #{$smalldesktop} {
     font-size: 30vmin;

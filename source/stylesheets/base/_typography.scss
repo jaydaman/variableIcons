@@ -1,5 +1,7 @@
 a {
   font-family: "SourceSansVariable", sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
   font-variation-settings: "wght" 500;
   font-size: 1em;
   text-decoration: none;
@@ -14,6 +16,8 @@ h1 {
 
 h4 {
   font-family: "SourceSansVariable";
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
   font-size: 1em;
   font-weight: 500;
   letter-spacing: 0.8px;
@@ -30,6 +34,8 @@ html {
 
 p {
   font-family: "SourceSansVariable", sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
   font-size: 0.875em;
   line-height: 25px;
   font-weight: 500;
@@ -56,4 +62,22 @@ p {
 
 .fs-40 {
   font-size: 40px;
+}
+
+.variicon {
+  font-family: "Variicon";
+  font-size: 40px;
+  line-height: 1;
+  font-variation-settings: "TIME" 0, "wdth" 70, "wght" 5;
+  display: inline-block;
+  font-weight: normal;
+  font-style: normal;
+  text-align: center;
+  letter-spacing: normal;
+  text-transform: none;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
