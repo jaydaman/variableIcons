@@ -8,17 +8,26 @@
 }
 
 //Button wrapper
-.js-icon-button {
+.icon-active {
   display: none;
-  font-family: "Variicon";
-  font-size: 40px;
-  font-variation-settings: "TIME" 0, "wdth" 70, "wght" 5;
-  color: $color-white;
+  background-color: $color-black; 
 
   @media #{$smalldesktop} {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+}
+
+.js-icon-button {
+  display: none;
+  color: $color-white;
+  font-size: 40px;
+
+
+  @media #{$smalldesktop} {
+    display: inline-block;
+    margin-top: -27%;
   }
 }
 
@@ -58,6 +67,8 @@
   font-size: 40px;
   font-variation-settings: "TIME" 0, "wdth" 80, "wght" 30;
   transition: font-variation-settings 0.2s ease;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
   text-align: center;
   margin-right: 2px;
 
