@@ -6,12 +6,18 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <meta property="og:url"    content="https://variicon.netlify.com<%= current_page.url %>" />
-    <meta property="og:type"    content="website" />
-    <meta property="og:title"    content="<%= current_page.data.title %>" />
-    <meta property="og:site_name"   content="variicon.netlify.com" />
-    <meta property="og:description" content="An icon library made with Variable Fonts" />
-    <meta property="og:image" content="https://variicon.netlify.com/images/variicons-og-landscape.png">
+    <meta property="og:url"            content="https://variicon.netlify.com<%= current_page.url %>" />
+    <meta property="og:type"           content="website" />
+    <meta property="og:title"          content="<%= current_page.data.title %>" />
+    <meta property="og:site_name"      content="variicon.netlify.com" />
+    <meta property="og:description"    content="An icon library made with Variable Fonts" />
+    <meta property="og:image"          content="https://variicon.netlify.com/images/variicons-og-landscape.png" />
+
+    <meta name="twitter:title"         content="variicon.netlify.com" />
+    <meta name="twitter:description"   content="An icon library made with Variable Fonts" />
+    <meta name="twitter:image"         content="https://variicon.netlify.com/images/variicons-og-landscape.png">
+    <meta name="twitter:site"          content="@mjjakobsson">
+    <meta name="twitter:creator"       content="@mjjakobsson">
     <!-- Use the title from a page's frontmatter if it has one -->
     <title><%= current_page.data.title || "Middleman" %></title>
     <%= stylesheet_link_tag "site" %>
