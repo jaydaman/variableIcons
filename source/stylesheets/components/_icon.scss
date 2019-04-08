@@ -1,11 +1,54 @@
 //Active icon component
+.font-size-slider {
+  position: absolute;
+  transform: rotate(90deg);
+  right: 200px;
+  top: 60%;
+
+  .slider {
+    width: 200px;
+    height: 2px;
+  }
+
+  .font-size-icon {
+    transform: rotate(-90deg);
+    color: #fff;
+
+    &:first-child {
+      margin-right: 20px;
+      font-size: 20px;
+    }
+
+    &:last-child {
+      margin-left: 20px;
+      font-size: 12px;
+    }
+  }
+}
+
+.configure-slider {
+  position: absolute;
+  left: 300px;
+
+  .slider-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .slider {
+    width: 150px;
+    height: 2px;
+  }
+}
 
 //Active icon
 .top-section__icon-container {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
 }
 
 .js-icon {
@@ -26,6 +69,12 @@
     font-size: 60vmin;
     margin-top: 60px;
   }
+}
+
+.top-section__icon {
+  width: 300px;
+  display: flex;
+  justify-content: center;
 }
 
 .top-section__icon.loop {
