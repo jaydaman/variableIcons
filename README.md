@@ -24,3 +24,6 @@ Pull requests are welcome. For major changes, please open an issue to discuss wh
 
 ## Deployment
 The site is deployed automatically using [Netlify](https://www.netlify.com/) when you push the `master` branch to GitHub.
+
+## Download Variicon Font
+Download the font here: https://github.com/jaydaman/variableIcons/blob/master/source/fonts/VariiconGX_1.1.4.ttf
