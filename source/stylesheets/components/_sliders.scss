@@ -5,7 +5,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 328px;
+  width: 304px;
   padding-top: 12px;
 
   @media #{$smalldesktop} {
@@ -18,7 +18,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 328px;
+    width: 304px;
     padding-top: 20px;
 
     @media #{$smalldesktop} {
@@ -63,7 +63,7 @@
 
     .slider {
       appearance: none;
-      width: 160px;
+      width: 150px;
       height: 3px;
       outline: none;
 

@@ -10,7 +10,7 @@
 //Button wrapper
 .icon-active {
   display: none;
-  background-color: $color-black; 
+  background-color: $color-black;
 
   @media #{$smalldesktop} {
     display: flex;
@@ -33,7 +33,7 @@
 
 // Icon selection container
 .left-container1 {
-  width: 328px;
+  width: 304px;
 
   @media #{$smalldesktop} {
     display: none;
@@ -61,10 +61,10 @@
 
 // Icon item
 .icon-item {
-  width: 64px;
-  height: 64px;
+  width: 56px;
+  height: 56px;
   font-family: "Variicon";
-  font-size: 40px;
+  font-size: 34px;
   font-variation-settings: "TIME" 0, "wdth" 80, "wght" 30;
   transition: font-variation-settings 0.2s ease;
   text-rendering: optimizeLegibility;
