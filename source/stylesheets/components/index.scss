@@ -38,12 +38,16 @@ a:link {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 60vh;
+  height: 55vh;
+
+  @media #{$smalldesktop} {
+    height: 60vh;
+  }
 }
 
 // Bottom section background themes
 .bottom-section {
-  height: 45vh;
+  height: 55vh;
 
   @media #{$tablet} {
     height: 40vh;
@@ -82,7 +86,7 @@ a:link {
 }
 
 .line-item {
-  margin-top: -24px;
+  margin-top: -20px;
 
   @media #{$smalldesktop} {
     margin-top: 0;
@@ -90,7 +94,7 @@ a:link {
 }
 
 .line-item-alt {
-  margin-top: -32px;
+  margin-top: -28px;
 
   @media #{$smalldesktop} {
     margin-top: 0;

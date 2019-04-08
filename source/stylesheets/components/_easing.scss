@@ -3,7 +3,7 @@
 .easing {
   display: flex;
   justify-content: space-between;
-  width: 328px;
+  width: 304px;
   padding-top: 20px;
 
   @media #{$smalldesktop} {
@@ -71,7 +71,7 @@
     }
 
     .btn {
-      padding: 10px 0 10px 0;
+      padding: 8px 0 8px 0;
       margin-bottom: 8px;
       margin-left: 2.7%;
       min-width: 47.3%;
