@@ -27,3 +27,12 @@ The site is deployed automatically using [Netlify](https://www.netlify.com/) whe
 
 ## Download Variicon Font
 Download the font here: https://github.com/jaydaman/variableIcons/blob/master/source/fonts/VariiconGX_1.1.4.ttf
+
+### Variicon key-bindings
+Here's the key bindings used to get the right icon in your code:
+
+hamburger_1: "B"
+hamburger_2: "A"
+icon_loading: "C"
+arrow-left: "D"
+asterix: "E"
