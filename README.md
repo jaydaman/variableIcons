@@ -31,8 +31,8 @@ Download the font here: https://github.com/jaydaman/variableIcons/blob/master/so
 ### Variicon key-bindings
 Here's the key bindings used to get the right icon in your code:
 
-hamburger_1: "B"
-hamburger_2: "A"
-icon_loading: "C"
-arrow-left: "D"
-asterix: "E"
+hamburger_1: "B"<br>
+hamburger_2: "A"<br>
+icon_loading: "C"<br>
+arrow-left: "D"<br>
+asterix: "E"<br>
